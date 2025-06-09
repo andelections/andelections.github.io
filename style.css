@@ -200,6 +200,12 @@ body {
     transition-duration: 0.4s;
 }
 
+#footer {
+    font-size: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
 @media (max-width: 1240px) {
     .excel-embed {
         zoom: 0.8;
