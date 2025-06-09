@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>&Elections • Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="title-bar">
+            <div id="titlebartext">
+                <div class="dropdown">
+                    <span><a href="#live-model"> Current Projection </a></span>
+                    <div class="dropdown-content current-projection">
+                        <a href="#live-model">▶ Live Model</a><br>
+                        <a href="#projection-maps">▶ Projection Maps</a><br>
+                        <a href="#constituency-projections">▶ Constituency Proj.</a><br>
+                        <a href="#regional-projections">▶ Regional Proj.</a><br>
+                        <a href="#regional-data">▶ Regional Data</a>
+                    </div>
+                </div>
+                •
+                <div class="dropdown">
+                    <span><a href="#poll-library"> Historical Info </a></span>
+                    <div class="dropdown-content historical-info">
+                        <a href="#poll-library">▶ Poll Library</a><br>
+                        <a href="#projection-timeline">▶ Projection Timeline</a>
+                    </div>
+                </div>
+                •
+                <div class="dropdown">
+                    <span><a href="#custom-projection"> Other Projections </a></span>
+                    <div class="dropdown-content other-projections">
+                        <a href="#custom-projection">▶ Custom Projection</a><br>
+                        <a href="#2024-projection">▶ 2024 Projection</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" title="back to top"><img id="logo" src="logobanner.png" frameborder="0" alt="&elections"></a>
+        </div>
+        
+        <section data-title="Current Projection">
+            <div id="live-model"><br>
+                <div class="container">
+                    <img id="infographic" src="image.png" frameborder="0" alt="current polls"></frame></iframe>
+                    <div class="scroll-container">
+                        <div class="flourish-embed flourish-parliament" data-src="visualisation/23520878"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23520878/thumbnail" width="100%" alt="parliament visualization" /></noscript></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="projection-maps">
+                <div class="sectiontitle">Projection Maps</div>
+                <div class="container">
+                    <iframe class="map" src="https://public.flourish.studio/visualisation/20684789/embed" frameborder="0"></iframe>
+                    <iframe class="map" src="https://public.flourish.studio/visualisation/19788967/embed" frameborder="0"></iframe>
+                </div>
+            </div>
+            <br>
+            <div id="constituency-projections">
+                <div class="sectiontitle">Constituency Projections</div>
+                <div class="excelsheet regular">
+                    <iframe class="excel-embed regular" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Constituency%20Projections'!C2&Item=ConsProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+                </div>
+            </div>
+            <br>
+            <div id="regional-projections">
+                <div class="sectiontitle">Regional Projections</div>
+                <div class="excelsheet regionalproj">
+                    <iframe class="excel-embed regionalproj" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+            </div>
+            <br>
+            <div id="regional-data">
+                <div class="sectiontitle">Regional Data</div>
+                <div class="excelsheet regional">
+                    <iframe class="excel-embed regional" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section data-title="Historical Info">
+            <div id="poll-library">
+                <div class="sectiontitle">Poll Library</div>
+                <div class="excelsheet polls">
+                    <iframe class="excel-embed polls" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+            </div>
+            <br>
+            <div id="projection-timeline">
+                <div class="sectiontitle">Projection Timeline</div>
+                <div class="timeline">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section data-title="Other Projections">
+            <div id="custom-projection">
+                <div class="sectiontitle">Custom Projection</div>
+                <div class="excelsheet regular">
+                    <iframe class="excel-embed regular" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+            </div>
+            <br>
+            <div id="2024-projection">
+                <div class="sectiontitle">2024 Projection</div>
+                <div class="container">
+                    <iframe class="map" src="https://public.flourish.studio/visualisation/23520885/embed" frameborder="0"></iframe>
+                    <iframe class="map" src="https://public.flourish.studio/visualisation/18688741/embed" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
