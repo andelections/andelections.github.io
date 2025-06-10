@@ -260,6 +260,7 @@ body {
 @media (max-width: 1000px) {
     .container {
         flex-direction: column;
+        margin: 0 auto;
     }
 
     .map {
@@ -267,13 +268,14 @@ body {
     }
 
     .scroll-container {
-        width: 100%;
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 70%;
         max-width: 700px;
+        margin: 0 auto;
     }
 
     .flourish-embed.flourish-parliament {
+        zoom: 0.9;
+        width: 100%;
         margin: 0 auto;
     }
 
