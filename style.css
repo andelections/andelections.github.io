@@ -156,6 +156,12 @@ body {
     font-weight: 900;
 }
 
+#socialsdropdown {
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.4s;
+}
+
 #socialsdropdown:hover {
     color: white;
     transition-duration: 0.4s;
@@ -317,10 +323,18 @@ body {
     .excelsheet.polls {
         max-width: calc(1100px * 0.6)
     }
+
+    .dropdown-content {
+        min-width: 225px;
+    }
 }
 
 @media (max-width: 800px) {
     .title-bar {
         font-stretch: condensed;
+    }
+
+    .dropdown-content {
+        min-width: 200px;
     }
 }
