@@ -156,6 +156,12 @@ body {
     font-weight: 900;
 }
 
+#socialsdropdown:hover {
+    color: white;
+    transition-duration: 0.4s;
+    font-weight: 900;
+}
+
 .titlebarlogo {
     font-weight: 900;
 }
