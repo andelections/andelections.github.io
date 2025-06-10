@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Bahnschrift';
-    src: url(fonts/BAHNSCHRIFT.TTF);
+    src: url('fonts/BAHNSCHRIFT.TTF') format('truetype');
 }
 
 html {
@@ -24,7 +24,7 @@ body {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    FONT-FAMILY: 'Bahnschrift', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     padding-top: 50px;
 }
 
@@ -250,7 +250,7 @@ body {
         padding-top: 14px;
         padding-bottom: 6px;
         font-size: 25px;
-        font-family: 'Bahnschrift Condensed', 'Bahnschrift', sans-serif;
+        font-stretch: semi-condensed;
         min-height: 40px;
     }
 
@@ -314,5 +314,11 @@ body {
 
     .excelsheet.polls {
         max-width: calc(1100px * 0.6)
+    }
+}
+
+@media (max-width: 800px) {
+    .title-bar {
+        font-stretch: condensed;
     }
 }
