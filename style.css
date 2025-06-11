@@ -160,6 +160,7 @@ body {
     text-decoration: none;
     color: white;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 #socialsdropdown:hover {
@@ -333,6 +334,88 @@ body {
 
     .dropdown-content {
         min-width: 225px;
+    }
+
+    .mobile-device .excel-embed {
+        zoom: 1;
+        height: 1200px;
+    }
+
+    .mobile-device .excel-embed.regular {
+        zoom: 0.8;
+    }
+
+    .mobile-device .excel-embed.regionalproj {
+        zoom: 0.8;
+    }
+
+    .mobile-device .excelsheet {
+        height: 1200px;
+    }
+
+    .mobile-device .excelsheet.regular {
+        height: calc(1200px * 0.8);
+        max-width: calc(1200px * 0.8);
+    }
+
+    .mobile-device .excelsheet.regionalproj {
+        height: calc(1200px * 0.8);
+        max-width: calc(1150px * 0.8);
+    }
+
+    .mobile-device .excelsheet.regional {
+        max-width: 925px;
+    }
+
+    .mobile-device .excelsheet.polls {
+        max-width: 1100px;
+    }
+
+    .mobile-device .map {
+        zoom: 2.5;
+        height: 600px;
+    }
+
+    .mobile-device .timeline {
+        max-width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .mobile-device .flourish-embed {
+        zoom: 2.25;
+    }
+
+    .mobile-device .scroll-container {
+        aspect-ratio: 1/1.5;
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .mobile-device .title-bar {
+        font-size: 60px;
+        font-stretch: condensed;
+    }
+
+    .mobile-device #infographic {
+        max-width: 90%;
+        max-height: 90%;
+        aspect-ratio: 1/1;
+        padding-top: 70px;
+    }
+
+    .mobile-device .dropdown-content {
+        font-size: 50px;
+        min-width: 400px;
+    }
+
+    .mobile-device .contianer {
+        max-width: 95%;
+    }
+
+    .mobile-device #logo {
+        height: 50px;
+        padding: 50px;
     }
 }
 

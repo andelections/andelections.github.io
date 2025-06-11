@@ -1,3 +1,4 @@
+
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
     
@@ -8,3 +9,21 @@ document.addEventListener("scroll", function () {
         }
     });
 });
+
+function detectMobileDevice() {
+    let userAgent = navigator.userAgent.toLowerCase();
+    if (/mobile|android|iphone|ipad|ipod/i.test(userAgent)) {
+        document.body.classList.add("mobile-device");
+        console.log("Mobile device detected!");
+        document.querySelectorAll('a.titlebarlink').forEach(link => {
+            link.addEventListener('click', function  (e) {
+                e.preventDefault();
+            });
+        })
+    }
+}
+
+window.addEventListener("load", (event) => {
+  detectMobileDevice();
+});
+
