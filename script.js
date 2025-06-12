@@ -10,20 +10,44 @@ document.addEventListener("scroll", function () {
     });
 });
 
+function displayMobileMenu() {
+    document.body.classList.toggle("mobile-menu-active");
+    let button = document.getElementById('mobiletitlesbutton');
+    button.innerHTML = document.body.classList.contains("mobile-menu-active") ? "Close" : "• • •";
+}
+
 function detectMobileDevice() {
     let userAgent = navigator.userAgent.toLowerCase();
-    if (/mobile|android|iphone|ipad|ipod/i.test(userAgent)) {
+    if (/mobile|android|iphone|ipod/i.test(userAgent)) {
         document.body.classList.add("mobile-device");
         console.log("Mobile device detected!");
         document.querySelectorAll('a.titlebarlink').forEach(link => {
             link.addEventListener('click', function  (e) {
                 e.preventDefault();
             });
-        })
+        });
+    }
+}
+
+function detectiPad() {
+    let userAgent = navigator.userAgent.toLowerCase();
+    let isIpad = /ipad/i.test(userAgent) ||
+                 (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 0);
+
+    if (isIpad) {
+        document.body.classList.remove("mobile-device")
+        document.body.classList.add("ipad-device");
+        console.log("iPad detected!");
+        document.querySelectorAll('a.titlebarlink').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
     }
 }
 
 window.addEventListener("load", (event) => {
   detectMobileDevice();
+  detectiPad();
 });
 
