@@ -466,6 +466,7 @@ body {
     .mobile-device #mobiletitletext {
         margin-top: 10px;
         display: none;
+        visibility: hidden;
         max-width: 100%;
         position: absolute;
         background-color:rgba(223, 37, 37,0.85);
@@ -479,7 +480,7 @@ body {
         transform: translateY(-10px);
         transition-duration: 0.4s;
         text-align: left;
-        font-size: 55px;
+        font-size: 40px;
     }
 
     .mobile-device a {
@@ -488,8 +489,10 @@ body {
     }
 
     .mobile-menu-active #mobiletitletext {
-        display: block;
         opacity: 1;
+        visibility: visible;
+        display: block;
+        transition-duration: 0.4s;
         transform: translateY(0);
     }
 }
