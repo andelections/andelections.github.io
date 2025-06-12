@@ -220,6 +220,11 @@ body {
     transition-duration: 0.4s;
 }
 
+.dropdownsubheading {
+    transform: translateY(5px);
+    font-weight: 500;
+}
+
 .mobile-title-bar {
     display: none;
 }
