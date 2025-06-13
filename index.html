@@ -38,8 +38,9 @@
                 </div>
                 •
                 <div class="dropdown">
-                    <span id="socialsdropdown"> Socials </span>
+                    <span><a class="titlebarlink" href="#about"> Socials </a></span>
                     <div class="dropdown-content socials">
+                        <a href="#about">→ About & Socials</a><br>
                         <a href="https://linktr.ee/andelections" target="_blank" rel="noopener noreferrer">↗ Linktree</a><br>
                         <div class="dropdownsubheading">Help the Site</div>
                         <a href="https://ko-fi.com/andelections" target="_blank" rel="noopener noreferrer">↗ Ko-fi</a><br>
@@ -136,8 +137,61 @@
                     <iframe class="map" src="https://public.flourish.studio/visualisation/18688741/embed" frameborder="0"></iframe>
                 </div>
             </div>
+        </section>
+        <section data-title="About & Socials">
+            <div id="about">
+                <div class="sectiontitle">About & Socials</div>
+                <p>
+                    Hi, I'm Nicholas. I started making what has eventually become &Elections in January 2024,
+                    when I started to collate MRP polling. In the 2024 election, my final call projection
+                    was one of the most accurate in the industry, with my model having forecast over 87% of
+                    constituencies correctly*. Since then, I've refined my model to better its accuracy,
+                    and have worked tirelessly on several new exciting features, including this site,
+                    which I independently created and published in June 2025.
+                </p>
+                <div class="container">
+                    <div class="aboutcontainer about"><p>
+                        Now, being just one 19-year-old working to create some of the most detailed analysis
+                        and projections for UK elections anywhere on the internet takes up
+                        a lot of effort, especially wihout any external financial backing. Anything that
+                        you can do to help contribute to the site is deeply appreciated! Also, especially
+                        if you can't contribute, please could you consider following &Elections on
+                        social media sites to stay up-to-date with polling and projection updates!
+                    </p><p class="disclaimer">
+                        *552 of the 631 constituencies projected (GB, excluding Chorley)
+                    </p></div>
+                    <div class="aboutcontainer socials">
+                        <table>
+                            <tr>
+                                <td colspan="2">Help the Site</td>
+                            </tr>
+                            <tr>
+                                <td><button title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections', 0)">Ko-fi</button></td>
+                                <td><button title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Social Media</td>
+                            </tr>
+                            <tr>
+                                <td><button title="Linktree (opens in new tab)" onclick="socialslink('https://linktr.ee/andelections',1)">Linktree</button></td>
+                                <td><button title="Substack (opens in new tab)" onclick="socialslink('https://substack.com/@andelections',1)">Substack</button></td>
+                            </tr>
+                            <tr>
+                                <td><button title="Twitter (opens in new tab)" onclick="socialslink('https://x.com/andelectionsuk',1)">Twitter</button></td>
+                                <td><button title="BlueSky (opens in new tab)" onclick="socialslink('https://bsky.app/profile/andelections.com',1)">BlueSky</button></td>
+                            </tr>
+                            <tr>
+                                <td><button title="Instagram (opens in new tab)" onclick="socialslink('https://www.instagram.com/andelections',1)">Instagram</button></td>
+                                <td><button title="TikTok (opens in new tab)" onclick="socialslink('https://www.tiktok.com/@andelections',1)">TikTok</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
             <div id="footer">
-                Proprietary modelling formulae are private intellectual information and property. Permission required before use. © 2025 Nicholas Tryand.
+                Proprietary modelling formulae are private intellectual information and property.
+                Permission required before use. © 2025 Nicholas Tryand.
             </div>
         </section>
     </body>

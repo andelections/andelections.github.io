@@ -140,18 +140,20 @@ body {
     height: 30px;
 }
 
-.title-bar a {
+a {
     text-decoration: none;
-    color: white;
     transition-duration: 0.4s;
+}
+
+.title-bar a{
+    color: white;
 }
 
 .title-bar:hover {
     background: rgba(223, 37, 37,0.85);
 }
 
-.title-bar a:hover {
-    color: white;
+a:hover {
     transition-duration: 0.4s;
     font-weight: 900;
 }
@@ -235,6 +237,61 @@ body {
     text-align: center;
 }
 
+p {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.disclaimer {
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aboutcontainer table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.aboutcontainer.about {
+    width: calc(100% - 480px);
+}
+
+.aboutcontainer.socials {
+    width: 480px;
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background-color:rgba(51, 117, 224,0.85);
+    font-family: 'Bahnschrift', sans-serif;
+    width: 80%;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+    color: white;
+    margin: 3px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+}
+
+button:hover {
+    background-color:rgba(223, 37, 37,0.85);
+    font-weight: 900;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+}
+
 @media (max-width: 1240px) {
     .excel-embed {
         zoom: 0.8;
@@ -305,6 +362,10 @@ body {
     #infographic {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .aboutcontainer.about {
+        width: 100%;
     }
 
     .excel-embed {

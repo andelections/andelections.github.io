@@ -10,6 +10,14 @@ document.addEventListener("scroll", function () {
     });
 });
 
+function socialslink(link,sameWindow) {
+    if (sameWindow == 0) {
+        window.open(link, "_blank", "width=800, height=600")
+    } else {
+        window.open(link, "_blnak")
+    }
+}
+
 function displayMobileMenu() {
     document.body.classList.toggle("mobile-menu-active");
     let button = document.getElementById('mobiletitlesbutton');
@@ -39,7 +47,7 @@ function detectiPad() {
         document.body.classList.add("ipad-device");
         console.log("iPad detected!");
         document.querySelectorAll('a.titlebarlink').forEach(link => {
-            link.addEventListener('click', function (e) {
+            link.addEventListener('click', function (e) {5
                 e.preventDefault();
             });
         });
