@@ -12,7 +12,7 @@ document.addEventListener("scroll", function () {
 
 function socialslink(link,sameWindow) {
     if (sameWindow == 0) {
-        window.open(link, "_blank", "width=800, height=600")
+        window.open(link, "_blank", "width=500, height=850")
     } else {
         window.open(link, "_blnak")
     }
