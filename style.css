@@ -272,7 +272,7 @@ p {
     text-align: center;
 }
 
-button {
+.aboutcontainer.socials button {
     background-color:rgba(51, 117, 224,0.85);
     font-family: 'Bahnschrift', sans-serif;
     width: 80%;
@@ -283,10 +283,11 @@ button {
     border: none;
     font-size: 25px;
     cursor: pointer;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.9);
+    transform: translateY(-3px);
 }
 
-button:hover {
+.aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
     font-weight: 900;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
@@ -368,6 +369,14 @@ button:hover {
         width: 100%;
     }
 
+    .aboutcontainer.socials {
+        width: 80%;
+    }
+
+    .aboutcontainer.socials button {
+        font-size: 30px;
+    }
+
     .excel-embed {
         /*transform: scale(0.6);*/
         zoom: 0.6;
@@ -404,6 +413,24 @@ button:hover {
 
     .dropdown-content {
         min-width: 225px;
+    }
+
+    .mobile-device .aboutcontainer.socials {
+        width: 95%;
+    }
+
+    .mobile-device .disclaimer {
+        font-size: 30px;
+    }
+
+    .mobile-device .socialstabletitles {
+        font-size: 55px;
+    }
+
+    .mobile-device .aboutcontainer.socials button {
+        width: 90%;
+        font-size: 50px;
+        height: 100px;
     }
 
     .mobile-device .excel-embed {
