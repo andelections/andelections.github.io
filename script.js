@@ -1,11 +1,20 @@
 
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
-    
+    let viewportHeight = window.innerHeight;
+
     sections.forEach(section => {
         let rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            document.title = "&Elections • " + section.getAttribute("data-title");
+        let sectionTitle = section.getAttribute("data-title");
+        let titleNoSpace = sectionTitle.replace(/\s+/g, "");
+        let menuBarTitle = document.getElementById(titleNoSpace);
+        menuBarTitle.style.fontWeight = "";
+        let visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+        let sectionHeight = rect.height;
+
+        if (visibleHeight >= viewportHeight / 2) {
+            document.title = "&Elections • " + sectionTitle;
+            menuBarTitle.style.fontWeight = "800";
         }
     });
 });
@@ -82,7 +91,7 @@ function refreshIframe() {
             iframe.src = iframe.src;
         }
     });
-    alert("To avoid timing out due to inactivity, some elements on this page have been refreshed.");
+    alert("Due to inactivity, this page has timed out. When you continue, it will refresh automatically.");
 }
 
 let inactivityTime = function() {
