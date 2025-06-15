@@ -5,25 +5,16 @@ document.addEventListener("scroll", function () {
 
     sections.forEach(section => {
         let rect = section.getBoundingClientRect();
+        let sectionTitle = section.getAttribute("data-title");
+        let titleNoSpace = sectionTitle.replace(/\s+/g, "");
+        let menuBarTitle = document.getElementById(titleNoSpace);
+        menuBarTitle.style.fontWeight = "";
         let visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         let sectionHeight = rect.height;
 
         if (visibleHeight >= viewportHeight / 2) {
-            let sectionTitle = section.getAttribute("data-title");
-            let titleNoSpace = sectionTitle.replace(/\s+/g, "");
-            let menuBarTitle = document.getElementById(titleNoSpace);
             document.title = "&Elections • " + sectionTitle;
-            menuBarTitle.style.fontWeight = "525";
-            menuBarTitle.addEventListener("mouseenter", function() {
-                menuBarTitle.style.fontWeight = "900";
-            });
-
-            menuBarTitle.addEventListener("mouseleave", function() {
-                menuBarTitle.style.fontWeight = "525";
-            });
-        } else {
-            let menuBarTitle = document.getElementById(titleNoSpace);
-            menuBarTitle.style.fontWeight = "";
+            menuBarTitle.style.fontWeight = "900";
         }
     });
 });
