@@ -75,6 +75,32 @@ function detectiPad() {
     }
 }
 
+function refreshIframe() {
+    let iframes = document.querySelectorAll("iframe");
+    iframes.forEach(iframe => {
+        if (iframe.classList.contains("excel-embed")) {
+            iframe.src = iframe.src;
+        }
+    });
+}
+
+let inactivityTime = function() {
+    let time;
+
+    function resetTimer() {
+        clearTimeout(time);
+        time = setTimeout(refreshIframe, 600000)
+    }
+
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeydown = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+}
+
+inactivityTime();
+
 window.addEventListener("load", (event) => {
   detectMobileDevice();
   detectiPad();
