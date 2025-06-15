@@ -35,6 +35,7 @@ function pollselectionbuttons(button) {
     button.style.fontWeight = "400";
     button.style.cursor = "default";
     button.style.pointerEvents = "none";
+    button.style.textShadow = "none";
 }
 
 function pollsselection(region) {
