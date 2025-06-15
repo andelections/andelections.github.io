@@ -483,6 +483,17 @@ p {
         min-width: 225px;
     }
 
+    .mobile-device .pollsoptionbox {
+        max-width: 100%;
+        border-radius: 100px;
+    }
+
+    .mobile-device .pollsoptionbox button {
+        font-size: 40px;
+        height: 80px;
+        border-radius: 40px;
+    }
+
     .mobile-device .aboutcontainer.socials {
         width: 95%;
     }
