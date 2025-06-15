@@ -152,6 +152,7 @@ body {
 a {
     text-decoration: none;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .title-bar a{
@@ -165,6 +166,7 @@ a {
 a:hover {
     transition-duration: 0.4s;
     font-weight: 900;
+    cursor: pointer;
 }
 
 #socialsdropdown {
