@@ -82,6 +82,7 @@ function refreshIframe() {
             iframe.src = iframe.src;
         }
     });
+    alert("To avoid timing out due to inactivity, some elements on this page have been refreshed.");
 }
 
 let inactivityTime = function() {
@@ -89,7 +90,7 @@ let inactivityTime = function() {
 
     function resetTimer() {
         clearTimeout(time);
-        time = setTimeout(refreshIframe, 600000)
+        time = setTimeout(refreshIframe, 600000);
     }
 
     window.onload = resetTimer;
