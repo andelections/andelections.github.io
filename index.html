@@ -95,7 +95,7 @@
             <div id="demographic-projections">
                 <div class="sectiontitle">Demographic Projections</div>
                 <div class="excelsheet regionalproj">
-                    <iframe class="excel-embed regionalproj" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C1&Item='Demographic%20Projections'!DemPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <iframe class="excel-embed regionalproj" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C2&Item='Demographic%20Projections'!DemPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                 </div>
             </div>
             <br>
@@ -117,8 +117,23 @@
         <section data-title="Historical Info">
             <div id="poll-library">
                 <div class="sectiontitle">Poll Library</div>
-                <div class="excelsheet polls">
+                <div class="pollsoptionbox">
+                    <button title="Show nationwide polls" id="pollsbuttonNationwide" onclick="pollsselection('Nationwide')">Nationwide</button>
+                    <button title="Show Scottish polls" id="pollsbuttonScotland" onclick="pollsselection('Scotland')">Scotland</button>
+                    <button title="Show Welsh polls" id="pollsbuttonWales" onclick="pollsselection('Wales')">Wales</button>
+                    <button title="Show London polls" id="pollsbuttonLondon" onclick="pollsselection('London')">London</button>
+                </div>
+                <div class="excelsheet polls" id="pollsNationwide">
                     <iframe class="excel-embed polls" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+                <div class="excelsheet polls sctwal" id="pollsScotland">
+                    <iframe class="excel-embed polls" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolSct&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+                <div class="excelsheet polls sctwal" id="pollsWales">
+                    <iframe class="excel-embed polls" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolWal&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                </div>
+                <div class="excelsheet polls london" id="pollsLondon">
+                    <iframe class="excel-embed polls" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLdn&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                 </div>
             </div>
             <br>

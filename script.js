@@ -18,6 +18,27 @@ function socialslink(link,sameWindow) {
     }
 }
 
+var pollsdisplaying = 'Nationwide';
+
+function pollselectionbuttons(button) {
+    button.style.backgroundColor = "rgba(233,37,37,0.85)";
+    button.style.boxShadow = "0px 2px 4px 0px rgba(0,0,0,0.6)";
+    button.style.fontWeight = "400";
+    button.style.cursor = "default";
+    button.style.pointerEvents = "none";
+}
+
+function pollsselection(region) {
+    let regiontohide = pollsdisplaying;
+    pollsdisplaying = region;
+    let button = document.getElementById('pollsbutton' + region);
+    pollselectionbuttons(button);
+    document.getElementById('polls' + region).style.display = 'block';
+    document.getElementById('polls' + regiontohide).style.display = 'none';
+    let oldbutton = document.getElementById('pollsbutton' + regiontohide);
+    oldbutton.removeAttribute("style");
+}
+
 function displayMobileMenu() {
     document.body.classList.toggle("mobile-menu-active");
     let button = document.getElementById('mobiletitlesbutton');
@@ -57,5 +78,8 @@ function detectiPad() {
 window.addEventListener("load", (event) => {
   detectMobileDevice();
   detectiPad();
+  let nationwidebutton = document.getElementById('pollsbuttonNationwide');
+  pollselectionbuttons(nationwidebutton);
+
 });
 

@@ -91,7 +91,16 @@ body {
 
 .excelsheet.polls {
     max-width: 1100px;
-    margin: 0 auto
+    margin: 0 auto;
+    display: none;
+}
+
+.excelsheet.polls.sctwal {
+    max-width: 1000px;
+}
+
+.excelsheet.polls.london {
+    max-width: 950px;
 }
 
 .excel-embed {
@@ -293,6 +302,47 @@ p {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
 }
 
+.pollsoptionbox {
+    margin: 0 auto;
+    background-color: #999999;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.6);
+}
+
+.pollsoptionbox button {
+    background-color: rgba(0,0,0,0);
+    font-family: 'Bahnschrift', sans-serif;
+    width: 23%;
+    height: 40px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    color: white;
+    margin: 3px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.pollsoptionbox button:hover {
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+    background-color: rgba(51, 117, 224,0.85);
+    font-weight: 900;
+}
+
+.pollsoptionbox button:active {
+    box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
+    background-color: rgba(223, 37, 37,0.85);
+}
+
+#pollsNationwide {
+    display: block;
+}
+
 @media (max-width: 1240px) {
     .excel-embed {
         zoom: 0.8;
@@ -309,19 +359,27 @@ p {
     }
 
     .excelsheet.regular {
-        max-width: calc(1200px * 0.8)
+        max-width: calc(1200px * 0.8);
     }
 
     .excelsheet.regionalproj {
-        max-width: calc(1150px * 0.8)
+        max-width: calc(1150px * 0.8);
     }
 
     .excelsheet.regional {
-        max-width: calc(925px * 0.8)
+        max-width: calc(925px * 0.8);
     }
 
     .excelsheet.polls {
-        max-width: calc(1100px * 0.8)
+        max-width: calc(1100px * 0.8);
+    }
+
+    .excelsheet.polls.sctwal {
+        max-width: calc(1000px * 0.8);
+    }
+
+    .excelsheet.polls.london {
+        max-width: calc(950px * 0.8);
     }
 }
 
@@ -411,6 +469,14 @@ p {
         max-width: calc(1100px * 0.6)
     }
 
+    .excelsheet.polls.sctwal {
+        max-width: calc(1000px * 0.6)
+    }
+
+    .excelsheet.polls.london {
+        max-width: calc(950px * 0.6)
+    }
+
     .dropdown-content {
         min-width: 225px;
     }
@@ -466,6 +532,14 @@ p {
 
     .mobile-device .excelsheet.polls {
         max-width: 1100px;
+    }
+
+    .mobile-device .excelsheet.polls.sctwal {
+        max-width: 1000px;
+    }
+
+    .mobile-device .excelsheet.polls.london {
+        max-width: 950px;
     }
 
     .mobile-device .map {
