@@ -34,9 +34,9 @@
                 <div class="dropdown">
                     <span><a class="titlebarlink" id="HistoricalInfo" href="#poll-library"> Historical Info </a></span>
                     <div class="dropdown-content historical-info">
-                        → <a href="#poll-library">Poll Library</a><br>
-                        → <a href="#monthly-polling-averages">Polling Timeline</a><br>
                         → <a href="#projection-timeline">Projection Timeline</a>
+                        → <a href="#polling-timeline">Polling Timeline</a><br>
+                        → <a href="#poll-library">Poll Library</a><br>
                     </div>
                 </div>
                 •
@@ -125,13 +125,42 @@
         </section>
         <br>
         <section data-title="Historical Info">
+            <div id="projection-timeline">
+                <div class="sectiontitle">Projection Timeline</div>
+                <div class="timeline projection">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+            </div>
+            <br>
+            <div id="polling-timeline">
+                <div class="sectiontitle">Polling Timeline</div>
+                <div class="pollsoptionbox timeline">
+                    <button title="Show nationwide averages timeline" id="tlbuttonNationwide" onclick="pollsselection('Nationwide',2)">Nationwide</buttoon>
+                    <button title="Show Scottish polls" id="tlbuttonScotland" onclick="pollsselection('Scotland',2)">Scotland</button>
+                    <button title="Show Welsh polls" id="tlbuttonWales" onclick="pollsselection('Wales',2)">Wales</button>
+                    <button title="Show London polls" id="tlbuttonLondon" onclick="pollsselection('London',2)">London</button>
+                </div><br>
+                <div class="timeline polls" id="tlNationwide">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23825431"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23825431/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+                <div class="timeline polls" id="tlScotland">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23830073"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830073/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+                <div class="timeline polls" id="tlWales">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23830171"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830171/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+                <div class="timeline polls" id="tlLondon">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/23830184"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830184/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                </div>
+            </div>
+            <br>
             <div id="poll-library">
                 <div class="sectiontitle">Poll Library</div>
-                <div class="pollsoptionbox">
-                    <button title="Show nationwide polls" id="pollsbuttonNationwide" onclick="pollsselection('Nationwide')">Nationwide</button>
-                    <button title="Show Scottish polls" id="pollsbuttonScotland" onclick="pollsselection('Scotland')">Scotland</button>
-                    <button title="Show Welsh polls" id="pollsbuttonWales" onclick="pollsselection('Wales')">Wales</button>
-                    <button title="Show London polls" id="pollsbuttonLondon" onclick="pollsselection('London')">London</button>
+                <div class="pollsoptionbox table">
+                    <button title="Show nationwide polls" id="pollsbuttonNationwide" onclick="pollsselection('Nationwide',1)">Nationwide</button>
+                    <button title="Show Scottish polls" id="pollsbuttonScotland" onclick="pollsselection('Scotland',1)">Scotland</button>
+                    <button title="Show Welsh polls" id="pollsbuttonWales" onclick="pollsselection('Wales',1)">Wales</button>
+                    <button title="Show London polls" id="pollsbuttonLondon" onclick="pollsselection('London',1)">London</button>
                 </div>
                 <div class="excelsheet polls" id="pollsNationwide">
                     <iframe class="excel-embed polls" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
@@ -144,20 +173,6 @@
                 </div>
                 <div class="excelsheet polls london" id="pollsLondon">
                     <iframe class="excel-embed polls" id="polls-ldn-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLdn&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                </div>
-            </div>
-            <br>
-            <div id="monthly-polling-averages">
-                <div class="sectiontitle">Monthly Polling Averages Timeline</div>
-                <div class="timeline">
-                    <div class="flourish-embed flourish-chart" data-src="visualisation/23825431"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23825431/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                </div>
-            </div>
-            <br>
-            <div id="projection-timeline">
-                <div class="sectiontitle">Projection Timeline</div>
-                <div class="timeline">
-                    <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
                 </div>
             </div>
         </section>

@@ -67,7 +67,16 @@ body {
     color: #222222;
 }
 
-.timeline {
+.timeline.polls {
+    max-width: 1200px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto;
+    display: none;
+    min-height: 590px;
+}
+
+.timeline.projection {
     max-width: 1200px;
     padding-left: 10%;
     padding-right: 10%;
@@ -348,6 +357,10 @@ p {
     display: block;
 }
 
+#tlNationwide {
+    display: block;
+}
+
 @media (max-width: 1240px) {
     .excel-embed {
         zoom: 0.8;
@@ -563,7 +576,13 @@ p {
         height: 600px;
     }
 
-    .mobile-device .timeline {
+    .mobile-device .timeline.polls {
+        max-width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .mobile-device .timeline.projection {
         max-width: 100%;
         padding-left: 0%;
         padding-right: 0%;

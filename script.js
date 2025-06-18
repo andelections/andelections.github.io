@@ -28,6 +28,7 @@ function socialslink(link,sameWindow) {
 }
 
 var pollsdisplaying = 'Nationwide';
+var timelinedisplaying = 'Nationwide';
 
 function pollselectionbuttons(button) {
     button.style.backgroundColor = "rgba(233,37,37,0.85)";
@@ -38,15 +39,26 @@ function pollselectionbuttons(button) {
     button.style.textShadow = "none";
 }
 
-function pollsselection(region) {
-    let regiontohide = pollsdisplaying;
-    pollsdisplaying = region;
-    let button = document.getElementById('pollsbutton' + region);
-    pollselectionbuttons(button);
-    document.getElementById('polls' + region).style.display = 'block';
-    document.getElementById('polls' + regiontohide).style.display = 'none';
-    let oldbutton = document.getElementById('pollsbutton' + regiontohide);
-    oldbutton.removeAttribute("style");
+function pollsselection(region,type) {
+    if (type == 1) {
+        let regiontohide = pollsdisplaying;
+        pollsdisplaying = region;
+        let button = document.getElementById('pollsbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('polls' + region).style.display = 'block';
+        document.getElementById('polls' + regiontohide).style.display = 'none';
+        let oldbutton = document.getElementById('pollsbutton' + regiontohide);
+        oldbutton.removeAttribute("style");
+    } else {
+        let regiontohide = timelinedisplaying;
+        timelinedisplaying = region;
+        let button = document.getElementById('tlbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('tl' + region).style.display = 'block';
+        document.getElementById('tl' + regiontohide).style.display = 'none';
+        let oldbutton = document.getElementById('tlbutton' + regiontohide);
+        oldbutton.removeAttribute("style");
+    }
 }
 
 function displayMobileMenu() {
@@ -92,7 +104,7 @@ function refreshIframe() {
             iframe.src = iframe.src;
         }
     });
-    alert("Due to inactivity, this page has timed out. When you continue, it will refresh automatically.");
+    /*alert("Due to inactivity, this page has timed out. When you continue, it will refresh automatically.");*/
 }
 
 let inactivityTime = function() {
@@ -115,8 +127,10 @@ inactivityTime();
 window.addEventListener("load", (event) => {
   detectMobileDevice();
   detectiPad();
-  let nationwidebutton = document.getElementById('pollsbuttonNationwide');
-  pollselectionbuttons(nationwidebutton);
+  let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
+  pollselectionbuttons(nationwidebuttonpolls);
+  let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
+  pollselectionbuttons(nationwidebuttontl);
 
 });
 
