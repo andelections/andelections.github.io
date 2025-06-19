@@ -170,7 +170,7 @@ window.addEventListener("load", (event) => {
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();
-    const inactivityThreshold = 10 * 60 * 1000; // 10 minutes
+    const inactivityThreshold = 15 * 60 * 1000; // 10 minutes
 
     // Step 1: Initialize activityMap with current time
     iframes.forEach(iframe => {
