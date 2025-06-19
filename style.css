@@ -372,6 +372,9 @@ p {
     transform: translateY(-30px);
     height: 30px;
     background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .refreshbtn a {
