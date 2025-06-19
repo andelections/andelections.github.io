@@ -64,11 +64,15 @@ button {
 }
 
 .sectiontitle {
-    padding-top: 20px;
+    position: relative;
+    padding-top: 15px;
     padding-bottom: 10px;
     font-size: 50px;
     font-weight: bold;
     color: #222222;
+    z-index: 200;
+    background-color: #ffffff;
+    transform: translateY(5px);
 }
 
 .timeline.polls {
@@ -323,6 +327,7 @@ p {
     max-width: 600px;
     width: 100%;
     border-radius: 30px;
+    margin-top: 5px;
     box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.6);
 }
 
@@ -370,7 +375,7 @@ p {
     width: 100%;
     z-index: 100;
     transform: translateY(-35px);
-    height: 35px;
+    height: 37px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -441,7 +446,7 @@ p {
 
     .refreshbtn {
         transform: translateY(-25px);
-        height: 25px;
+        height: 27px;
     }
 
     .container {
