@@ -75,14 +75,26 @@ button {
     transform: translateY(5px);
 }
 
+#graphtitles {
+    position: relative;
+    font-size: 30px;
+    color: #222222;
+    font-weight: 500;
+}
+
 .timeline.polls {
     max-width: 1200px;
     padding-left: 10%;
     padding-right: 10%;
     margin: 0 auto;
     display: none;
-    min-height: 590px;
 }
+
+
+.flourish-embed.flourish-chart.tl {
+    height: 620px;
+}
+
 
 .timeline.projection {
     max-width: 1200px;
@@ -531,6 +543,14 @@ p {
 
     .dropdown-content {
         min-width: 225px;
+    }
+
+    .mobile-device .flourish-embed.flourish-chart.tl {
+        height: 500px;
+    }
+
+    .mobile-device #graphtitles {
+        font-size: 40px;
     }
 
     .mobile-device .pollsoptionbox {

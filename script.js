@@ -58,6 +58,14 @@ function pollsselection(region,type) {
         document.getElementById('tl' + regiontohide).style.display = 'none';
         let oldbutton = document.getElementById('tlbutton' + regiontohide);
         oldbutton.removeAttribute("style");
+        let graphtitle;
+        if (region == 'Nationwide') {
+            graphtitle = 'National Monthly Averages';
+        } else {
+            graphtitle = region + " Voting Intention Polls";
+        };
+        document.getElementById('graphtitles').innerHTML = graphtitle;
+        console.log(grpahtitle);
     }
 }
 
