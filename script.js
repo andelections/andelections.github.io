@@ -122,15 +122,89 @@ let inactivityTime = function() {
     document.onscroll = resetTimer;
 }
 
-inactivityTime();
+function manualrefresh(sheet) {
+    let iframetoReload = document.getElementById(sheet);
+    if (iframetoReload) {
+        iframetoReload.src = iframetoReload.src;
+    }
+}
+
+/*// Optional: kickstart timers on load
+window.onload = resetAllActivityTimers;
+
+const iframesRefresh = document.querySelectorAll('iframe.excel-embed');
+const activityMap = new WeakMap();
+const inactivityLimit = 60 * 1000; // 10 minutes
+
+iframesRefresh.forEach(iframe => {
+    // Mark initial activity time
+    activityMap.set(iframe, Date.now());
+
+    // Update activity on interaction
+    iframe.addEventListener('mouseenter', () => {
+    const lastActive = activityMap.get(iframe) || 0;
+    const now = Date.now();
+
+    if (now - lastActive > inactivityLimit) {
+        // Trigger refresh
+        const src = iframe.getAttribute('src');
+        iframe.setAttribute('src', src);
+    }
+
+    // Update last active time
+    activityMap.set(iframe, now);
+    });
+});
+
+// Optional: prune map or monitor visibility if you embed/unmount dynamically
+
+/*InactivityTime();*/
 
 window.addEventListener("load", (event) => {
-  detectMobileDevice();
-  detectiPad();
-  let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
-  pollselectionbuttons(nationwidebuttonpolls);
-  let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
-  pollselectionbuttons(nationwidebuttontl);
+    detectMobileDevice();
+    detectiPad();
+    let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
+    pollselectionbuttons(nationwidebuttonpolls);
+    let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
+    pollselectionbuttons(nationwidebuttontl);
 
+    const iframes = document.querySelectorAll("iframe.excel-embed");
+    const activityMap = new WeakMap();
+    const inactivityThreshold = 10 * 60 * 1000; // 10 minutes
+
+    // Step 1: Initialize activityMap with current time
+    iframes.forEach(iframe => {
+        activityMap.set(iframe, Date.now());
+
+        // Step 2: On hover, check inactivity and refresh if needed
+        iframe.addEventListener("mouseenter", () => {
+            console.log('hover fired');
+            const lastActive = activityMap.get(iframe) || 0;
+            const now = Date.now();
+            console.group("inactive for", now - lastActive, "ms");
+
+            if (now - lastActive >= inactivityThreshold) {
+                iframe.src = iframe.src;
+                // Optional: trigger a subtle visual cue here
+            }
+
+            // Update activity timestamp
+            activityMap.set(iframe, now);
+        });
+    });
+
+    // Step 3: Reset inactivity timer on global user activity
+    let resetAllActivityTimers = () => {
+        const now = Date.now();
+        iframes.forEach(iframe => {
+            activityMap.set(iframe, now);
+        });
+    };
+
+    // Monitor global activity
+    /*["mousemove", "keydown", "click", "scroll"].forEach(evt =>
+    document.addEventListener(evt, resetAllActivityTimers)*/
+
+    
 });
 

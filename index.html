@@ -99,6 +99,7 @@
                 <div class="sectiontitle">Constituency Projections</div>
                 <div class="excelsheet regular">
                     <iframe class="excel-embed regular" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Constituency%20Projections'!C2&Item=ConsProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn consty-proj-sheet" onclick="manualrefresh('consty-proj-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
             <br>
@@ -106,6 +107,7 @@
                 <div class="sectiontitle">Demographic Projections</div>
                 <div class="excelsheet regionalproj">
                     <iframe class="excel-embed regionalproj" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item='Demographic%20Projections'!DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn demo-proj-sheet" onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
             <br>
@@ -113,6 +115,7 @@
                 <div class="sectiontitle">Regional Projections</div>
                 <div class="excelsheet regionalproj">
                     <iframe class="excel-embed regionalproj" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn regional-proj-sheet" onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
             <br>
@@ -120,6 +123,7 @@
                 <div class="sectiontitle">Regional Data</div>
                 <div class="excelsheet regional">
                     <iframe class="excel-embed regional" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn regional-data-sheet" onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
         </section>
@@ -164,15 +168,19 @@
                 </div>
                 <div class="excelsheet polls" id="pollsNationwide">
                     <iframe class="excel-embed polls" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn polls-nat-sheet" onclick="manualrefresh('polls-nat-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
                 <div class="excelsheet polls sctwal" id="pollsScotland">
                     <iframe class="excel-embed polls" id="polls-sct-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolSct&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn polls-sct-sheet" onclick="manualrefresh('polls-sct-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
                 <div class="excelsheet polls sctwal" id="pollsWales">
-                    <iframe class="excel-embed polls" id="polls-wal=sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolWal&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <iframe class="excel-embed polls" id="polls-wal-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolWal&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn polls-wal-sheet" onclick="manualrefresh('polls-wal-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
                 <div class="excelsheet polls london" id="pollsLondon">
                     <iframe class="excel-embed polls" id="polls-ldn-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLdn&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn polls-ldn-sheet" onclick="manualrefresh('polls-ldn-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
         </section>
@@ -182,6 +190,7 @@
                 <div class="sectiontitle">Custom Projection</div>
                 <div class="excelsheet regular">
                     <iframe class="excel-embed regular" id="custom-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                    <button class="refreshbtn custom-proj-sheet" onclick="manualrefresh('custom-proj-sheet')">If this feature is not working, click here to refresh it.</button>
                 </div>
             </div>
             <br>
