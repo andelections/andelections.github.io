@@ -369,8 +369,8 @@ p {
     position: relative;
     width: 100%;
     z-index: 100;
-    transform: translateY(-30px);
-    height: 30px;
+    transform: translateY(-35px);
+    height: 35px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -440,8 +440,8 @@ p {
 @media (max-width: 1000px) {
 
     .refreshbtn {
-        transform: translateY(-20px);
-        height: 20px;
+        transform: translateY(-25px);
+        height: 25px;
     }
 
     .container {
