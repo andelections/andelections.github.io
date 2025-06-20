@@ -62,7 +62,7 @@ function pollsselection(region,type) {
         if (region == 'Nationwide') {
             graphtitle = 'National Monthly Averages';
         } else {
-            graphtitle = region + " Voting Intention Polls";
+            graphtitle = region + " GE Voting Intention Polls";
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(grpahtitle);
@@ -178,7 +178,7 @@ window.addEventListener("load", (event) => {
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();
-    const inactivityThreshold = 15 * 60 * 1000; // 10 minutes
+    const inactivityThreshold = 10 * 60 * 1000; // 10 minutes
 
     // Step 1: Initialize activityMap with current time
     iframes.forEach(iframe => {
@@ -186,10 +186,10 @@ window.addEventListener("load", (event) => {
 
         // Step 2: On hover, check inactivity and refresh if needed
         iframe.addEventListener("mouseenter", () => {
-            console.log('hover fired');
+            // console.log('hover fired');
             const lastActive = activityMap.get(iframe) || 0;
             const now = Date.now();
-            console.group("inactive for", now - lastActive, "ms");
+            // console.log("inactive for", now - lastActive, "ms");
 
             if (now - lastActive >= inactivityThreshold) {
                 iframe.src = iframe.src;
