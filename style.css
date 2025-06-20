@@ -75,6 +75,14 @@ button {
     transform: translateY(5px);
 }
 
+#blankspace {
+    position: relative;
+    min-height: 4px;
+    z-index: 200;
+    transform: translateY(3px);
+    background-color: #ffffff;
+}
+
 #graphtitles {
     position: relative;
     font-size: 30px;
@@ -387,7 +395,7 @@ p {
     width: 100%;
     z-index: 100;
     transform: translateY(-35px);
-    height: 37px;
+    height: 39px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -458,7 +466,7 @@ p {
 
     .refreshbtn {
         transform: translateY(-25px);
-        height: 27px;
+        height: 29px;
     }
 
     .container {
