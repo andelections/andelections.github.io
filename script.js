@@ -23,7 +23,7 @@ function socialslink(link,sameWindow) {
     if (sameWindow == 0) {
         window.open(link, "_blank", "width=500, height=850")
     } else {
-        window.open(link, "_blnak")
+        window.open(link, "_blank")
     }
 }
 
@@ -66,6 +66,61 @@ function pollsselection(region,type) {
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(grpahtitle);
+    }
+}
+
+var sectionsDisplaying = [
+    ['projection-maps',true],           //0
+    ['constituency-projections',true],  //1
+    ['demographic-projections',false],  //2
+    ['regional-projections',false],     //3
+    ['regional-data',false],            //4
+    ['projection-timeline',false],      //5
+    ['polling-timeline',false],         //6
+    ['poll-library',false],             //7
+    ['custom-projection',false],        //8
+    ['2024-projection',false],          //9
+    ['about',true]                      //10
+];
+
+function showhide(section, canHide) {
+    let sectionTitle = sectionsDisplaying[section][0];
+    let sectionWasDisplaying = sectionsDisplaying[section][1];
+    let button = document.getElementById('shb-' + sectionTitle);
+    let titleLink = document.getElementById('lnk-' + sectionTitle);
+    let sectionData = document.getElementById('data-' + sectionTitle);
+    if (sectionWasDisplaying == true && canHide == true) {
+        //sectionData.style.display = 'none';
+        /*sectionData.style.overflow = "hidden";
+        sectionData.style.transition = "max-height 0.5s ease";
+        sectionData.style.maxHeight = "0";
+        sectionData.style.display = 'none';*/
+        sectionData.classList.add('hidden');
+        button.innerHTML = 'show';
+        button.title = 'show section';
+        titleLink.title = 'show and go to section';
+        sectionsDisplaying[section][1] = false;
+        console.log('hiddennow');
+    } else {
+        // document.getElementById(sectionTitle + '-data').style.display = '';
+        /*if (section == 0 || section == 9 || section == 10) {
+            sectionData.style.display = 'flex';
+        } else {
+            sectionData.style.display = "block";
+        }
+        sectionData.style.overflow = "hidden";
+        sectionData.style.transition = "max-height 0.5s ease";
+        sectionData.style.maxHeight = "100%";*/
+        sectionData.classList.remove('hidden');
+        const iframe = sectionData.querySelector("iframe.lazy-frame");
+        if (iframe && !iframe.src) {
+            iframe.src = iframe.dataset.src;
+        }
+        button.innerHTML = 'hide';
+        button.title = 'hide section';
+        titleLink.title = 'go to section';
+        sectionsDisplaying[section][1] = true;
+        console.log('shownnow');
     }
 }
 

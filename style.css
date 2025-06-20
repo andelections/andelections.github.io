@@ -30,6 +30,15 @@ body {
 
 button {
     font-family: 'Bahnschrift', sans-serif;
+    background-color: rgba(51, 117, 224,0.85);
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgba(223, 37, 37,0.85);
 }
 
 .container {
@@ -73,6 +82,16 @@ button {
     z-index: 200;
     background-color: #ffffff;
     transform: translateY(5px);
+}
+
+.sectiontitle a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #222222;
+}
+
+.sectiontitle a:hover {
+    font-weight: bold;
 }
 
 #blankspace {
@@ -367,6 +386,34 @@ p {
     cursor: pointer;
     font-weight: 400;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.9);
+    box-shadow: none;
+}
+
+.showhidesection {
+    position: absolute;
+    width: 100px;
+    font-size: 30px;
+    height: 50px;
+    font-weight: 400;
+    border-radius: 25px;
+    left: 5%;
+    top: 18px;
+}
+
+.showhidesection:hover {
+    font-weight: 800;
+}
+
+.showhidesection:active {
+    box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
+    background-color: rgba(223, 37, 37,0.85);
+}
+
+.sectiontitlelink {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 60%;
 }
 
 .pollsoptionbox button:hover {
@@ -406,6 +453,8 @@ p {
     text-decoration: none;
     color: black;
 }
+
+
 
 
 
@@ -484,6 +533,12 @@ p {
         margin: 0 auto;
     }
 
+    .showhidesection {
+        left: 0;
+        font-stretch: semi-condensed;
+        width: 80px;
+    }
+
     .flourish-embed.flourish-parliament {
         zoom: 0.9;
         width: 100%;
@@ -551,6 +606,10 @@ p {
 
     .dropdown-content {
         min-width: 225px;
+    }
+
+    .mobile-device .sectiontitlelink {
+        color: #222222;
     }
 
     .mobile-device .flourish-embed.flourish-chart.tl {
@@ -792,3 +851,22 @@ p {
     padding: 50px;
 }
 
+/*#demographic-projections-data {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}*/
+
+.datacontainer {
+    opacity: 1;
+    max-height: 2500px;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    /*display: block;*/
+}
+
+.datacontainer.hidden {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
