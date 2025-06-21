@@ -70,8 +70,8 @@ function pollsselection(region,type) {
 }
 
 var sectionsDisplaying = [
-    ['projection-maps',true],           //0
-    ['constituency-projections',true],  //1
+    ['projection-maps',false],           //0
+    ['constituency-projections',false],  //1
     ['demographic-projections',false],  //2
     ['regional-projections',false],     //3
     ['regional-data',false],            //4
@@ -115,6 +115,10 @@ function showhide(section, canHide) {
         const iframe = sectionData.querySelector("iframe.lazy-frame");
         if (iframe && !iframe.src) {
             iframe.src = iframe.dataset.src;
+            /*sectionData.appendChild("loading...");
+            setTimeout(() => {
+                section.removeChild("loading...");
+            }, 3000);*/
         }
         button.innerHTML = 'hide';
         button.title = 'hide section';
