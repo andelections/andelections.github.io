@@ -88,10 +88,10 @@
             </div>
             <div id="projection-maps">
                 <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-projection-maps" title="hide section" onclick="showhide(0,true)">hide</button>
-                    <a href="#projection-maps" id="lnk-projection-maps" class="sectiontitlelink" title="go to section" onclick="showhide(0,false)">Projection Maps</a>
+                    <button class="showhidesection" id="shb-projection-maps" title="show section" onclick="showhide(0,true)">show</button>
+                    <a href="#projection-maps" id="lnk-projection-maps" class="sectiontitlelink" title="show and go to section" onclick="showhide(0,false)">Projection Maps</a>
                 </div>
-                <div class="datacontainer" id="data-projection-maps">
+                <div class="datacontainer hidden" id="data-projection-maps">
                     <div class="container">
                         <iframe class="map" src="https://public.flourish.studio/visualisation/20684789/embed" frameborder="0"></iframe>
                         <iframe class="map" src="https://public.flourish.studio/visualisation/19788967/embed" frameborder="0"></iframe>
@@ -100,12 +100,13 @@
             </div>
             <div id="constituency-projections">
                 <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-constituency-projections" title="hide section" onclick="showhide(1,true)">hide</button>
-                    <a href="#constituency-projections" id="lnk-constituency-projections" class="sectiontitlelink" title="go to section" onclick="showhide(1,false)">Constituency Projections</a>
+                    <button class="showhidesection" id="shb-constituency-projections" title="show section" onclick="showhide(1,true)">show</button>
+                    <a href="#constituency-projections" id="lnk-constituency-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(1,false)">Constituency Projections</a>
                 </div>
-                <div class="datacontainer" id="data-constituency-projections">
+                <div class="datacontainer hidden" id="data-constituency-projections">
+                    <div class="loading" id="loading-constituency-projections">Loading...<br>Please wait.</div>
                     <div class="excelsheet regular">
-                        <iframe class="excel-embed regular" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Constituency%20Projections'!C2&Item=ConsProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+                        <iframe class="excel-embed regular lazy-frame" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Constituency%20Projections'!C2&Item=ConsProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
                         <div class="refreshbtn consty-proj-sheet"><a onclick="manualrefresh('consty-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
                     </div>
                 </div>
@@ -116,6 +117,7 @@
                     <a href="#demographic-projections" id="lnk-demographic-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(2,false)">Demographic Projections</a>
                 </div>
                 <div class="datacontainer hidden" id="data-demographic-projections">
+                    <div class="loading" id="loading-demographic-projections">Loading...<br>Please wait.</div>
                     <div class="excelsheet regionalproj">
                         <iframe class="excel-embed regionalproj lazy-frame" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item='Demographic%20Projections'!DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                         <div class="refreshbtn demo-proj-sheet"><a onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
@@ -128,6 +130,7 @@
                     <a href="#regional-projections" id="lnk-regional-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(3,false)">Regional Projections</a>
                 </div>
                 <div class="datacontainer hidden" id="data-regional-projections">
+                    <div class="loading" id="loading-regional-projections">Loading...<br>Please wait.</div>
                     <div class="excelsheet regionalproj">
                         <iframe class="excel-embed regionalproj lazy-frame" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                         <div class="refreshbtn regional-proj-sheet"><a onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
@@ -140,6 +143,7 @@
                     <a href="#regional-data" id="lnk-regional-data" class="sectiontitlelink" title="show and go to section" onclick="showhide(4,false)">Regional Data</a>
                 </div>
                 <div class="datacontainer hidden" id="data-regional-data">
+                    <div class="loading" id="loading-regional-data">Loading...<br>Please wait.</div>
                     <div class="excelsheet regional">
                         <iframe class="excel-embed regional lazy-frame" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                         <div class="refreshbtn regional-data-sheet"><a onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</a></div>
@@ -199,6 +203,7 @@
                         <button title="Show London polls" id="pollsbuttonLondon" onclick="pollsselection('London',1)">London</button>
                     </div>
                     <div id="blankspace"></div>
+                    <div class="loading" id="loading-poll-library">Loading...<br>Please wait.</div>
                     <div class="excelsheet polls" id="pollsNationwide">
                         <iframe class="excel-embed polls lazy-frame" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
                         <div class="refreshbtn polls-nat-sheet"><a onclick="manualrefresh('polls-nat-sheet')">If this feature is not working, click here to refresh it.</a></div>
@@ -224,6 +229,7 @@
                     <button class="showhidesection" id="shb-custom-projection" title="show section" onclick="showhide(8,true)">show</button>
                     <a href="#custom-projection" id="lnk-custom-projection" class="sectiontitlelink" title="show and go to section" onclick="showhide(8,false)">Custom Projection</a>
                 </div>
+                <div class="loading" id="loading-custom-projection">Loading...<br>Please wait.</div>
                 <div class="datacontainer hidden" id="data-custom-projection">
                     <div class="excelsheet regular">
                         <iframe class="excel-embed regular lazy-frame" id="custom-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
