@@ -875,9 +875,9 @@ p {
 
 .datacontainer {
     opacity: 1;
-    max-height: 2500px;
+    max-height: 3500px;
     overflow: hidden;
-    transition: opacity 0.4s ease, max-height 1s ease;
+    transition: opacity 0.4s ease, max-height 1.5s ease;
     /*display: block;*/
 }
 
