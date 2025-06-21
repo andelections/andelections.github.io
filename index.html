@@ -20,7 +20,7 @@
         <div class="title-bar">
             <div id="titlebartext">
                 <div class="dropdown">
-                    <span><a class="titlebarlink" id="CurrentProjection" href="#live-model"> Current Projection </a></span>
+                    <span><a class="titlebarlink" id="CurrentProjection" href="#live-model" onclick="showhide(0,false); showhide(1,false); showhide(2,false); showhide(3,false); showhide(4,false)"> Current Projection </a></span>
                     <div class="dropdown-content current-projection">
                         → <a href="#live-model">Live Model</a><br>
                         → <a href="#projection-maps" onclick="showhide(0,false)">Projection Maps</a><br>
@@ -32,7 +32,7 @@
                 </div>
                 •
                 <div class="dropdown">
-                    <span><a class="titlebarlink" id="HistoricalInfo" href="#poll-library"> Historical Info </a></span>
+                    <span><a class="titlebarlink" id="HistoricalInfo" href="#projection-timeline" onclick="showhide(5,false); showhide(6,false); showhide(7,false)"> Historical Info </a></span>
                     <div class="dropdown-content historical-info">
                         → <a href="#projection-timeline" onclick="showhide(5,false)">Projection Timeline</a>
                         → <a href="#polling-timeline" onclick="showhide(6,false)">Polling Timeline</a><br>
@@ -41,7 +41,7 @@
                 </div>
                 •
                 <div class="dropdown">
-                    <span><a class="titlebarlink" id="OtherProjections" href="#custom-projection"> Other Projections </a></span>
+                    <span><a class="titlebarlink" id="OtherProjections" href="#custom-projection" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
                     <div class="dropdown-content other-projections">
                         → <a href="#custom-projection" onclick="showhide(8,false)">Custom Projection</a><br>
                         → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
