@@ -817,7 +817,7 @@ p {
         font-size: 40px;
     }
 
-    .mobile-device a {
+    .mobile-device .mobile-title-bar a {
         text-decoration: none;
         color: white;
     }
