@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const triggerRect = trigger.getBoundingClientRect();
 
             // Calculate position relative to the document
-            content.style.top = `${triggerRect.bottom + window.scrollY}px`; // Bottom of trigger
+            //content.style.top = `${triggerRect.bottom + window.scrollY}px`; // Bottom of trigger
             content.style.left = `${triggerRect.left + window.scrollX}px`;   // Left edge of trigger
             // You might want to adjust 'left' if you want it centered or aligned differently
             // E.g., `content.style.left = `${triggerRect.left + (triggerRect.width / 2) - (content.offsetWidth / 2) + window.scrollX}px`;` for centering

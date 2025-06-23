@@ -921,9 +921,10 @@ p {
 
 /* Update .dropdown-content */
 .dropdown-content {
+    margin-top: 40px;
     opacity: 0;
     visibility: hidden;
-    position: absolute; /* This is crucial for positioning relative to the viewport/body */
+    position: fixed; /* This is crucial for positioning relative to the viewport/body */
     /* Make background more transparent for the blur to show through */
     background-color: rgba(51, 117, 224, 0.6); /* Example: Much lower opacity */
     min-width: 250px;
@@ -950,6 +951,7 @@ p {
 
 /* New class to make dropdown content visible (toggled by JS) */
 .dropdown-content.is-open {
+    margin-top: 50px;
     opacity: 1;
     visibility: visible;
 }
