@@ -96,7 +96,11 @@ function showhide(section, canHide) {
         sectionData.style.maxHeight = "0";
         sectionData.style.display = 'none';*/
         sectionData.classList.add('hidden');
-        button.innerHTML = 'show';
+        if (!mobileDevice) {
+            button.innerHTML = 'show';
+        } else {
+            button.classList.remove('opened');
+        }
         button.title = 'show section';
         titleLink.title = 'show and go to section';
         sectionsDisplaying[section][1] = false;
@@ -120,7 +124,11 @@ function showhide(section, canHide) {
                 section.removeChild("loading...");
             }, 3000);*/
         }
-        button.innerHTML = 'hide';
+        if (!mobileDevice) {
+            button.innerHTML = 'hide';
+        } else {
+            button.classList.add('opened');
+        }
         button.title = 'hide section';
         titleLink.title = 'go to section';
         sectionsDisplaying[section][1] = true;
@@ -134,16 +142,23 @@ function displayMobileMenu() {
     button.innerHTML = document.body.classList.contains("mobile-menu-active") ? "Close" : "• • •";
 }
 
+
 function detectMobileDevice() {
     let userAgent = navigator.userAgent.toLowerCase();
     if (/mobile|android|iphone|ipod/i.test(userAgent)) {
         document.body.classList.add("mobile-device");
         console.log("Mobile device detected!");
+        document.querySelectorAll('.showhidesection').forEach(btn => {
+            btn.innerHTML = '▶';
+        })
         document.querySelectorAll('a.titlebarlink').forEach(link => {
             link.addEventListener('click', function  (e) {
                 e.preventDefault();
             });
         });
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -226,9 +241,11 @@ iframesRefresh.forEach(iframe => {
 // Optional: prune map or monitor visibility if you embed/unmount dynamically
 
 /*InactivityTime();*/
+let mobileDevice = false;
 
-window.addEventListener("load", (event) => {
-    detectMobileDevice();
+//window.addEventListener("load", (event) => {
+window.addEventListener('DOMContentLoaded', () => {
+    mobileDevice = detectMobileDevice();
     detectiPad();
     let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
     pollselectionbuttons(nationwidebuttonpolls);
@@ -275,3 +292,298 @@ window.addEventListener("load", (event) => {
     
 });
 
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Map trigger IDs to content IDs
+    const dropdownMap = {
+        'current-projectiondd-trigger': 'current-projectiondd',
+        'historical-infodd-trigger': 'historical-infodd',
+        'other-projectionsdd-trigger': 'other-projectionsdd',
+        'socialsdd-trigger': 'socialsdd'
+        // Add all your other dropdown trigger-to-content mappings here
+        // Example: 'about-us-trigger': 'about-us-content'
+    };
+
+    const dropdownTriggers = document.querySelectorAll('.dropdown'); // Select all trigger wrappers
+    const dropdownContents = document.querySelectorAll('.dropdown-content'); // Select all content divs
+
+    function positionDropdowns() {
+        dropdownTriggers.forEach(trigger => {
+            const contentId = dropdownMap[trigger.id];
+            if (!contentId) return; // Skip if no mapping
+
+            const content = document.getElementById(contentId);
+            if (!content) return; // Skip if content not found
+
+            const triggerRect = trigger.getBoundingClientRect();
+
+            // Calculate position relative to the document
+            content.style.top = `${triggerRect.bottom + window.scrollY}px`; // Bottom of trigger
+            content.style.left = `${triggerRect.left + window.scrollX}px`;   // Left edge of trigger
+            // You might want to adjust 'left' if you want it centered or aligned differently
+            // E.g., `content.style.left = `${triggerRect.left + (triggerRect.width / 2) - (content.offsetWidth / 2) + window.scrollX}px`;` for centering
+        });
+    }
+
+    // Initial positioning and reposition on resize
+    positionDropdowns();
+    window.addEventListener('resize', positionDropdowns);
+    // Also re-position if scroll happens, as position:absolute is relative to document, not viewport
+    window.addEventListener('scroll', positionDropdowns);
+
+
+    // Add event listeners for showing/hiding dropdowns
+    dropdownTriggers.forEach(trigger => {
+        const contentId = dropdownMap[trigger.id];
+        const content = document.getElementById(contentId);
+
+        if (!content) return; // Ensure content exists
+
+        let hideTimeout;
+
+        // Mouse enters the trigger area
+        trigger.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout); // Clear any pending hide operation
+            // Hide any other open dropdowns (good UX)
+            dropdownContents.forEach(dc => {
+                if (dc !== content) {
+                    dc.classList.remove('is-open');
+                }
+            });
+            content.classList.add('is-open');
+            positionDropdowns(); // Re-position just in case of scroll/resize
+        });
+
+        // Mouse leaves the trigger area
+        trigger.addEventListener('mouseleave', () => {
+            // Start a timeout to hide the dropdown, allowing time to move mouse to content
+            hideTimeout = setTimeout(() => {
+                // Only hide if the mouse is not over the content itself
+                if (!content.matches(':hover')) {
+                    content.classList.remove('is-open');
+                }
+            }, 200); // 200ms delay
+        });
+
+        // Mouse enters the dropdown content area (to prevent it from closing)
+        content.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout); // Clear pending hide operation
+        });
+
+        // Mouse leaves the dropdown content area
+        content.addEventListener('mouseleave', () => {
+            // Hide the dropdown after a short delay
+            hideTimeout = setTimeout(() => {
+                content.classList.remove('is-open');
+            }, 200); // 200ms delay
+        });
+    });
+
+    // Optional: Close dropdowns if user clicks anywhere else on the document
+    document.addEventListener('click', (event) => {
+        dropdownContents.forEach(content => {
+            const triggerId = Object.keys(dropdownMap).find(key => dropdownMap[key] === content.id);
+            if (!triggerId) return;
+            const trigger = document.getElementById(triggerId);
+
+            // If the click is not inside the trigger and not inside the content
+            if (!trigger.contains(event.target) && !content.contains(event.target)) {
+                content.classList.remove('is-open');
+            }
+        });
+    });
+
+    // IMPORTANT: Review your existing onclick="showhide(...)" calls in index.html
+    // For the titlebarlinks that now trigger these JS dropdowns, you should remove those onclicks.
+    // E.g., `onclick="showhide(0,false); showhide(1,false); showhide(2,false); showhide(3,false); showhide(4,false)"`
+    // If those `showhide` calls are still needed for section display, you might need to
+    // call them from within the JavaScript dropdown's `mouseenter` or `click` event,
+    // or rethink how your content sections are managed.
+
+    
+
+    const elements = document.querySelectorAll('.dropdown-content');
+    const titlebar = document.querySelectorAll('.title-bar');
+
+    elements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            console.log('dropdown open');
+            document.getElementById('title-bar').classList.add('dropdown-open');
+        });
+        el.addEventListener('mouseleave', () => {
+            console.log('dropdown closed');
+            document.getElementById('title-bar').classList.remove('dropdown-open');
+        });
+    });
+});
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const titleBar = document.querySelector('.title-bar');
+    const body = document.body;
+    const titlebartext = document.getElementById('titlebartext');
+    // Ensure this matches the actual initial height of titlebartext
+    const initialTitleBarTextHeight = titlebartext ? titlebartext.offsetHeight : 50;
+    let baseTitleBarHeight = initialTitleBarTextHeight;
+
+    // Map trigger IDs to content IDs AND to the corresponding link ID
+    const dropdownMap = {
+        'projection-trigger': { contentId: 'projection-content', linkId: 'CurrentProjection' }, // Assuming 'CurrentProjection' is the ID of the <a> tag
+        'uk-ge-trigger': { contentId: 'uk-ge-content', linkId: 'UKandGElectionLink' }, // Assuming 'UKandGElectionLink' is the ID of the <a> tag
+        'socials-trigger': { contentId: 'socials-content', linkId: 'SocialsLink' } // Assuming 'SocialsLink' is the ID of the <a> tag
+        // Add all your other mappings here
+    };
+
+    const dropdownTriggers = document.querySelectorAll('.dropdown');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
+
+    function updateTitleBarHeight() {
+        let maxDropdownContentHeight = 0;
+        let anyDropdownOpen = false; // Flag to check if any dropdown is open
+
+        let openDropdowns = [];
+        dropdownContents.forEach(content => {
+            if (content.classList.contains('is-open')) {
+                openDropdowns.push(content);
+                content.style.display = 'block'; // Temporarily display to measure
+                maxDropdownContentHeight = Math.max(maxDropdownContentHeight, content.offsetHeight);
+                anyDropdownOpen = true;
+            }
+        });
+
+        const newTitleBarHeight = baseTitleBarHeight + maxDropdownContentHeight;
+        titleBar.style.height = `${newTitleBarHeight}px`;
+        body.style.paddingTop = `${newTitleBarHeight}px`;
+
+        // Restore display: none for dropdowns that are not open
+        dropdownContents.forEach(content => {
+            if (!content.classList.contains('is-open')) {
+                content.style.display = 'none';
+            }
+        });
+        // Ensure currently open dropdowns remain block
+        openDropdowns.forEach(content => {
+            content.style.display = 'block';
+        });
+
+        // Toggle the .is-active class on the titleBar based on any dropdown being open
+        if (anyDropdownOpen) {
+            titleBar.classList.add('is-active');
+        } else {
+            titleBar.classList.remove('is-active');
+        }
+    }
+
+    window.addEventListener('load', () => {
+        baseTitleBarHeight = titlebartext ? titlebartext.offsetHeight : 50;
+        updateTitleBarHeight();
+    });
+    window.addEventListener('resize', updateTitleBarHeight);
+
+    // Function to set active state for a specific link
+    function setActiveLink(linkId, isActive) {
+        const link = document.getElementById(linkId);
+        if (link) {
+            if (isActive) {
+                link.classList.add('is-active');
+            } else {
+                link.classList.remove('is-active');
+            }
+        }
+    }
+
+    dropdownTriggers.forEach(trigger => {
+        const triggerData = dropdownMap[trigger.id];
+        if (!triggerData) return;
+
+        const content = document.getElementById(triggerData.contentId);
+        if (!content) return;
+
+        const linkId = triggerData.linkId; // Get the associated link ID
+
+        let hideTimeout;
+
+        trigger.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            dropdownContents.forEach(dc => {
+                if (dc !== content) {
+                    dc.classList.remove('is-open');
+                    dc.style.display = 'none'; // Explicitly hide others
+                    // Also deactivate their links
+                    const otherTrigger = dc.closest('.dropdown');
+                    if (otherTrigger && dropdownMap[otherTrigger.id]) {
+                        setActiveLink(dropdownMap[otherTrigger.id].linkId, false);
+                    }
+                }
+            });
+
+            content.classList.add('is-open');
+            content.style.display = 'block';
+            setActiveLink(linkId, true); // Activate current link
+            updateTitleBarHeight();
+        });
+
+        trigger.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                if (!content.matches(':hover')) {
+                    content.classList.remove('is-open');
+                    content.style.display = 'none';
+                    setActiveLink(linkId, false); // Deactivate link
+                    updateTitleBarHeight();
+                }
+            }, 200);
+        });
+
+        content.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            // Ensure the link is active if mouse enters content directly (e.g., from outside)
+            setActiveLink(linkId, true);
+            // Ensure title bar is active too
+            titleBar.classList.add('is-active');
+        });
+
+        content.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                content.classList.remove('is-open');
+                content.style.display = 'none';
+                setActiveLink(linkId, false); // Deactivate link
+                updateTitleBarHeight();
+            }, 200);
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        dropdownContents.forEach(content => {
+            if (content.classList.contains('is-open')) {
+                const trigger = content.closest('.dropdown');
+                const triggerData = dropdownMap[trigger.id];
+
+                if (!trigger.contains(event.target) && !content.contains(event.target)) {
+                    content.classList.remove('is-open');
+                    content.style.display = 'none';
+                    if (triggerData) {
+                        setActiveLink(triggerData.linkId, false); // Deactivate link
+                    }
+                    updateTitleBarHeight();
+                }
+            }
+        });
+    });
+});
+*/
+
+const elements = document.querySelectorAll('.dropdown-content');
+const titlebar = document.querySelector('.title-bar');
+
+elements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        console.log('dropdown open');
+        titlebar.classList.add('dropdown-open');
+    });
+    el.addEventListener('mouseleave', () => {
+        console.log('dropdown closed');
+        titlebar.classList.remove('dropdown-open');
+    });
+});

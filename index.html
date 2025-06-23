@@ -17,8 +17,25 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="title-bar">
+        <div class="title-bar" id="title-bar">
             <div id="titlebartext">
+                <div class="dropdown" id="current-projectiondd-trigger">
+                    <span><a class="titlebarlink" id="CurrentProjection" href="#live-model" onclick="showhide(0,false); showhide(1,false); showhide(2,false); showhide(3,false); showhide(4,false)"> Current Projection </a></span>
+                </div>
+                •
+                <div class="dropdown" id="historical-infodd-trigger">
+                    <span><a class="titlebarlink" id="HistoricalInfo" href="#projection-timeline" onclick="showhide(5,false); showhide(6,false); showhide(7,false)"> Historical Info </a></span>
+                </div>
+                •
+                <div class="dropdown" id="other-projectionsdd-trigger">
+                    <span><a class="titlebarlink" id="OtherProjections" href="#custom-projection" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
+                </div>
+                •
+                <div class="dropdown" id="socialsdd-trigger">
+                    <span><a class="titlebarlink" id="About&Socials" href="#about" onclick="showhide(10,false)"> Socials </a></span>
+                </div>
+            </div>
+            <!--div id="titlebartext">
                 <div class="dropdown">
                     <span><a class="titlebarlink" id="CurrentProjection" href="#live-model" onclick="showhide(0,false); showhide(1,false); showhide(2,false); showhide(3,false); showhide(4,false)"> Current Projection </a></span>
                     <div class="dropdown-content current-projection">
@@ -64,8 +81,38 @@
                         ↗ <a href="https://www.tiktok.com/@andelections" target="_blank" rel="noopener noreferrer">TikTok</a>
                     </div>
                 </div>
-            </div>
+            </div-->
             <a href="#" title="back to top"><img id="logo" src="logobanner.png" frameborder="0" alt="&elections"></a>
+        </div>
+        <div class="dropdown-content current-projection" id="current-projectiondd">
+            → <a href="#live-model">Live Model</a><br>
+            → <a href="#projection-maps" onclick="showhide(0,false)">Projection Maps</a><br>
+            → <a href="#constituency-projections" onclick="showhide(1,false)">Constituency Proj.</a><br>
+            → <a href="#demographic-projections" onclick="showhide(2,false)">Demographic Proj.</a>
+            → <a href="#regional-projections" onclick="showhide(3,false)">Regional Proj.</a><br>
+            → <a href="#regional-data" onclick="showhide(4,false)">Regional Data</a>
+        </div>
+        <div class="dropdown-content historical-info" id="historical-infodd">
+            → <a href="#projection-timeline" onclick="showhide(5,false)">Projection Timeline</a>
+            → <a href="#polling-timeline" onclick="showhide(6,false)">Polling Timeline</a><br>
+            → <a href="#poll-library" onclick="showhide(7,false)">Poll Library</a><br>
+        </div>
+        <div class="dropdown-content other-projections" id="other-projectionsdd">
+            → <a href="#custom-projection" onclick="showhide(8,false)">Custom Projection</a><br>
+            → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
+        </div>
+        <div class="dropdown-content socials" id="socialsdd">
+            → <a href="#about" onclick="showhide(10,false)">About & Socials</a><br>
+            ↗ <a title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</a><br>
+            <div class="dropdownsubheading">Help the Site</div>
+            ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections',0)">Ko-fi</a><br>
+            ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</a><br>
+            <div class="dropdownsubheading">Social Media</div>
+            ↗ <a href="https://substack.com/@andelections" target="_blank" rel="noopener noreferrer">Substack</a><br>
+            ↗ <a href="https://x.com/andelectionsuk" target="_blank" rel="noopener noreferrer">Twitter</a><br>
+            ↗ <a href="https://bsky.app/profile/andelections.com" target="_blank" rel="noopener noreferrer">BlueSky</a><br>
+            ↗ <a href="https://www.instagram.com/andelections" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+            ↗ <a href="https://www.tiktok.com/@andelections" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
         <div class="mobile-title-bar">
             <button id="mobiletitlesbutton" title="Menu" onclick="displayMobileMenu()">• • •</button>
@@ -253,7 +300,7 @@
         <section data-title="About & Socials">
             <div id="about">
                 <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-about" title="hide section" onclick="showhide(10,true)">hide</button>
+                    <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(10,true)">hide</button>
                     <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">About & Socials</a>
                 </div>
                 <div class="datacontainer" id="data-about">

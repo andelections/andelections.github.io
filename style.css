@@ -30,7 +30,7 @@ body {
 
 button {
     font-family: 'Bahnschrift', sans-serif;
-    background-color: rgba(51, 117, 224,0.85);
+    background-color: rgba(51, 117, 224,0.75);
     color: white;
     border: none;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
@@ -38,8 +38,12 @@ button {
 }
 
 button:hover {
-    background-color: rgba(223, 37, 37,0.85);
+    background-color: rgba(223, 37, 37,0.75);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
+}
+
+button:active {
+    box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
 .container {
@@ -185,8 +189,8 @@ button:hover {
     padding-left: 5%;
     color: white;
     font-weight: 50;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     transition-duration: 0.4s;
     text-decoration: none;
     z-index: 999;
@@ -216,8 +220,12 @@ a {
     color: white;
 }
 
+.dropdown-content a {
+    color: white;
+}
+
 .title-bar:hover {
-    background: rgba(223, 37, 37,0.85);
+    background: rgba(223, 37, 37,0.75);
 }
 
 a:hover {
@@ -260,7 +268,7 @@ a:hover {
     opacity: 0;
     position: absolute;
     visibility: hidden;
-    background-color: rgba(51, 117, 224,0.85);
+    background-color: rgba(51, 117, 224,0.75);
     min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
     padding: 12px 16px;
@@ -286,7 +294,7 @@ a:hover {
 }
 
 .dropdown-content:hover {
-    background-color:rgba(223, 37, 37,0.85);
+    background-color:rgba(223, 37, 37,0.75);
     transition-duration: 0.4s;
 }
 
@@ -341,7 +349,7 @@ p {
 }
 
 .aboutcontainer.socials button {
-    background-color:rgba(51, 117, 224,0.85);
+    background-color:rgba(51, 117, 224,0.75);
     font-family: 'Bahnschrift', sans-serif;
     width: 80%;
     border-radius: 40px;
@@ -351,14 +359,18 @@ p {
     border: none;
     font-size: 25px;
     cursor: pointer;
-    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.9);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     transform: translateY(-3px);
 }
 
 .aboutcontainer.socials button:hover {
-    background-color:rgba(223, 37, 37,0.85);
+    background-color:rgba(223, 37, 37,0.75);
     font-weight: 900;
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
+}
+
+.aboutcontianer.socials button:active {
+    box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
 .pollsoptionbox {
@@ -408,7 +420,7 @@ p {
 
 .showhidesection:active {
     box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
-    background-color: rgba(223, 37, 37,0.85);
+    background-color: rgba(223, 37, 37,0.75);
 }
 
 .loading {
@@ -434,14 +446,14 @@ p {
 
 .pollsoptionbox button:hover {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
-    background-color: rgba(51, 117, 224,0.85);
+    background-color: rgba(51, 117, 224,0.75);
     font-weight: 900;
     text-shadow: none;
 }
 
 .pollsoptionbox button:active {
     box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
-    background-color: rgba(223, 37, 37,0.85);
+    background-color: rgba(223, 37, 37,0.75);
     text-shadow: none;
 }
 
@@ -803,7 +815,7 @@ p {
         visibility: hidden;
         max-width: 100%;
         position: absolute;
-        background-color:rgba(223, 37, 37,0.85);
+        background-color:rgba(223, 37, 37,0.75);
         min-width: 90%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
         padding: 12px 16px;
@@ -828,6 +840,25 @@ p {
         display: block;
         transition-duration: 0.4s;
         transform: translateY(0);
+    }
+
+    .mobile-device .showhidesection {
+        text-align: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 40px;
+        transition-duration: 0.4s;
+        display: inline-block;
+    }
+
+    .mobile-device .sectiontitle {
+        min-height: 85px;
+        font-size: 80px;
+        font-stretch: semi-condensed;
+    }
+
+    .mobile-device .opened {
+        transform: rotate(-90deg);
     }
 }
 
@@ -885,4 +916,47 @@ p {
     opacity: 0;
     max-height: 0;
     transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+
+/* Update .dropdown-content */
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; /* This is crucial for positioning relative to the viewport/body */
+    /* Make background more transparent for the blur to show through */
+    background-color: rgba(51, 117, 224, 0.6); /* Example: Much lower opacity */
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    padding: 12px 16px;
+    z-index: 10000; /* Ensure it's above everything else, including title-bar's 9999 */
+    border-radius: 10px;
+    /* Use 'all' or specify properties for smooth transition */
+    /*transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;*/
+    transition-duration: 0.4s;
+    color: white;
+    font-weight: 50;
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
+    -webkit-backdrop-filter: blur(8px); /* Increase blur for more visibility */
+    backdrop-filter: blur(8px); /* Increase blur for more visibility */
+
+    /* These will be set by JavaScript, but providing defaults might help in dev */
+    top: 0;
+    left: 0;
+    max-width: 250px;
+}
+
+/* New class to make dropdown content visible (toggled by JS) */
+.dropdown-content.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Remove the old CSS hover rule as JS will handle it now */
+/* .dropdown:hover .dropdown-content { ... } */
+
+.title-bar.dropdown-open {
+    background-color:rgba(223, 37, 37,0.6);
 }
