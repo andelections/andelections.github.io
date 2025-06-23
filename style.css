@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(223, 37, 37,0.75);
+    background-color: rgba(223, 37, 37,0.85);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
@@ -364,7 +364,7 @@ p {
 }
 
 .aboutcontainer.socials button:hover {
-    background-color:rgba(223, 37, 37,0.75);
+    background-color:rgba(223, 37, 37,0.85);
     font-weight: 900;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
@@ -453,7 +453,7 @@ p {
 
 .pollsoptionbox button:active {
     box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
-    background-color: rgba(223, 37, 37,0.75);
+    background-color: rgba(223, 37, 37,0.85);
     text-shadow: none;
 }
 
@@ -815,7 +815,7 @@ p {
         visibility: hidden;
         max-width: 100%;
         position: absolute;
-        background-color:rgba(223, 37, 37,0.75);
+        background-color:rgba(223, 37, 37,0.85);
         min-width: 90%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
         padding: 12px 16px;
