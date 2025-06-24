@@ -611,3 +611,15 @@ document.querySelectorAll('*').forEach(el => {
 });
 */
 
+if (
+  /Safari/.test(navigator.userAgent) &&
+  !/Chrome|Chromium|Edg/.test(navigator.userAgent)
+) {
+  const style = document.createElement('style');
+  style.textContent = `
+    * {
+      font-weight: 400 !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
