@@ -14,7 +14,7 @@ document.addEventListener("scroll", function () {
 
         if (visibleHeight >= viewportHeight / 2) {
             document.title = "&Elections • " + sectionTitle;
-            menuBarTitle.style.fontWeight = "900";
+            menuBarTitle.style.fontWeight = "700";
         }
     });
 });
