@@ -1032,10 +1032,10 @@ p {
     .safari-weight-fix {
         font-weight: 350 !important;
     }
-}
+}*/
 
 @supports (-webkit-touch-callout: none) {
     * {
-        font-weight: normal !important;
+        font-weight: 400 !important;
     }
 }
