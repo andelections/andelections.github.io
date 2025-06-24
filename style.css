@@ -3,6 +3,7 @@
     src: url('Fonts/BAHNSCHRIFT.TTF') format('truetype');
 }
 
+/*
 @supports (-webkit-touch-callout: none) {
     @font-face {
         font-family: 'Bahnschrift';
@@ -11,6 +12,7 @@
         font-style: normal;
     }
 }
+*/
 
 html {
     scroll-padding-top: 50px;
@@ -51,6 +53,7 @@ button:hover {
     background-color: rgba(223, 37, 37,0.85);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
     font-weight: 650;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 button:active {
@@ -256,6 +259,7 @@ a:hover {
     color: white;
     transition-duration: 0.4s;
     font-weight: 650;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .titlebarlogo {
@@ -307,6 +311,7 @@ a:hover {
 .dropdown-content:hover {
     background-color:rgba(223, 37, 37,0.75);
     transition-duration: 0.4s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .dropdownsubheading {
@@ -378,6 +383,7 @@ p {
     background-color:rgba(223, 37, 37,0.85);
     font-weight: 650;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .aboutcontianer.socials button:active {
@@ -426,6 +432,7 @@ p {
 
 .showhidesection:hover {
     font-weight: 650;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .showhidesection:active {
@@ -459,6 +466,7 @@ p {
     background-color: rgba(51, 117, 224,0.75);
     font-weight: 650;
     text-shadow: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .pollsoptionbox button:active {
@@ -856,7 +864,21 @@ p {
         text-align: center;
         font-size: 60px;
         max-height: 80px;
+        min-height: 80px;
         max-width: 80px;
+        min-width: 80px;
+        border-radius: 40px;
+        transition-duration: 0.4s;
+        display: inline-block;
+    }
+
+    .mobile-device .showhidesection button {
+        text-align: center;
+        font-size: 60px;
+        max-height: 80px;
+        max-width: 80px;
+        min-height: 80px;
+        min-width: 80px;
         border-radius: 40px;
         transition-duration: 0.4s;
         display: inline-block;
@@ -994,4 +1016,10 @@ p {
 
 .title-bar.dropdown-open {
     background-color:rgba(223, 37, 37,0.6);
+}
+
+@supports (-webkit-touch-callout: none) {
+    .safari-weight-fix {
+        font-weight: normal !important;
+    }
 }
