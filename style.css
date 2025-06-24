@@ -938,14 +938,14 @@ p {
     font-stretch: condensed;
 }
 
-/*
+
 .ipad-device #infographic {
     max-width: 90%;
     max-height: 90%;
     aspect-ratio: 1/1;
     padding-top: 70px;
 }
-*/
+
 
 .ipad-device .dropdown-content {
     font-size: 50px;
@@ -956,6 +956,7 @@ p {
     max-width: 95%;
 }
 
+/*
 .ipad-device #logo {
     height: 50px;
     padding: 50px;

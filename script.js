@@ -96,10 +96,12 @@ function showhide(section, canHide) {
         sectionData.style.maxHeight = "0";
         sectionData.style.display = 'none';*/
         sectionData.classList.add('hidden');
-        if (!mobileDevice) {
-            button.innerHTML = 'show';
-        } else {
+        if (mobileDevice) {
             button.classList.remove('opened');
+        } else if (ipadDevice) {
+            button.innerHTML = '>';
+        } else {
+            button.innerHTML = 'show';
         }
         button.title = 'show section';
         titleLink.title = 'show and go to section';
@@ -124,10 +126,12 @@ function showhide(section, canHide) {
                 section.removeChild("loading...");
             }, 3000);*/
         }
-        if (!mobileDevice) {
-            button.innerHTML = 'hide';
-        } else {
+        if (mobileDevice) {
             button.classList.add('opened');
+        } else if (ipadDevice) {
+            button.innerHTML = '^';
+        } else {
+            button.innerHTML = 'hide';
         }
         button.title = 'hide section';
         titleLink.title = 'go to section';
@@ -171,11 +175,20 @@ function detectiPad() {
         document.body.classList.remove("mobile-device")
         document.body.classList.add("ipad-device");
         console.log("iPad detected!");
+        document.querySelectorAll('.showhidesection').forEach(btn => {
+            btn.innerHTML = ">";
+        });
+        document.querySelectorAll('.showhidesection.opened').forEach(btn => {
+            btn.innerHTML = "^";
+        });
         document.querySelectorAll('a.titlebarlink').forEach(link => {
             link.addEventListener('click', function (e) {5
                 e.preventDefault();
             });
         });
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -242,11 +255,12 @@ iframesRefresh.forEach(iframe => {
 
 /*InactivityTime();*/
 let mobileDevice = false;
+let ipadDevice = false;
 
 //window.addEventListener("load", (event) => {
 window.addEventListener('DOMContentLoaded', () => {
     mobileDevice = detectMobileDevice();
-    detectiPad();
+    ipadDevice = detectiPad();
     let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
     pollselectionbuttons(nationwidebuttonpolls);
     let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
