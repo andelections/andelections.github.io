@@ -1027,8 +1027,15 @@ p {
     background-color:rgba(223, 37, 37,0.6);
 }
 
+/*
 @supports (-webkit-touch-callout: none) {
     .safari-weight-fix {
         font-weight: 350 !important;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    * {
+        font-weight: normal !important;
     }
 }

@@ -602,9 +602,12 @@ elements.forEach(el => {
     });
 });
 
+/*
 document.querySelectorAll('*').forEach(el => {
     const weight = parseInt(getComputedStyle(el).fontWeight, 10);
     if (weight > 400) {
         el.classList.add('safari-weight-fix');
     }
 });
+*/
+
