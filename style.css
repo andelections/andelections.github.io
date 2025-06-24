@@ -3,6 +3,15 @@
     src: url('Fonts/BAHNSCHRIFT.TTF') format('truetype');
 }
 
+@supports (-webkit-touch-callout: none) {
+    @font-face {
+        font-family: 'Bahnschrift';
+        src: url('Fonts/BAHNSCHRIFT.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
 html {
     scroll-padding-top: 50px;
     scroll-behavior: smooth;
@@ -92,7 +101,7 @@ button:active {
 }
 
 .sectiontitle a {
-    font-weight: 600 /* bold */;
+    font-weight: 650 /* bold */;
     text-decoration: none;
     color: #222222;
 }
@@ -113,7 +122,7 @@ button:active {
     position: relative;
     font-size: 30px;
     color: #222222;
-    font-weight: 650; /*500*/
+    font-weight: 500; /*500*/
 }
 
 .timeline.polls {
@@ -190,7 +199,7 @@ button:active {
     text-align: left;
     padding-left: 5%;
     color: white;
-    font-weight: 50;
+    font-weight: lighter;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition-duration: 0.4s;
@@ -302,7 +311,7 @@ a:hover {
 
 .dropdownsubheading {
     transform: translateY(5px);
-    font-weight: 650; /*500*/
+    font-weight: 500; /*500*/
 }
 
 .mobile-title-bar {
@@ -846,8 +855,8 @@ p {
     .mobile-device .showhidesection {
         text-align: center;
         font-size: 60px;
-        height: 80px;
-        width: 80px;
+        max-height: 80px;
+        max-width: 80px;
         border-radius: 40px;
         transition-duration: 0.4s;
         display: inline-block;
