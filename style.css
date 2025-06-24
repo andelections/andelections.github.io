@@ -35,11 +35,13 @@ button {
     border: none;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     transition-duration: 0.4s;
+    font-weight: 350;
 }
 
 button:hover {
     background-color: rgba(223, 37, 37,0.85);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
+    font-weight: 500;
 }
 
 button:active {
@@ -111,7 +113,7 @@ button:active {
     position: relative;
     font-size: 30px;
     color: #222222;
-    font-weight: 500;
+    font-weight: 500; /*500*/
 }
 
 .timeline.polls {
@@ -230,7 +232,7 @@ a {
 
 a:hover {
     transition-duration: 0.4s;
-    font-weight: 600; /**/
+    font-weight: 500; /**/
     cursor: pointer;
 }
 
@@ -244,11 +246,11 @@ a:hover {
 #socialsdropdown:hover {
     color: white;
     transition-duration: 0.4s;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .titlebarlogo {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #titlebartext {
@@ -300,7 +302,7 @@ a:hover {
 
 .dropdownsubheading {
     transform: translateY(5px);
-    font-weight: 500;
+    font-weight: 500; /*500*/
 }
 
 .mobile-title-bar {
@@ -365,7 +367,7 @@ p {
 
 .aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
@@ -397,7 +399,7 @@ p {
     border: none;
     font-size: 25px;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 300;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.9);
     box-shadow: none;
 }
@@ -407,7 +409,6 @@ p {
     width: 100px;
     font-size: 30px;
     height: 50px;
-    font-weight: 400;
     border-radius: 25px;
     left: 5%;
     top: 18px;
@@ -415,7 +416,7 @@ p {
 }
 
 .showhidesection:hover {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .showhidesection:active {
@@ -447,7 +448,7 @@ p {
 .pollsoptionbox button:hover {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     background-color: rgba(51, 117, 224,0.75);
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: none;
 }
 
