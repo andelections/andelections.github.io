@@ -230,7 +230,7 @@ a {
 
 a:hover {
     transition-duration: 0.4s;
-    font-weight: 650;
+    font-weight: 600; /**/
     cursor: pointer;
 }
 
@@ -244,11 +244,11 @@ a:hover {
 #socialsdropdown:hover {
     color: white;
     transition-duration: 0.4s;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .titlebarlogo {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #titlebartext {
@@ -365,7 +365,7 @@ p {
 
 .aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
-    font-weight: 700;
+    font-weight: 600;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
@@ -415,7 +415,7 @@ p {
 }
 
 .showhidesection:hover {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .showhidesection:active {
@@ -447,7 +447,7 @@ p {
 .pollsoptionbox button:hover {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     background-color: rgba(51, 117, 224,0.75);
-    font-weight: 700;
+    font-weight: 600;
     text-shadow: none;
 }
 
@@ -860,6 +860,26 @@ p {
 
     .mobile-device .opened {
         transform: rotate(-90deg);
+    }
+
+    .mobile-device p {
+        font-size: 35px;
+    }
+
+    .mobile-device .disclaimer {
+        font-size: 27.5px;
+    }
+
+    .mobile-device .loading {
+        font-size: 27.5px;
+    }
+
+    .mobile-device .refreshbtn {
+        font-size: 27.5px;
+    }
+
+    .mobile-device #footer {
+        font-size: 25px;
     }
 }
 
