@@ -107,7 +107,7 @@ button:active {
 }
 
 .sectiontitle a:hover {
-    font-weight: 600 /* bold */;
+    font-weight: 650 /* bold */;
 }
 
 #blankspace {
@@ -908,12 +908,14 @@ p {
     font-stretch: condensed;
 }
 
+/*
 .ipad-device #infographic {
     max-width: 90%;
     max-height: 90%;
     aspect-ratio: 1/1;
     padding-top: 70px;
 }
+*/
 
 .ipad-device .dropdown-content {
     font-size: 50px;
