@@ -244,11 +244,11 @@ a:hover {
 #socialsdropdown:hover {
     color: white;
     transition-duration: 0.4s;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .titlebarlogo {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #titlebartext {
@@ -365,7 +365,7 @@ p {
 
 .aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
-    font-weight: 900;
+    font-weight: 700;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
@@ -415,7 +415,7 @@ p {
 }
 
 .showhidesection:hover {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .showhidesection:active {
@@ -447,7 +447,7 @@ p {
 .pollsoptionbox button:hover {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     background-color: rgba(51, 117, 224,0.75);
-    font-weight: 900;
+    font-weight: 700;
     text-shadow: none;
 }
 
@@ -844,6 +844,7 @@ p {
 
     .mobile-device .showhidesection {
         text-align: center;
+        font-size: 60px;
         height: 80px;
         width: 80px;
         border-radius: 40px;

@@ -149,7 +149,7 @@ function detectMobileDevice() {
         document.body.classList.add("mobile-device");
         console.log("Mobile device detected!");
         document.querySelectorAll('.showhidesection').forEach(btn => {
-            btn.innerHTML = '▶';
+            btn.innerHTML = '>';
         })
         document.querySelectorAll('a.titlebarlink').forEach(link => {
             link.addEventListener('click', function  (e) {
