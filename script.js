@@ -624,6 +624,7 @@ document.querySelectorAll('*').forEach(el => {
   document.head.appendChild(style);
 }*/
 
+/*
 if (
   /Safari/.test(navigator.userAgent) &&
   !/Chrome|Chromium|Edg/.test(navigator.userAgent)
@@ -631,6 +632,22 @@ if (
   document.querySelectorAll('*').forEach(el => {
     const weight = parseInt(getComputedStyle(el).fontWeight, 10);
     if (weight > 400) {
+      el.style.setProperty('font-weight', '400', 'important');
+    }
+  });
+}*/
+
+if (
+  /Safari/.test(navigator.userAgent) &&
+  !/Chrome|Chromium|Edg/.test(navigator.userAgent)
+) {
+  document.querySelectorAll('*').forEach(el => {
+    const computedWeight = getComputedStyle(el).fontWeight;
+    const numericWeight = isNaN(computedWeight)
+      ? (computedWeight === 'bold' ? 700 : 400)
+      : parseInt(computedWeight, 10);
+
+    if (numericWeight > 400) {
       el.style.setProperty('font-weight', '400', 'important');
     }
   });
