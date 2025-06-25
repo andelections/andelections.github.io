@@ -611,7 +611,7 @@ document.querySelectorAll('*').forEach(el => {
 });
 */
 
-if (
+/*if (
   /Safari/.test(navigator.userAgent) &&
   !/Chrome|Chromium|Edg/.test(navigator.userAgent)
 ) {
@@ -622,4 +622,16 @@ if (
     }
   `;
   document.head.appendChild(style);
+}*/
+
+if (
+  /Safari/.test(navigator.userAgent) &&
+  !/Chrome|Chromium|Edg/.test(navigator.userAgent)
+) {
+  document.querySelectorAll('*').forEach(el => {
+    const weight = parseInt(getComputedStyle(el).fontWeight, 10);
+    if (weight > 400) {
+      el.style.setProperty('font-weight', '400', 'important');
+    }
+  });
 }
