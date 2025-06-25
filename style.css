@@ -52,7 +52,7 @@ button {
 button:hover {
     background-color: rgba(223, 37, 37,0.85);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
-    font-weight: 650;
+    font-weight: 550 /* */;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
@@ -96,7 +96,7 @@ button:active {
     padding-top: 15px;
     padding-bottom: 10px;
     font-size: 50px;
-    font-weight: 650;
+    font-weight: 650; /**/
     color: #222222;
     z-index: 200;
     background-color: #ffffff;
@@ -104,13 +104,13 @@ button:active {
 }
 
 .sectiontitle a {
-    font-weight: 650 /* bold */;
+    font-weight: 650 /* */ /* bold */;
     text-decoration: none;
     color: #222222;
 }
 
 .sectiontitle a:hover {
-    font-weight: 650 /* bold */;
+    font-weight: 650 /* */ /* bold */;
 }
 
 #blankspace {
@@ -258,12 +258,12 @@ a:hover {
 #socialsdropdown:hover {
     color: white;
     transition-duration: 0.4s;
-    font-weight: 650;
+    font-weight: 550 /* */;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .titlebarlogo {
-    font-weight: 650;
+    font-weight: 550 /* */;
 }
 
 #titlebartext {
@@ -389,7 +389,7 @@ p {
 
 .aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
-    font-weight: 650;
+    font-weight: 550 /* */;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.9);
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
@@ -439,7 +439,7 @@ p {
 }
 
 .showhidesection:hover {
-    font-weight: 650;
+    font-weight: 550 /* */;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
@@ -472,7 +472,7 @@ p {
 .pollsoptionbox button:hover {
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     background-color: rgba(51, 117, 224,0.75);
-    font-weight: 650;
+    font-weight: 550 /* */;
     text-shadow: none;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }

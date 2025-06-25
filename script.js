@@ -14,7 +14,7 @@ document.addEventListener("scroll", function () {
 
         if (visibleHeight >= viewportHeight / 2) {
             document.title = "&Elections • " + sectionTitle;
-            menuBarTitle.style.fontWeight = "650";
+            menuBarTitle.style.fontWeight = "550";
         }
     });
 });
@@ -611,7 +611,8 @@ document.querySelectorAll('*').forEach(el => {
 });
 */
 
-/*if (
+/*
+if (
   /Safari/.test(navigator.userAgent) &&
   !/Chrome|Chromium|Edg/.test(navigator.userAgent)
 ) {
@@ -622,7 +623,7 @@ document.querySelectorAll('*').forEach(el => {
     }
   `;
   document.head.appendChild(style);
-}*/
+}
 
 /*
 if (
@@ -637,6 +638,7 @@ if (
   });
 }*/
 
+/*
 if (
   /Safari/.test(navigator.userAgent) &&
   !/Chrome|Chromium|Edg/.test(navigator.userAgent)
@@ -651,4 +653,19 @@ if (
       el.style.setProperty('font-weight', '400', 'important');
     }
   });
+}*/
+
+if (
+  /Safari/.test(navigator.userAgent) &&
+  !/Chrome|Chromium|Edg/.test(navigator.userAgent)
+) {
+  const style = document.createElement('style');
+  style.textContent = `
+    .sectiontitle,
+    .sectiontitle a,
+    .sectiontitle a:hover {
+      font-weight: 400 !important;
+    }
+  `;
+  document.head.appendChild(style);
 }
