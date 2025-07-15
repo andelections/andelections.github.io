@@ -29,6 +29,7 @@ function socialslink(link,sameWindow) {
 
 var pollsdisplaying = 'Nationwide';
 var timelinedisplaying = 'Nationwide';
+var sheetdisplaying = 'headline';
 
 function pollselectionbuttons(button) {
     button.style.backgroundColor = "rgba(233,37,37,0.85)";
@@ -49,7 +50,7 @@ function pollsselection(region,type) {
         document.getElementById('polls' + regiontohide).style.display = 'none';
         let oldbutton = document.getElementById('pollsbutton' + regiontohide);
         oldbutton.removeAttribute("style");
-    } else {
+    } else if (type == 2) {
         let regiontohide = timelinedisplaying;
         timelinedisplaying = region;
         let button = document.getElementById('tlbutton' + region);
@@ -66,6 +67,15 @@ function pollsselection(region,type) {
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(grpahtitle);
+    } else {
+        let sheettohide = sheetdisplaying;
+        sheetdisplaying = region;
+        let button = document.getElementById('demobtn' + region);
+        pollselectionbuttons(button);
+        document.getElementById('demographics-' + region).style.display = 'block';
+        document.getElementById('demographics-' + sheettohide).style.display = 'none';
+        let oldbutton = document.getElementById('demobtn' + sheettohide);
+        oldbutton.removeAttribute("style");
     }
 }
 
@@ -265,6 +275,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pollselectionbuttons(nationwidebuttonpolls);
     let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
     pollselectionbuttons(nationwidebuttontl);
+    let headlinebuttondemos = document.getElementById('demobtnheadline');
+    pollselectionbuttons(headlinebuttondemos)
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();

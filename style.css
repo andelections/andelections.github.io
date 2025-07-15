@@ -113,7 +113,7 @@ button:active {
     font-weight: 650 /* */ /* bold */;
 }
 
-#blankspace {
+.blankspace {
     position: relative;
     min-height: 4px;
     z-index: 200;
@@ -157,6 +157,12 @@ button:active {
 .excelsheet.regionalproj {
     max-width: 1150px;
     margin: 0 auto
+}
+
+.excelsheet.demos {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: none;
 }
 
 .excelsheet.regional {
@@ -425,6 +431,12 @@ p {
     font-weight: 300;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.9);
     box-shadow: none;
+    position: relative;
+    z-index: 100;
+}
+
+.pollsoptionbox.demographics button {
+    width: 31%;
 }
 
 .showhidesection {
@@ -455,6 +467,7 @@ p {
     left: 50%;
     transform: translate(-50%, 50px);
     animation: blink 1.5s infinite;
+    z-index: 1;
 }
 
 @keyframes blink {
@@ -488,6 +501,10 @@ p {
 }
 
 #tlNationwide {
+    display: block;
+}
+
+#demographics-headline {
     display: block;
 }
 
@@ -532,6 +549,10 @@ p {
     }
 
     .excelsheet.regionalproj {
+        max-width: calc(1150px * 0.8);
+    }
+
+    .excelsheet.demos {
         max-width: calc(1150px * 0.8);
     }
 
@@ -646,6 +667,10 @@ p {
         max-width: calc(1150px * 0.6)
     }
 
+    .excelsheet.demos {
+        max-width: calc(1150px * 0.6);
+    }
+
     .excelsheet.regional {
         max-width: calc(925px * 0.6)
     }
@@ -730,6 +755,11 @@ p {
     }
 
     .mobile-device .excelsheet.regionalproj {
+        height: calc(1200px * 0.8);
+        max-width: calc(1150px * 0.8);
+    }
+
+    .mobile-device .excelsheet.demos {
         height: calc(1200px * 0.8);
         max-width: calc(1150px * 0.8);
     }
