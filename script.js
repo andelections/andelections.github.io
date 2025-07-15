@@ -29,7 +29,7 @@ function socialslink(link,sameWindow) {
 
 var pollsdisplaying = 'Nationwide';
 var timelinedisplaying = 'Nationwide';
-var sheetdisplaying = 'headline';
+var sheetdisplaying = 'allgroups';
 
 function pollselectionbuttons(button) {
     button.style.backgroundColor = "rgba(233,37,37,0.85)";
@@ -275,8 +275,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pollselectionbuttons(nationwidebuttonpolls);
     let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
     pollselectionbuttons(nationwidebuttontl);
-    let headlinebuttondemos = document.getElementById('demobtnheadline');
-    pollselectionbuttons(headlinebuttondemos)
+    let allgroupsbuttondemos = document.getElementById('demobtnallgroups');
+    pollselectionbuttons(allgroupsbuttondemos)
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();

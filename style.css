@@ -26,7 +26,7 @@ table {
     margin: 0 auto;
 }
 
-#headline {
+#allgroups {
     max-height: 1000px;
     max-width: 100%;
 }
@@ -504,7 +504,7 @@ p {
     display: block;
 }
 
-#demographics-headline {
+#demographics-allgroups {
     display: block;
 }
 
