@@ -378,21 +378,25 @@ p {
     text-align: center;
 }
 
-.aboutcontainer.socials button {
+.socialsbutton {
     background-color:rgba(51, 117, 224,0.75);
     font-family: 'Bahnschrift', sans-serif;
-    width: 80%;
     border-radius: 40px;
+    width: calc(100% - 15px);
     transition-duration: 0.4s;
     color: white;
     margin: 3px;
-    border: none;
     font-size: 25px;
     cursor: pointer;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     transform: translateY(-3px);
 }
 
+/*
+.tablebuttoncolspan2 button {
+    min-width: 100%;
+}
+*/
 .aboutcontainer.socials button:hover {
     background-color:rgba(223, 37, 37,0.85);
     font-weight: 550 /* */;
