@@ -32,7 +32,7 @@
                 </div>
                 •
                 <div class="dropdown" id="socialsdd-trigger">
-                    <span><a class="titlebarlink" id="About&Socials" href="#about" onclick="showhide(10,false)"> Socials </a></span>
+                    <span><a class="titlebarlink" id="About&Socials" href="#blog" onclick="showhide(10,false)"> Socials </a></span>
                 </div>
             </div>
             <!--div id="titlebartext">
@@ -102,8 +102,8 @@
             → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
         </div>
         <div class="dropdown-content socials" id="socialsdd">
-            → <a href="#about" onclick="showhide(10,false)">About & Socials</a><br>
-            → <a href="#blog" onclick="showhide(11,false)">Blog & Articles</a><br>
+            → <a href="#blog" onclick="showhide(10,false)">Blog & Articles</a><br>
+            → <a href="#about" onclick="showhide(11,false)">About & Socials</a><br>
             ↗ <a title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</a><br>
             <div class="dropdownsubheading">Help the Site</div>
             ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections',0)">Ko-fi</a><br>
@@ -314,10 +314,29 @@
             </div>
         </section>
         <section data-title="About & Socials">
+            <div id="blog">
+                <div class="sectiontitle">
+                    <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
+                    <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Blog & Articles</a>
+                </div>
+                <div class="datacontainer" id="data-blog">
+                    <a href="https://andelections.substack.com/p/a-new-left-party-could-it-succeed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                        <h2>A New Left Party: Could It Succeed?</h2>
+                        <p>20 Jul 2025 • With it being over a fortnight since Sultana and Corbyn announced that they would start a new party, what successes or failures could it be destined for?</p>
+                    </a>
+                    <a href="https://andelections.substack.com/p/young-men-arent-reformers" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                        <h2>Young Men Aren't Reformers</h2>
+                        <p>20 Jul 2025 • With 16 and 17-year-olds being set to be enfranchised by the next election, where do young people really stand?</p>
+                    </a>
+                    <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                        <h2>&Elections: The Methodology</h2>
+                        <p>19 Jul 2025 • A summary of the methodology of &Elections' live Westminster projection.</p>
+                    </a>
+                </div>
             <div id="about">
                 <div class="sectiontitle">
-                    <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(10,true)">hide</button>
-                    <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">About & Socials</a>
+                    <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(11,true)">hide</button>
+                    <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(11,false)">About & Socials</a>
                 </div>
                 <div class="datacontainer" id="data-about">
                     <p>
@@ -372,25 +391,6 @@
                     </div>
                 </div>
             </div>
-            <div id="blog">
-                <div class="sectiontitle">
-                    <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(11,true)">hide</button>
-                    <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(11,false)">Blog & Articles</a>
-                </div>
-                <div class="datacontainer" id="data-blog">
-                    <a href="https://andelections.substack.com/p/a-new-left-party-could-it-succeed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>A New Left Party: Could It Succeed?</h2>
-                        <p>20 Jul 2025 • With it being over a fortnight since Sultana and Corbyn announced that they would start a new party, what successes or failures could it be destined for?</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/young-men-arent-reformers" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>Young Men Aren't Reformers</h2>
-                        <p>20 Jul 2025 • With 16 and 17-year-olds being set to be enfranchised by the next election, where do young people really stand?</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>&Elections: The Methodology</h2>
-                        <p>19 Jul 2025 • A summary of the methodology of &Elections' live Westminster projection.</p>
-                    </a>
-                </div>
         </section>
             <div id="footer">
                 Proprietary modelling formulae are private intellectual information and property.

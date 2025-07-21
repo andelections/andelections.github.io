@@ -90,8 +90,8 @@ var sectionsDisplaying = [
     ['poll-library',false],             //7
     ['custom-projection',false],        //8
     ['2024-projection',false],          //9
-    ['about',true],                     //10
-    ['blog',true]                       //11
+    ['blog',true],                      //10
+    ['about',true]                      //11
 ];
 
 function showhide(section, canHide) {
