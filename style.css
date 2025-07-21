@@ -14,6 +14,11 @@
 }
 */
 
+a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
 html {
     scroll-padding-top: 50px;
     scroll-behavior: smooth;
@@ -350,6 +355,31 @@ p {
     text-align: justify;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+#data-about a {
+    color: black;
+}
+
+#data-about a:hover {
+    color: rgba(223, 37, 37,0.85);
+}
+
+#data-blog a {
+    color: black;
+}
+
+#data-blog a:hover {
+    color:rgba(223, 37, 37,0.85);
+}
+
+h2 {
+    text-align: left;
+    font-size: 45px;
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-weight: 650;
 }
 
 .disclaimer {

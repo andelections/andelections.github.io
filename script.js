@@ -80,8 +80,8 @@ function pollsselection(region,type) {
 }
 
 var sectionsDisplaying = [
-    ['projection-maps',false],           //0
-    ['constituency-projections',false],  //1
+    ['projection-maps',false],          //0
+    ['constituency-projections',false], //1
     ['demographic-projections',false],  //2
     ['regional-projections',false],     //3
     ['regional-data',false],            //4
@@ -90,7 +90,8 @@ var sectionsDisplaying = [
     ['poll-library',false],             //7
     ['custom-projection',false],        //8
     ['2024-projection',false],          //9
-    ['about',true]                      //10
+    ['about',true],                     //10
+    ['blog',true]                       //11
 ];
 
 function showhide(section, canHide) {
@@ -675,7 +676,8 @@ if (
   style.textContent = `
     .sectiontitle,
     .sectiontitle a,
-    .sectiontitle a:hover {
+    .sectiontitle a:hover
+    h2 {
       font-weight: 400 !important;
     }
   `;
