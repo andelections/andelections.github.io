@@ -376,9 +376,10 @@ p {
 h2 {
     text-align: left;
     font-size: 45px;
-    padding-top: 10px;
+    padding-top: 12.5px;
     margin: 0 auto;
-    max-width: 1200px;
+    padding-right: 20%;
+    max-width: calc(1200px - 20%);
     font-weight: 650;
 }
 
@@ -972,6 +973,13 @@ h2 {
 
     .mobile-device p {
         font-size: 35px;
+    }
+
+    .mobile-device h2 {
+        font-size: 55px;
+        font-stretch: semi-condensed;
+        padding-right: 10%;
+        max-width: calc(1200px - 10%);
     }
 
     .mobile-device .disclaimer {
