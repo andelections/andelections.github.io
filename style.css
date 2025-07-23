@@ -387,8 +387,8 @@ h2 {
     font-size: 45px;
     padding-top: 12.5px;
     margin: 0 auto;
-    padding-right: 10%;
-    max-width: calc(1200px - 10%);
+    padding-right: 15%;
+    max-width: calc(1200px - 15%);
     font-weight: 650;
     transition-duration: 0.4s;
 }
@@ -1001,6 +1001,8 @@ h2 {
     .mobile-device h2 {
         font-size: 55px;
         font-stretch: semi-condensed;
+        padding-right: 10%;
+        max-width: calc(1200px - 10%);
     }
 
     .mobile-device .disclaimer {
