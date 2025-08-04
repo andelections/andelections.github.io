@@ -96,6 +96,22 @@ button:active {
     overflow-y: auto;
 }
 
+.blogtitles-container {
+    width: 100%;
+    max-width: 1200px;
+    /*height: 750px;*/
+    max-height: 80vh;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+/*
+@media (max-height: 937.5px) {
+    .blogtitles-container {
+        height: 80vh;
+    }
+}*/
+
 .sectiontitle {
     position: relative;
     padding-top: 15px;
@@ -278,7 +294,7 @@ a:hover {
 }
 
 #titlebartext {
-    width: 75%;
+    width: 79%;
     align-items: left;
     text-align: left;
 }
@@ -346,6 +362,8 @@ a:hover {
     font-size: 15px;
     padding: 30px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 p {
@@ -391,6 +409,10 @@ h2 {
     max-width: calc(1200px - 15%);
     font-weight: 650;
     transition-duration: 0.4s;
+}
+
+#data-blog p {
+    padding-right: 15px;
 }
 
 #data-blog a:hover h2 {

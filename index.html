@@ -33,7 +33,7 @@
                 </div>
                 •
                 <div class="dropdown" id="socialsdd-trigger">
-                    <span><a class="titlebarlink" id="About&Socials" href="#blog" onclick="showhide(10,false)"> Socials </a></span>
+                    <span><a class="titlebarlink" id="Blog&About" href="#blog" onclick="showhide(10,false)"> Connect </a></span>
                 </div>
             </div>
             <!--div id="titlebartext">
@@ -103,7 +103,7 @@
             → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
         </div>
         <div class="dropdown-content socials" id="socialsdd">
-            → <a href="#blog" onclick="showhide(10,false)">Blog & Articles</a><br>
+            → <a href="#blog" onclick="showhide(10,false)">Substack Blog</a><br>
             → <a href="#about" onclick="showhide(11,false)">About & Socials</a><br>
             ↗ <a title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</a><br>
             <div class="dropdownsubheading">Help the Site</div>
@@ -123,7 +123,7 @@
                 <a href="#live-model" onclick="displayMobileMenu()">→ Current Projection</a><br>
                 <a href="#projection-timeline" onclick="displayMobileMenu()">→ Historical Info</a><br>
                 <a href="#custom-projection" onclick="displayMobileMenu()">→ Other Projections</a><br>
-                <a href="#blog" onclick="displayMobileMenu()">→ About & Socials</a>
+                <a href="#blog" onclick="displayMobileMenu()">→ Connect</a>
             </div>
         </div>
         
@@ -314,33 +314,39 @@
                 </div>
             </div>
         </section>
-        <section data-title="About & Socials">
+        <section data-title="Blog & About">
             <div id="blog">
                 <div class="sectiontitle">
                     <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
-                    <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Blog & Articles</a>
+                    <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Substack Blog</a>
                 </div>
                 <div class="datacontainer" id="data-blog">
-                    <a href="https://andelections.substack.com/p/290725-uk-projection-reform-headed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>29/07/25 UK Projection: Reform Headed for an Outright Majority</h2>
-                        <p>29 Jul 2025 • Update on &Elections' live general election projection. Reform are headed for an outright majority for the first time as Labour and the Tories collapse further.</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/22-jul-2025-uk-projection-independents" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>22/07/25 UK Projection: Independents Bouncing Back Better</h2>
-                        <p>22 Jul 2025 • Update on &Elections' live general election projection. Lib Dems & independents are up slightly; Tories are down to fifth again.</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/a-new-left-party-could-it-succeed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>A New Left Party: Could It Succeed?</h2>
-                        <p>20 Jul 2025 • With it being over a fortnight since Sultana and Corbyn announced that they would start a new party, what successes or failures could it be destined for?</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/young-men-arent-reformers" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>Young Men Aren't Reformers</h2>
-                        <p>20 Jul 2025 • With 16 and 17-year-olds being set to be enfranchised by the next election, where do young people really stand?</p>
-                    </a>
-                    <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                        <h2>&Elections: The Methodology</h2>
-                        <p>19 Jul 2025 • A summary of the methodology of &Elections' live Westminster projection.</p>
-                    </a>
+                        <div class="blogtitles-container">
+                        <a href="https://andelections.substack.com/p/the-snps-unremarkable-comeback" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>The SNP's Unremarkable Comeback</h2>
+                            <p>04 Aug 2025 • The SNP were decimated to 9 seats in 2024, but now most forecasters are projecting that a general election today would yield upwards of 40 seats for them. What happened?</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/290725-uk-projection-reform-headed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>29/07/25 UK Projection: Reform Headed for an Outright Majority</h2>
+                            <p>29 Jul 2025 • Update on &Elections' live general election projection. Reform are headed for an outright majority for the first time as Labour and the Tories collapse further.</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/22-jul-2025-uk-projection-independents" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>22/07/25 UK Projection: Independents Bouncing Back Better</h2>
+                            <p>22 Jul 2025 • Update on &Elections' live general election projection. Lib Dems & independents are up slightly; Tories are down to fifth again.</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/a-new-left-party-could-it-succeed" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>A New Left Party: Could It Succeed?</h2>
+                            <p>20 Jul 2025 • With it being over a fortnight since Sultana and Corbyn announced that they would start a new party, what successes or failures could it be destined for?</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/young-men-arent-reformers" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>Young Men Aren't Reformers</h2>
+                            <p>20 Jul 2025 • With 16 and 17-year-olds being set to be enfranchised by the next election, where do young people really stand?</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>&Elections: The Methodology</h2>
+                            <p>19 Jul 2025 • A summary of the methodology of &Elections' live Westminster projection.</p>
+                        </a>
+                    </div>
                 </div>
             <div id="about">
                 <div class="sectiontitle">
@@ -402,8 +408,16 @@
             </div>
         </section>
             <div id="footer">
-                Proprietary modelling formulae are private intellectual information and property.
-                Permission required before use. © 2025 Nicholas Tryand.
+                Permission required before use of projection data. © 2025 Nicholas Tryand.
+                <!--a href="privacy-policy">Privacy policy.</a><br>
+                Sources include: <a href="#poll-library">all polls mentioned</a>,
+                2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
+                and 2024 UK general elections in Great Britain.<br>
+                2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
+                notional results are used for that election.<br>
+                Methodological information on the collation of this data is available here.
+                Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
+                &Elections does not store user input information in interactive fields.<br-->
             </div>
         </section>
     </body>
