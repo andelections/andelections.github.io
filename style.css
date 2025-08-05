@@ -723,7 +723,7 @@ h2 {
 
     .excel-embed {
         /*transform: scale(0.6);*/
-        zoom: 0.6;
+        zoom: 0.7;
         display: block;
         /*transform-origin: center top;*/
         /*width: 100%;*/
@@ -736,35 +736,35 @@ h2 {
     .excelsheet {
         width: 100%;
         margin: 0 auto;
-        height: 450px;
+        height: 525px;
     }
 
     .excelsheet.regular {
-        max-width: calc(1200px * 0.6)
+        max-width: calc(1200px * 0.7)
     }
 
     .excelsheet.regionalproj {
-        max-width: calc(1150px * 0.6)
+        max-width: calc(1150px * 0.7)
     }
 
     .excelsheet.demos {
-        max-width: calc(1150px * 0.6);
+        max-width: calc(1150px * 0.7);
     }
 
     .excelsheet.regional {
-        max-width: calc(925px * 0.6)
+        max-width: calc(925px * 0.7)
     }
 
     .excelsheet.polls {
-        max-width: calc(1100px * 0.6)
+        max-width: calc(1100px * 0.7)
     }
 
     .excelsheet.polls.sctwal {
-        max-width: calc(1000px * 0.6)
+        max-width: calc(1000px * 0.7)
     }
 
     .excelsheet.polls.london {
-        max-width: calc(950px * 0.6)
+        max-width: calc(950px * 0.7)
     }
 
     .dropdown-content {
@@ -1041,6 +1041,50 @@ h2 {
 
     .mobile-device #footer {
         font-size: 25px;
+    }
+}
+
+
+@media (max-width: 880px) {
+    .excel-embed {
+        zoom: 0.6;
+        display: block;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    .excelsheet {
+        width: 100%;
+        margin: 0 auto;
+        height: calc(750px * 0.6);
+    }
+
+    .excelsheet.regular {
+        max-width: calc(1200px * 0.6);
+    }
+
+    .excelsheet.regionalproj {
+        max-width: calc(1150px * 0.6);
+    }
+
+    .excelsheet.demos {
+        max-width: calc(1150px * 0.6);
+    }
+
+    .excelsheet.regional {
+        max-width: calc(925px * 0.6);
+    }
+
+    .excelsheet.polls {
+        max-width: calc(1100px * 0.6);
+    }
+
+    .excelsheet.polls.sctwal {
+        max-width: calc(1000px * 0.6);
+    }
+
+    .excelsheet.polls.london {
+        max-width: calc(950px * 0.6);
     }
 }
 
