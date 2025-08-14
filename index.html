@@ -129,10 +129,30 @@
         
         <section data-title="Current Projection">
             <div id="live-model"><br>
-                <div class="container">
-                    <img id="infographic" src="image.png" frameborder="0" alt="current polls"></frame></iframe>
+                <div class="pollsoptionbox currentprojection">
+                    <button title="Show binary seat tabulation model" id="livebtnbinary" onclick="pollsselection('binary',4)">Binary</button>
+                    <button title="Show combined seat tabulation model" id="livebtncombined" onclick="pollsselection('combined',4)">Combined</button>
+                    <button title="Show probabilistic seat tabulation model" id="livebtnprobabilistic" onclick="pollsselection('probabilistic',4)">Probabilistic</button>
+                </div>
+                <div id="livemodeldisclaimer"><a href="https://andelections.substack.com/p/and-elections-methodological-updates" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                    <p>Learn more about &Elections' new probabilistic and combined methodologies for seat tabulations here.</p>
+                </a></div>
+                <div class="container hidden" id="model-binary">
+                    <img id="infographic" src="imgbinary.png" frameborder="0" alt="Binary Tabulation - Live Election Projection"></frame></iframe>
                     <div class="scroll-container">
-                        <div class="flourish-embed flourish-parliament" data-src="visualisation/23520878"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23520878/thumbnail" width="100%" alt="parliament visualization" /></noscript></div>
+                        <div class="flourish-embed flourish-parliament" data-src="visualisation/24621380"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24621380/thumbnail" width="100%" alt="binary tabulation parliament visualization" /></noscript></div>
+                    </div>
+                </div>
+                <div class="container" id="model-combined">
+                    <img id="infographic" src="imgcombined.png" frameborder="0" alt="Combined Tabulation - Live Election Projection"></frame></iframe>
+                    <div class="scroll-container">
+                        <div class="flourish-embed flourish-parliament" data-src="visualisation/23520878"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23520878/thumbnail" width="100%" alt="combined tabulation parliament visualization" /></noscript></div>
+                    </div>
+                </div>
+                <div class="container hidden" id="model-probabilistic">
+                    <img id="infographic" src="imgprobabilistic.png" frameborder="0" alt="Probabilistic Tabulation - Live Election Projection"></frame></iframe>
+                    <div class="scroll-container">
+                        <div class="flourish-embed flourish-parliament" data-src="visualisation/24621385"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24621385/thumbnail" width="100%" alt="probabilistic tabulation parliament visualization" /></noscript></div>
                     </div>
                 </div>
             </div>
@@ -322,9 +342,17 @@
                 </div>
                 <div class="datacontainer" id="data-blog">
                     <div class="blogtitles-container">
+                        <a href="https://andelections.substack.com/p/140825-uk-projection-reforms-lead" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>14/08/25 UK Projection: Reform's Lead Marginally Softens</h2>
+                            <p>14 Aug 2025 • Reform are no longer forecast to win a majority and the Tories are fourth again..</p>
+                        </a>
+                        <a href="https://andelections.substack.com/p/and-elections-methodological-updates" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>&Elections: Methodological Updates to Seat Tabulations</h2>
+                            <p>14 Aug 2025 • &Elections will now be combining traditional binary and more sophisticated probabilistic modelling to produce a more realistic projected seat total for each party.</p>
+                        </a>
                         <a href="https://andelections.substack.com/p/and-elections-updates-since-the-2024" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
                             <h2>&Elections: Updates Since the 2024 Election</h2>
-                            <p>13 Aug 2025 • Since 2024, various improvements have been made to the methodology &Elections uses to forecast elections, coinciding with new features alongside the projection model.</p>
+                            <p>13 Aug 2025 • Since 2024, various improvements have been made to the methodology &Elections uses to project elections, coinciding with new features alongside the projection model.</p>
                         </a>
                         <a href="https://andelections.substack.com/p/could-corbyn-have-won-it-for-labour" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
                             <h2>Could Corbyn Have Won It for Labour?</h2>
@@ -441,7 +469,4 @@
             </div>
         </section>
     </body>
-
 </html>
-
-

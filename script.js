@@ -30,6 +30,7 @@ function socialslink(link,sameWindow) {
 var pollsdisplaying = 'Nationwide';
 var timelinedisplaying = 'Nationwide';
 var sheetdisplaying = 'allgroups';
+var modeldisplaying = 'combined';
 
 function pollselectionbuttons(button) {
     button.style.backgroundColor = "rgba(233,37,37,0.85)";
@@ -67,7 +68,7 @@ function pollsselection(region,type) {
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(grpahtitle);
-    } else {
+    } else if (type == 3) {
         let sheettohide = sheetdisplaying;
         sheetdisplaying = region;
         let button = document.getElementById('demobtn' + region);
@@ -75,6 +76,15 @@ function pollsselection(region,type) {
         document.getElementById('demographics-' + region).style.display = 'block';
         document.getElementById('demographics-' + sheettohide).style.display = 'none';
         let oldbutton = document.getElementById('demobtn' + sheettohide);
+        oldbutton.removeAttribute("style");
+    } else {
+        let modeltohide = modeldisplaying;
+        modeldisplaying = region;
+        let button = document.getElementById('livebtn' + modeldisplaying);
+        pollselectionbuttons(button);
+        document.getElementById('model-' + modeldisplaying).style.display = 'flex';
+        document.getElementById('model-' + modeltohide).style.display = 'none';
+        let oldbutton = document.getElementById('livebtn' + modeltohide);
         oldbutton.removeAttribute("style");
     }
 }
@@ -277,7 +287,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
     pollselectionbuttons(nationwidebuttontl);
     let allgroupsbuttondemos = document.getElementById('demobtnallgroups');
-    pollselectionbuttons(allgroupsbuttondemos)
+    pollselectionbuttons(allgroupsbuttondemos);
+    let combinedbuttonlivemodel = document.getElementById('livebtncombined');
+    pollselectionbuttons(combinedbuttonlivemodel);
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();

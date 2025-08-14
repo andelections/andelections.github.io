@@ -72,6 +72,10 @@ button:active {
     margin: 0 auto;
 }
 
+.container.hidden {
+    display: none;
+}
+
 #infographic {
     max-width: 650px;
     max-height: 650px;
@@ -376,6 +380,25 @@ p {
     transition-duration: 0.4s;
 }
 
+#livemodeldisclaimer p{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#livemodeldisclaimer a {
+    color: black;
+}
+
+#livemodeldisclaimer a:hover {
+    color: rgba(51, 117, 224,0.85);
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+#livemodeldisclaimer a:active {
+    color: rgba(223, 37, 37,0.85);
+}
+
 #data-about a {
     color: black;
 }
@@ -516,6 +539,10 @@ h2 {
 }
 
 .pollsoptionbox.demographics button {
+    width: 31%;
+}
+
+.pollsoptionbox.currentprojection button {
     width: 31%;
 }
 
