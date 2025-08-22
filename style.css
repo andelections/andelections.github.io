@@ -89,6 +89,9 @@ button:active {
     height: 850px;
 }
 
+.map.all {
+    width: 100%;
+}
 
 .pmentchart {
     width: 100%;
@@ -146,7 +149,7 @@ button:active {
     background-color: #ffffff;
 }
 
-#graphtitles {
+.graphtitles {
     position: relative;
     font-size: 30px;
     color: #222222;
@@ -217,11 +220,30 @@ button:active {
     z-index: 10;
 }
 
+.flag {
+    width: 40px;
+    border-radius: 10px;
+    transform: translateY(10px);
+    margin-top: -20px;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
 
+.title-bar .flag:hover {
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+#pagesdd {
+    line-height: 1.85;
+}
+
+#pagesdd a:hover .flag {
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
 
 
 .title-bar {
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.9);
+    box-shadow: -20px 5px 20px 0px rgba(0,0,0,0.9);
     position: fixed;
     top: 0;
     right: 0;
@@ -806,7 +828,7 @@ h2 {
         height: 500px;
     }
 
-    .mobile-device #graphtitles {
+    .mobile-device .graphtitles {
         font-size: 40px;
     }
 

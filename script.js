@@ -1,3 +1,8 @@
+let currentPage = 'Home';
+
+function setCurrentPage(page) {
+    currentPage = page;
+};
 
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
@@ -13,11 +18,16 @@ document.addEventListener("scroll", function () {
         let sectionHeight = rect.height;
 
         if (visibleHeight >= viewportHeight / 2) {
-            document.title = "&Elections • " + sectionTitle;
+            if (currentPage == 'Home') {
+                document.title = "&Elections • " + sectionTitle;
+            } else {
+                document.title = "&Elections • " + currentPage + " • " + sectionTitle;
+            };
             menuBarTitle.style.fontWeight = "550";
         }
     });
 });
+
 
 function socialslink(link,sameWindow) {
     if (sameWindow == 0) {
@@ -337,6 +347,7 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Map trigger IDs to content IDs
     const dropdownMap = {
+        'pagesdd-trigger': 'pagesdd',
         'current-projectiondd-trigger': 'current-projectiondd',
         'historical-infodd-trigger': 'historical-infodd',
         'other-projectionsdd-trigger': 'other-projectionsdd',
