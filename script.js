@@ -28,6 +28,30 @@ document.addEventListener("scroll", function () {
     });
 });
 
+function scottishmap(maptoshow) {
+    if (maptoshow == 'reg') {
+        var maptohide = 'hex';
+        var btntoshow = 'left';
+        var btntohide = 'right';
+        /*const iframe = 'scotmap-reg'.querySelector("iframe.lazy-frame");
+        if (iframe && !iframe.src) {
+            iframe.src = iframe.dataset.src;
+        }*/
+    } else {
+        var maptohide = 'reg';
+        var btntoshow = 'right';
+        var btntohide = 'left';
+    };
+    let newMapId = document.getElementById("scotmap-" + maptoshow);
+    newMapId.classList.remove('hide');
+    let oldMapId = document.getElementById("scotmap-" + maptohide);
+    oldMapId.classList.add('hide');
+    let newBtnId = document.getElementById("scotmapbtns" + btntoshow);
+    newBtnId.classList.remove('hide');
+    let oldBtnId = document.getElementById("scotmapbtns" + btntohide);
+    oldBtnId.classList.add('hide');
+}
+
 
 function socialslink(link,sameWindow) {
     if (sameWindow == 0) {
@@ -41,14 +65,19 @@ var pollsdisplaying = 'Nationwide';
 var timelinedisplaying = 'Nationwide';
 var sheetdisplaying = 'allgroups';
 var modeldisplaying = 'combined';
+var scotregionsmapinitiated = false;
+var scotpollsdisplaying = 'Regional';
+var scottimelinedisplaying = 'Regional';
 
 function pollselectionbuttons(button) {
-    button.style.backgroundColor = "rgba(233,37,37,0.85)";
-    button.style.boxShadow = "0px 2px 4px 0px rgba(0,0,0,0.6)";
-    button.style.fontWeight = "400";
-    button.style.cursor = "default";
-    button.style.pointerEvents = "none";
-    button.style.textShadow = "none";
+    if (button) {
+        button.style.backgroundColor = "rgba(233,37,37,0.85)";
+        button.style.boxShadow = "0px 2px 4px 0px rgba(0,0,0,0.6)";
+        button.style.fontWeight = "400";
+        button.style.cursor = "default";
+        button.style.pointerEvents = "none";
+        button.style.textShadow = "none";
+    }
 }
 
 function pollsselection(region,type) {
@@ -87,7 +116,7 @@ function pollsselection(region,type) {
         document.getElementById('demographics-' + sheettohide).style.display = 'none';
         let oldbutton = document.getElementById('demobtn' + sheettohide);
         oldbutton.removeAttribute("style");
-    } else {
+    } else if (type == 4) { 
         let modeltohide = modeldisplaying;
         modeldisplaying = region;
         let button = document.getElementById('livebtn' + modeldisplaying);
@@ -96,6 +125,32 @@ function pollsselection(region,type) {
         document.getElementById('model-' + modeltohide).style.display = 'none';
         let oldbutton = document.getElementById('livebtn' + modeltohide);
         oldbutton.removeAttribute("style");
+    } else if (type == 5) {
+        let pollstohide = scotpollsdisplaying;
+        scotpollsdisplaying = region;
+        let button = document.getElementById('pollsbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('polls' + region).style.display = 'block';
+        document.getElementById('polls' + pollstohide).style.display = 'none';
+        let oldbutton = document.getElementById('pollsbutton' + pollstohide);
+        oldbutton.removeAttribute("style");
+    } else {
+        let tltohide = scottimelinedisplaying;
+        scottimelinedisplaying = region;
+        let button = document.getElementById('tlbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('tl' + region).style.display = 'block';
+        document.getElementById('tl' + tltohide).style.display = 'none';
+        let oldbutton = document.getElementById('tlbutton' + tltohide);
+        oldbutton.removeAttribute("style");
+        let graphtitle;
+        if (region == 'Regional') {
+            graphtitle = 'Regional List Polls';
+        } else {
+            graphtitle = 'Constituency Vote Polls';
+        };
+        document.getElementById('graphtitles').innerHTML = graphtitle;
+        console.log(graphtitle);
     }
 }
 
@@ -111,7 +166,8 @@ var sectionsDisplaying = [
     ['custom-projection',false],        //8
     ['2024-projection',false],          //9
     ['blog',true],                      //10
-    ['about',true]                      //11
+    ['about',true],                     //11
+    ['other-legislatures',true]
 ];
 
 function showhide(section, canHide) {
@@ -149,6 +205,27 @@ function showhide(section, canHide) {
         sectionData.style.transition = "max-height 0.5s ease";
         sectionData.style.maxHeight = "100%";*/
         sectionData.classList.remove('hidden');
+        /*if (section == 0 && currentPage == 'Holyrood') {
+            var promapscot = true;
+        } else {
+            var promapscot = false;
+        }*/
+        /*const smallWidth = !window.matchMedia("(min-width: 1275px)").matches;/*
+        if (!(smallWidth && promapscot)) {
+            const iframe = sectionData.querySelector("iframe.lazy-frame");
+            if (iframe && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+                /*sectionData.appendChild("loading...");
+                setTimeout(() => {
+                    section.removeChild("loading...");
+                }, 3000);
+            }
+        }*/
+        if (currentPage == 'Holyrood' && section == 0 && scotregionsmapinitiated == false) {
+            regionsmap = document.getElementById('scotmap-reg');
+            regionsmap.classList.add('hide');
+            scotregionsmapinitiated = true;
+        }
         const iframe = sectionData.querySelector("iframe.lazy-frame");
         if (iframe && !iframe.src) {
             iframe.src = iframe.dataset.src;
@@ -177,12 +254,35 @@ function displayMobileMenu() {
     button.innerHTML = document.body.classList.contains("mobile-menu-active") ? "Close" : "• • •";
 }
 
+/*
+window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
+  if (e.matches) {
+    document.body.classList.add("landscape");
+    console.log('landscape');
+  } else {
+    document.body.classList.remove("landscape");
+    console.log('not landscape');
+  }
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (screen.orientation) {
+    document.body.classList.toggle("landscape", screen.orientation.type.startsWith("landscape"));
+  }
+});
+
+screen.orientation?.addEventListener("change", () => {
+  document.body.classList.toggle("landscape", screen.orientation.type.startsWith("landscape"));
+});
 
 function detectMobileDevice() {
     let userAgent = navigator.userAgent.toLowerCase();
     if (/mobile|android|iphone|ipod/i.test(userAgent)) {
         document.body.classList.add("mobile-device");
         console.log("Mobile device detected!");
+        document.body.style.paddingBottom = '150px';
+        document.body.style.paddingTop = '20px';
+        //document.documentElement.style.scrollPaddingTop = '125px';
         document.querySelectorAll('.showhidesection').forEach(btn => {
             btn.innerHTML = '>';
         })
@@ -292,14 +392,21 @@ let ipadDevice = false;
 window.addEventListener('DOMContentLoaded', () => {
     mobileDevice = detectMobileDevice();
     ipadDevice = detectiPad();
+    console.log("okay then")
     let nationwidebuttonpolls = document.getElementById('pollsbuttonNationwide');
     pollselectionbuttons(nationwidebuttonpolls);
     let nationwidebuttontl = document.getElementById('tlbuttonNationwide');
     pollselectionbuttons(nationwidebuttontl);
+    console.log("thing now here")
     let allgroupsbuttondemos = document.getElementById('demobtnallgroups');
     pollselectionbuttons(allgroupsbuttondemos);
     let combinedbuttonlivemodel = document.getElementById('livebtncombined');
     pollselectionbuttons(combinedbuttonlivemodel);
+    let regionalbuttonpolls = document.getElementById('pollsbuttonRegional');
+    pollselectionbuttons(regionalbuttonpolls);
+    let regionalbuttontl = document.getElementById('tlbuttonRegional');
+    pollselectionbuttons(regionalbuttontl);
+    console.log("thing here so far")
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();

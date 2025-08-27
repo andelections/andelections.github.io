@@ -24,19 +24,19 @@
                     <span><a class="titlebarlink" id="DifferentPages" href="#"><img class="flag" src="../-Flags/reddragonsquare.png" alt="WAL"></a></span>
                 </div>
                 <div class="dropdown" id="current-projectiondd-trigger">
-                    <span><a class="titlebarlink" id="CurrentProjection" href="#live-model" onclick="showhide(0,false); showhide(1,false); /* showhide(2,false); showhide(3,false); showhide(4,false) */"> Current Projection </a></span>
+                    <span><a class="titlebarlink" id="CurrentProjection" href="#current-projection" onclick="showhide(0,false); showhide(1,false); /* showhide(2,false); showhide(3,false); showhide(4,false) */"> Current Projection </a></span>
                 </div>
                 •
                 <div class="dropdown" id="historical-infodd-trigger">
-                    <span><a class="titlebarlink" id="HistoricalInfo" href="#polling-timeline" onclick="/*showhide(5,false);*/ showhide(6,false); showhide(7,false)"> Historical Info </a></span>
+                    <span><a class="titlebarlink" id="HistoricalInfo" href="#historical-info" onclick="/*showhide(5,false);*/ showhide(6,false); showhide(7,false)"> Historical Info </a></span>
                 </div><!--
                 •
                 <div class="dropdown" id="other-projectionsdd-trigger">
-                    <span><a class="titlebarlink" id="OtherProjections" href="#custom-projection" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
+                    <span><a class="titlebarlink" id="OtherProjections" href="#other-projections" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
                 </div>-->
                 •
                 <div class="dropdown" id="socialsdd-trigger">
-                    <span><a class="titlebarlink" id="Blog&About" href="#blog" onclick="showhide(10,false); showhide(11,false)"> Connect </a></span>
+                    <span><a class="titlebarlink" id="Blog&About" href="#blog-and-about" onclick="showhide(10,false); showhide(11,false)"> Connect </a></span>
                 </div>
             </div>
             <!--div id="titlebartext">
@@ -127,15 +127,22 @@
         </div>
         <div class="mobile-title-bar">
             <button id="mobiletitlesbutton" title="Menu" onclick="displayMobileMenu()">• • •</button>
-            <div id="mobiletitletext">
-                <a href="#live-model" onclick="displayMobileMenu()">→ Current Projection</a><br>
-                <a href="#polling-timeline" onclick="displayMobileMenu()">→ Historical Info</a><br><!--
-                <a href="#custom-projection" onclick="displayMobileMenu()">→ Other Projections</a><br>-->
-                <a href="#blog" onclick="displayMobileMenu()">→ Connect</a>
+            
+        </div>
+        <div id="mobiletitletext">
+            <div id="actualtitlestext">
+                <div id="mobileotherpages">
+                    <a href="../">Westminster Proj.</a><br>
+                    <a href="#">Senedd Projection</a><br>
+                </div>
+                <a href="#current-projection" onclick="displayMobileMenu()">Current Projection</a><br>
+                <a href="#historical-info" onclick="displayMobileMenu()">Historical Info</a><br><!--
+                <a href="#other-projections" onclick="displayMobileMenu()">Other Projections</a><br>-->
+                <a href="#blog-and-about" onclick="displayMobileMenu()">Connect</a>
             </div>
         </div>
         
-        <section data-title="Current Projection">
+        <section data-title="Current Projection" id="current-projection">
             <div id="live-model"><br>
                 <div class="container" id="model-binary">
                     <img id="infographic" src="image.png" frameborder="0" alt="Binary Tabulation - Live Election Projection"></frame></iframe>
@@ -225,7 +232,7 @@
             </div>
             -->
         </section>
-        <section data-title="Historical Info">
+        <section data-title="Historical Info" id="historical-info">
             <!--div id="projection-timeline">
                 <div class="sectiontitle">
                     <button class="showhidesection" id="shb-projection-timeline" title="show section" onclick="showhide(5,true)">show</button>
@@ -261,7 +268,7 @@
                 </div>
             </div>
         </section><!--
-        <section data-title="Other Projections">
+        <section data-title="Other Projections" id="other-projections">
             <div id="custom-projection">
                 <div class="sectiontitle">
                     <button class="showhidesection" id="shb-custom-projection" title="show section" onclick="showhide(8,true)">show</button>
@@ -276,7 +283,7 @@
                 </div>
             </div>
         </section-->
-        <section data-title="Blog & About">
+        <section data-title="Blog & About" id="blog-and-about">
             <div id="blog">
                 <div class="sectiontitle">
                     <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
