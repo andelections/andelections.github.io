@@ -807,6 +807,7 @@ if (
     .sectiontitle,
     .sectiontitle a,
     .sectiontitle a:hover
+    .blogtitles-container h2
     h2 {
       font-weight: 400 !important;
     }
