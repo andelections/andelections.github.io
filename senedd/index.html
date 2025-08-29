@@ -142,236 +142,238 @@
             </div>
         </div>
         
-        <section data-title="Current Projection" id="current-projection">
-            <div id="live-model"><br>
-                <div class="container" id="model-binary">
-                    <img id="infographic" src="image.png" frameborder="0" alt="Binary Tabulation - Live Election Projection"></frame></iframe>
-                    <div class="scroll-container">
-                        <div class="flourish-embed flourish-parliament" data-src="visualisation/24742937"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24742937/thumbnail" width="100%" alt="senedd cymru visualisation" /></noscript></div>
-                    </div>
-                </div>
-            </div>
-            <div id="projection-maps">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-projection-maps" title="show section" onclick="showhide(0,true)">show</button>
-                    <a href="#projection-maps" id="lnk-projection-maps" class="sectiontitlelink" title="show and go to section" onclick="showhide(0,false)">Projection Maps</a>
-                </div>
-                <div class="datacontainer hidden" id="data-projection-maps">
-                    <div class="container">
-                        <table width="100%"><tr><td><div class="graphtitles">Current Projection</div></td></tr><tr><td><iframe class="map all" src="https://public.flourish.studio/visualisation/24708955/embed" frameborder="0"></iframe></td></tr></table>
-                        <table width="100%"><tr><td><div class="graphtitles">2021 Notional Result</div></td></tr><tr><td><iframe class="map all" src="https://public.flourish.studio/visualisation/24784604/embed" frameborder="0"></iframe></td></tr></table>
-                    </div>
-                </div>
-            </div>
-            <div id="constituency-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-constituency-projections" title="show section" onclick="showhide(1,true)">show</button>
-                    <a href="#constituency-projections" id="lnk-constituency-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(1,false)">Constituency Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-constituency-projections">
-                    <div class="loading" id="loading-constituency-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regionalproj">
-                        <iframe class="excel-embed regular lazy-frame" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQQJxJwHAozLSY1HUE66kE90ARyI4inw4AQTw6Gk3HXh4jM?AllowTyping=True&Item=conprjnew&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn consty-proj-sheet"><a onclick="manualrefresh('consty-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <!--
-            <div id="demographic-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-demographic-projections" title="show section" onclick="showhide(2,true)">show</button>
-                    <a href="#demographic-projections" id="lnk-demographic-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(2,false)">Demographic Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-demographic-projections">
-                    <div class="pollsoptionbox demographics">
-                        <button title="Show headline information" id="demobtnallgroups" onclick="pollsselection('allgroups',3)">all groups</button>
-                        <button title="Show detailed information" id="demobtndetails" onclick="pollsselection('details',3)">details</button>
-                        <button title="Show intersectional breakdown" id="demobtnintersectional" onclick="pollsselection('intersectional',3)">intersectional</button>
-                    </div>
-                    <div class="blankspace"></div>
-                    <div class="loading" id="loading-demographic-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet demos" id="demographics-allgroups">
-                        <iframe class="excel-embed regionalproj lazy-frame" id="demo-allgroups-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demo%20Headlines'!C38&Item=DemoHead&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-allgroups-sheet"><a onclick="manualrefresh('demo-allgroups-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet demos" id="demographics-details">
-                        <iframe class="excel-embed regionalproj" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item=DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-proj-sheet"><a onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet demos" id="demographics-intersectional">
-                        <iframe class="excel-embed regionalproj" id="demo-intersect-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Custom%20Demo%20Breakdown'!C43&Item=DemoInte&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-intersect-sheet"><a onclick="manualrefresh('demo-intersect-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="regional-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-regional-projections" title="show section" onclick="showhide(3,true)">show</button>
-                    <a href="#regional-projections" id="lnk-regional-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(3,false)">Regional Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-regional-projections">
-                    <div class="loading" id="loading-regional-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regionalproj">
-                        <iframe class="excel-embed regionalproj lazy-frame" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn regional-proj-sheet"><a onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="regional-data">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-regional-data" title="show section" onclick="showhide(4,true)">show</button>
-                    <a href="#regional-data" id="lnk-regional-data" class="sectiontitlelink" title="show and go to section" onclick="showhide(4,false)">Regional Data</a>
-                </div>
-                <div class="datacontainer hidden" id="data-regional-data">
-                    <div class="loading" id="loading-regional-data">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regional">
-                        <iframe class="excel-embed regional lazy-frame" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn regional-data-sheet"><a onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            -->
-        </section>
-        <section data-title="Historical Info" id="historical-info">
-            <!--div id="projection-timeline">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-projection-timeline" title="show section" onclick="showhide(5,true)">show</button>
-                    <a href="#projection-timeline" id="lnk-projection-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(5,false)">Projection Timeline</a>
-                </div>
-                <div class="datacontainer hidden" id="data-projection-timeline">
-                    <div class="timeline projection">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                </div>
-            </div-->
-            <div id="polling-timeline">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-polling-timeline" title="show section" onclick="showhide(6,true)">show</button>
-                    <a href="#polling-timeline" id="lnk-polling-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(6,false)">Polling Timeline</a>
-                </div>
-                <div class="datacontainer hidden" id="data-polling-timeline">
-                    <div class="timeline polls" id="tlNationwide">
-                        <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/24773847"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24773847/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-            </div>
-            <div id="poll-library">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-poll-library" title="show section" onclick="showhide(7,true)">show</button>
-                    <a href="#poll-library" id="lnk-poll-library" class="sectiontitlelink" title="show and go to section" onclick="showhide(7,false)">Poll Library</a>
-                </div>
-                <div class="datacontainer hidden" id="data-poll-library">
-                    <div class="loading" id="loading-poll-library">Loading...<br>Please wait.</div>
-                    <div class="excelsheet polls" id="pollsNationwide">
-                        <iframe class="excel-embed polls lazy-frame" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQQJxJwHAozLSY1HUE66kE90ARyI4inw4AQTw6Gk3HXh4jM?Item=PolNew&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn polls-nat-sheet"><a onclick="manualrefresh('polls-nat-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-        </section><!--
-        <section data-title="Other Projections" id="other-projections">
-            <div id="custom-projection">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-custom-projection" title="show section" onclick="showhide(8,true)">show</button>
-                    <a href="#custom-projection" id="lnk-custom-projection" class="sectiontitlelink" title="show and go to section" onclick="showhide(8,false)">Custom Projection</a>
-                </div>
-                <div class="datacontainer hidden" id="data-custom-projection">
-                <div class="loading" id="loading-custom-projection">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regular">
-                        <iframe class="excel-embed regular lazy-frame" id="custom-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn custom-proj-sheet"><a onclick="manualrefresh('custom-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-        </section-->
-        <section data-title="Blog & About" id="blog-and-about">
-            <div id="blog">
-                <div class="sectiontitle">
-                    <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
-                    <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Substack Blog</a>
-                </div>
-                <div class="datacontainer" id="data-blog">
-                    <div class="blogtitles-container">
-                        <a href="https://andelections.substack.com/p/220825-senedd-projection-plaid-and" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                            <h2>22/08/25 Senedd Projection: Plaid & Reform Vying for the Most Seats</h2>
-                            <p>22 Aug 2025 • &Elections first projection for next year's Senedd election has Plaid Cymru and Reform neck-and-neck, ending Labour's stronghold on the legislature.</p>
-                        </a>
-                        <a href="https://andelections.substack.com/p/will-plaid-win-cymru" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                            <h2>Will Plaid Win Cymru?</h2>
-                            <p>05 Aug 2025 • With all the talk of Reform potentially becoming the largest party in Wales, it's worth recognising the growth of the party chasing Labour's heels for the left-of-centre vote.</p>
-                        </a>
-                    </div>
-                </div>
-            <div id="about">
-                <div class="sectiontitle">
-                    <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(11,true)">hide</button>
-                    <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(11,false)">About & Socials</a>
-                </div>
-                <div class="datacontainer" id="data-about">
-                    <p>
-                        Hi, I'm Nicholas. I started making what has eventually become &Elections in January 2024,
-                        when I started to collate MRP polling. In the 2024 election, my final call projection
-                        was one of the most accurate in the industry, with my model having forecast over 87% of
-                        constituencies correctly*. Since then, I've refined my model to better its accuracy,
-                        and have worked tirelessly on several new exciting features, including this site,
-                        which I independently created and published in June 2025.
-                        <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">You can read more about my methodology here.</a>
-                    </p>
-                    <div class="container">
-                        <div class="aboutcontainer about"><p>
-                            Now, being just one 19-year-old working to create some of the most detailed analysis
-                            and projections for UK elections anywhere on the internet takes up
-                            a lot of effort, especially wihout any external financial backing. Anything that
-                            you can do to help contribute to the site is deeply appreciated! Also, especially
-                            if you can't contribute, please could you consider following &Elections on
-                            social media sites to stay up-to-date with polling and projection updates!
-                        </p><p class="disclaimer">
-                            *552 of the 631 constituencies projected (GB, excluding Chorley)
-                        </p></div>
-                        <div class="aboutcontainer socials">
-                            <table>
-                                <tr>
-                                    <td colspan="2" class="socialstabletitles">Help the Site</td>
-                                </tr>
-                                <tr>
-                                    <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections', 0)">Ko-fi</button></td>
-                                    <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</button></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><button class="socialsbutton" title="Subscribe (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0)">Subscribe on Substack</button></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="socialstabletitles">Social Media</td>
-                                </tr>
-                                <tr>
-                                    <td><button class="socialsbutton" title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</button></td>
-                                    <td><button class="socialsbutton" title="Substack (opens in new tab)" onclick="socialslink('https://andelections.substack.com',1)">Substack</button></td>
-                                </tr>
-                                <tr>
-                                    <td><button class="socialsbutton" title="Twitter (opens in new tab)" onclick="socialslink('https://x.com/andelectionsuk',1)">Twitter</button></td>
-                                    <td><button class="socialsbutton" title="BlueSky (opens in new tab)" onclick="socialslink('https://bsky.app/profile/andelections.com',1)">BlueSky</button></td>
-                                </tr>
-                                <tr>
-                                    <td><button class="socialsbutton" title="Instagram (opens in new tab)" onclick="socialslink('https://www.instagram.com/andelections',1)">Instagram</button></td>
-                                    <td><button class="socialsbutton" title="TikTok (opens in new tab)" onclick="socialslink('https://www.tiktok.com/@andelections',1)">TikTok</button></td>
-                                </tr>
-                            </table>
+        <div class="page-contents">
+            <section data-title="Current Projection" id="current-projection">
+                <div id="live-model"><br>
+                    <div class="container" id="model-binary">
+                        <img id="infographic" src="image.png" frameborder="0" alt="Binary Tabulation - Live Election Projection"></frame></iframe>
+                        <div class="scroll-container">
+                            <div class="flourish-embed flourish-parliament" data-src="visualisation/24742937"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24742937/thumbnail" width="100%" alt="senedd cymru visualisation" /></noscript></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-            <div id="footer">
-                Permission required before use of projection data. © 2025 Nicholas Tryand.
-                <!--a href="privacy-policy">Privacy policy.</a><br>
-                Sources include: <a href="#poll-library">all polls mentioned</a>,
-                2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
-                and 2024 UK general elections in Great Britain.<br>
-                2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
-                notional results are used for that election.<br>
-                Methodological information on the collation of this data is available here.
-                Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
-                &Elections does not store user input information in interactive fields.<br-->
-            </div>
-        </section>
+                <div id="projection-maps">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-projection-maps" title="show section" onclick="showhide(0,true)">show</button>
+                        <a href="#projection-maps" id="lnk-projection-maps" class="sectiontitlelink" title="show and go to section" onclick="showhide(0,false)">Projection Maps</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-projection-maps">
+                        <div class="container">
+                            <table width="100%"><tr><td><div class="graphtitles">Current Projection</div></td></tr><tr><td><iframe class="map all" src="https://public.flourish.studio/visualisation/24708955/embed" frameborder="0"></iframe></td></tr></table>
+                            <table width="100%"><tr><td><div class="graphtitles">2021 Notional Result</div></td></tr><tr><td><iframe class="map all" src="https://public.flourish.studio/visualisation/24784604/embed" frameborder="0"></iframe></td></tr></table>
+                        </div>
+                    </div>
+                </div>
+                <div id="constituency-projections">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-constituency-projections" title="show section" onclick="showhide(1,true)">show</button>
+                        <a href="#constituency-projections" id="lnk-constituency-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(1,false)">Constituency Projections</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-constituency-projections">
+                        <div class="loading" id="loading-constituency-projections">Loading...<br>Please wait.</div>
+                        <div class="excelsheet regionalproj">
+                            <iframe class="excel-embed regular lazy-frame" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQQJxJwHAozLSY1HUE66kE90ARyI4inw4AQTw6Gk3HXh4jM?AllowTyping=True&Item=conprjnew&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn consty-proj-sheet"><a onclick="manualrefresh('consty-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div id="demographic-projections">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-demographic-projections" title="show section" onclick="showhide(2,true)">show</button>
+                        <a href="#demographic-projections" id="lnk-demographic-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(2,false)">Demographic Projections</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-demographic-projections">
+                        <div class="pollsoptionbox demographics">
+                            <button title="Show headline information" id="demobtnallgroups" onclick="pollsselection('allgroups',3)">all groups</button>
+                            <button title="Show detailed information" id="demobtndetails" onclick="pollsselection('details',3)">details</button>
+                            <button title="Show intersectional breakdown" id="demobtnintersectional" onclick="pollsselection('intersectional',3)">intersectional</button>
+                        </div>
+                        <div class="blankspace"></div>
+                        <div class="loading" id="loading-demographic-projections">Loading...<br>Please wait.</div>
+                        <div class="excelsheet demos" id="demographics-allgroups">
+                            <iframe class="excel-embed regionalproj lazy-frame" id="demo-allgroups-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demo%20Headlines'!C38&Item=DemoHead&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn demo-allgroups-sheet"><a onclick="manualrefresh('demo-allgroups-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                        <div class="excelsheet demos" id="demographics-details">
+                            <iframe class="excel-embed regionalproj" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item=DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn demo-proj-sheet"><a onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                        <div class="excelsheet demos" id="demographics-intersectional">
+                            <iframe class="excel-embed regionalproj" id="demo-intersect-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Custom%20Demo%20Breakdown'!C43&Item=DemoInte&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn demo-intersect-sheet"><a onclick="manualrefresh('demo-intersect-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="regional-projections">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-regional-projections" title="show section" onclick="showhide(3,true)">show</button>
+                        <a href="#regional-projections" id="lnk-regional-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(3,false)">Regional Projections</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-regional-projections">
+                        <div class="loading" id="loading-regional-projections">Loading...<br>Please wait.</div>
+                        <div class="excelsheet regionalproj">
+                            <iframe class="excel-embed regionalproj lazy-frame" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn regional-proj-sheet"><a onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="regional-data">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-regional-data" title="show section" onclick="showhide(4,true)">show</button>
+                        <a href="#regional-data" id="lnk-regional-data" class="sectiontitlelink" title="show and go to section" onclick="showhide(4,false)">Regional Data</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-regional-data">
+                        <div class="loading" id="loading-regional-data">Loading...<br>Please wait.</div>
+                        <div class="excelsheet regional">
+                            <iframe class="excel-embed regional lazy-frame" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn regional-data-sheet"><a onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </section>
+            <section data-title="Historical Info" id="historical-info">
+                <!--div id="projection-timeline">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-projection-timeline" title="show section" onclick="showhide(5,true)">show</button>
+                        <a href="#projection-timeline" id="lnk-projection-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(5,false)">Projection Timeline</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-projection-timeline">
+                        <div class="timeline projection">
+                            <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                        </div>
+                    </div>
+                </div-->
+                <div id="polling-timeline">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-polling-timeline" title="show section" onclick="showhide(6,true)">show</button>
+                        <a href="#polling-timeline" id="lnk-polling-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(6,false)">Polling Timeline</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-polling-timeline">
+                        <div class="timeline polls" id="tlNationwide">
+                            <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/24773847"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24773847/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                        </div>
+                </div>
+                <div id="poll-library">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-poll-library" title="show section" onclick="showhide(7,true)">show</button>
+                        <a href="#poll-library" id="lnk-poll-library" class="sectiontitlelink" title="show and go to section" onclick="showhide(7,false)">Poll Library</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-poll-library">
+                        <div class="loading" id="loading-poll-library">Loading...<br>Please wait.</div>
+                        <div class="excelsheet polls" id="pollsNationwide">
+                            <iframe class="excel-embed polls lazy-frame" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQQJxJwHAozLSY1HUE66kE90ARyI4inw4AQTw6Gk3HXh4jM?Item=PolNew&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn polls-nat-sheet"><a onclick="manualrefresh('polls-nat-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section><!--
+            <section data-title="Other Projections" id="other-projections">
+                <div id="custom-projection">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-custom-projection" title="show section" onclick="showhide(8,true)">show</button>
+                        <a href="#custom-projection" id="lnk-custom-projection" class="sectiontitlelink" title="show and go to section" onclick="showhide(8,false)">Custom Projection</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-custom-projection">
+                    <div class="loading" id="loading-custom-projection">Loading...<br>Please wait.</div>
+                        <div class="excelsheet regular">
+                            <iframe class="excel-embed regular lazy-frame" id="custom-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+                            <div class="refreshbtn custom-proj-sheet"><a onclick="manualrefresh('custom-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section-->
+            <section data-title="Blog & About" id="blog-and-about">
+                <div id="blog">
+                    <div class="sectiontitle">
+                        <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
+                        <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Substack Blog</a>
+                    </div>
+                    <div class="datacontainer" id="data-blog">
+                        <div class="blogtitles-container">
+                            <a href="https://andelections.substack.com/p/220825-senedd-projection-plaid-and" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                                <h2>22/08/25 Senedd Projection: Plaid & Reform Vying for the Most Seats</h2>
+                                <p>22 Aug 2025 • &Elections first projection for next year's Senedd election has Plaid Cymru and Reform neck-and-neck, ending Labour's stronghold on the legislature.</p>
+                            </a>
+                            <a href="https://andelections.substack.com/p/will-plaid-win-cymru" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                                <h2>Will Plaid Win Cymru?</h2>
+                                <p>05 Aug 2025 • With all the talk of Reform potentially becoming the largest party in Wales, it's worth recognising the growth of the party chasing Labour's heels for the left-of-centre vote.</p>
+                            </a>
+                        </div>
+                    </div>
+                <div id="about">
+                    <div class="sectiontitle">
+                        <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(11,true)">hide</button>
+                        <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(11,false)">About & Socials</a>
+                    </div>
+                    <div class="datacontainer" id="data-about">
+                        <p>
+                            Hi, I'm Nicholas. I started making what has eventually become &Elections in January 2024,
+                            when I started to collate MRP polling. In the 2024 election, my final call projection
+                            was one of the most accurate in the industry, with my model having forecast over 87% of
+                            constituencies correctly*. Since then, I've refined my model to better its accuracy,
+                            and have worked tirelessly on several new exciting features, including this site,
+                            which I independently created and published in June 2025.
+                            <a href="https://andelections.substack.com/p/and-elections-the-methodology" title="Open article in new tab" target="_blank" rel="noopener noreferrer">You can read more about my methodology here.</a>
+                        </p>
+                        <div class="container">
+                            <div class="aboutcontainer about"><p>
+                                Now, being just one 19-year-old working to create some of the most detailed analysis
+                                and projections for UK elections anywhere on the internet takes up
+                                a lot of effort, especially wihout any external financial backing. Anything that
+                                you can do to help contribute to the site is deeply appreciated! Also, especially
+                                if you can't contribute, please could you consider following &Elections on
+                                social media sites to stay up-to-date with polling and projection updates!
+                            </p><p class="disclaimer">
+                                *552 of the 631 constituencies projected (GB, excluding Chorley)
+                            </p></div>
+                            <div class="aboutcontainer socials">
+                                <table>
+                                    <tr>
+                                        <td colspan="2" class="socialstabletitles">Help the Site</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections', 0)">Ko-fi</button></td>
+                                        <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><button class="socialsbutton" title="Subscribe (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0)">Subscribe on Substack</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="socialstabletitles">Social Media</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="socialsbutton" title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</button></td>
+                                        <td><button class="socialsbutton" title="Substack (opens in new tab)" onclick="socialslink('https://andelections.substack.com',1)">Substack</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="socialsbutton" title="Twitter (opens in new tab)" onclick="socialslink('https://x.com/andelectionsuk',1)">Twitter</button></td>
+                                        <td><button class="socialsbutton" title="BlueSky (opens in new tab)" onclick="socialslink('https://bsky.app/profile/andelections.com',1)">BlueSky</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="socialsbutton" title="Instagram (opens in new tab)" onclick="socialslink('https://www.instagram.com/andelections',1)">Instagram</button></td>
+                                        <td><button class="socialsbutton" title="TikTok (opens in new tab)" onclick="socialslink('https://www.tiktok.com/@andelections',1)">TikTok</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <div id="footer">
+                    Permission required before use of projection data. © 2025 Nicholas Tryand.
+                    <!--a href="privacy-policy">Privacy policy.</a><br>
+                    Sources include: <a href="#poll-library">all polls mentioned</a>,
+                    2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
+                    and 2024 UK general elections in Great Britain.<br>
+                    2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
+                    notional results are used for that election.<br>
+                    Methodological information on the collation of this data is available here.
+                    Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
+                    &Elections does not store user input information in interactive fields.<br-->
+                </div>
+            </section>
+        </div>
     </body>
 </html>
