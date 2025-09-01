@@ -29,11 +29,11 @@
                 •
                 <div class="dropdown" id="historical-infodd-trigger">
                     <span><a class="titlebarlink" id="HistoricalInfo" href="#historical-info" onclick="/*showhide(5,false);*/ showhide(6,false); showhide(7,false)"> Historical Info </a></span>
-                </div><!--
+                </div>
                 •
                 <div class="dropdown" id="other-projectionsdd-trigger">
-                    <span><a class="titlebarlink" id="OtherProjections" href="#other-projections" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
-                </div>-->
+                    <span><a class="titlebarlink" id="OtherProjections" href="#other-projections" onclick="showhide(12,false)"> Other Projections </a></span>
+                </div>
                 •
                 <div class="dropdown" id="socialsdd-trigger">
                     <span><a class="titlebarlink" id="Blog&About" href="#blog-and-about" onclick="showhide(10,false); showhide(11,false)"> Connect </a></span>
@@ -105,11 +105,12 @@
             → <a href="#projection-timeline" onclick="showhide(5,false)">Projection Timeline</a><br-->
             → <a href="#polling-timeline" onclick="showhide(6,false)">Polling Timeline</a><br>
             → <a href="#poll-library" onclick="showhide(7,false)">Poll Library</a>
-        </div><!--
-        <div class="dropdown-content other-projections" id="other-projectionsdd">
+        </div>
+        <div class="dropdown-content other-projections" id="other-projectionsdd"><!--
             → <a href="#custom-projection" onclick="showhide(8,false)">Custom Projection</a><br>
-            → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
-        </div>-->
+            → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a-->
+            → <a href="#more-legislatures" onclick="showhide(12,false)">More Legislatures</a><br>
+        </div>
         <div class="dropdown-content socials" id="socialsdd">
             → <a href="#blog" onclick="showhide(10,false)">Substack Blog</a><br>
             → <a href="#about" onclick="showhide(11,false)">About & Socials</a><br>
@@ -137,8 +138,8 @@
                     <a href="../senedd/">Senedd Projection</a><br>
                 </div>
                 <a href="#current-projection" onclick="displayMobileMenu()">Current Projection</a><br>
-                <a href="#historical-info" onclick="displayMobileMenu()">Historical Info</a><br><!--
-                <a href="#other-projections" onclick="displayMobileMenu()">Other Projections</a><br>-->
+                <a href="#historical-info" onclick="displayMobileMenu()">Historical Info</a><br>
+                <a href="#other-projections" onclick="displayMobileMenu()">Other Projections</a><br>
                 <a href="#blog-and-about" onclick="displayMobileMenu()">Connect</a>
             </div>
         </div>
@@ -306,8 +307,8 @@
                     </div>
                 </div>
             </section>
-            <!--section data-title="Other Projections" id="other-projections">
-                <div id="other-legislatures">
+            <section data-title="Other Projections" id="other-projections">
+                <!--div id="other-legislatures">
                     <div class="sectiontitle">
                         <button class="showhidesection" id="shb-other-legislatures" title="hide section" onclick="showhide(12,true)">hide</button>
                         <a href="#other-legislatures" id="lnk-other-legislatues" class="sectiontitlelink" title="go to section" onclick="showhide(12,false)">Other Legislatures</a>
@@ -330,8 +331,28 @@
                             <div class="refreshbtn custom-proj-sheet"><a onclick="manualrefresh('custom-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
                         </div>
                     </div>
+                </div-->
+                <div id="more-legislatures">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-more-legislatures" title="hide section" onclick="showhide(12,true)">hide</button>
+                        <a href="#more-legislatures" id="lnk-more-legislatures" class="sectiontitlelink" title="go to section" onclick="showhide(12,false)">More Legislatures</a>
+                    </div>
+                    <div class="datacontainer" id="data-more-legislatures">
+                        <button class="morelegsbuttons" title="go to Westminster projection" onclick="window.location.href='../'">
+                            <img class="flagleg" src="../-Flags/unionjacksquare.png" frameborder="0" alt="GBR"><br>
+                            Westminster
+                        </button>
+                        <button class="morelegsbuttons" title="go to Holyrood projection" onclick="window.location.href='#'">
+                            <img class="flagleg" src="../-Flags/saltiresquare.png" frameborder="0" alt="SCT"><br>
+                            Holyrood
+                        </button>
+                        <button class="morelegsbuttons" title="go to Senedd projection" onclick="window.location.href='../senedd/'">
+                            <img class="flagleg" src="../-Flags/reddragonsquare.png" frameborder="0" alt="WAL"><br>
+                            Senedd
+                        </button>
+                    </div>
                 </div>
-            </section-->
+            </section>
             <section data-title="Blog & About" id="blog-and-about">
                 <div id="blog">
                     <div class="sectiontitle">
@@ -340,6 +361,10 @@
                     </div>
                     <div class="datacontainer" id="data-blog">
                         <div class="blogtitles-container">
+                            <a href="https://andelections.substack.com/p/010925-holyrood-projection-snp-to" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                                <h2>01/09/25 Holyrood Projection: SNP to Retain Most Seats Despite Vote Collapsing</h2>
+                                <p>01 Sep 2025 • &Elections' inaugural projection of next year's Scottish Parliament election has the SNP storming ahead despite their vote share collapsing.</p>
+                            </a>
                             <a href="https://andelections.substack.com/p/the-snps-unremarkable-comeback" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
                                 <h2>The SNP's Unremarkable Comeback</h2>
                                 <p>04 Aug 2025 • The SNP were decimated to 9 seats in 2024, but now most forecasters are projecting that a general election today would yield upwards of 40 seats for them. What happened?</p>

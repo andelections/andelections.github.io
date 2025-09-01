@@ -32,7 +32,7 @@
                 </div>
                 •
                 <div class="dropdown" id="other-projectionsdd-trigger">
-                    <span><a class="titlebarlink" id="OtherProjections" href="#other-projections" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
+                    <span><a class="titlebarlink" id="OtherProjections" href="#other-projections" onclick="showhide(8,false); showhide(9,false); showhide(12,false)"> Other Projections </a></span>
                 </div>
                 •
                 <div class="dropdown" id="socialsdd-trigger">
@@ -108,7 +108,8 @@
         </div>
         <div class="dropdown-content other-projections" id="other-projectionsdd">
             → <a href="#custom-projection" onclick="showhide(8,false)">Custom Projection</a><br>
-            → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
+            → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a><br>
+            → <a href="#more-legislatures" onclick="showhide(12,false)">More Legislatures</a><br>
         </div>
         <div class="dropdown-content socials" id="socialsdd">
             → <a href="#blog" onclick="showhide(10,false)">Substack Blog</a><br>
@@ -350,6 +351,26 @@
                         </div>
                     </div>
                 </div>
+                <div id="more-legislatures">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-more-legislatures" title="hide section" onclick="showhide(12,true)">hide</button>
+                        <a href="#more-legislatures" id="lnk-more-legislatures" class="sectiontitlelink" title="go to section" onclick="showhide(12,false)">More Legislatures</a>
+                    </div>
+                    <div class="datacontainer" id="data-more-legislatures">
+                        <button class="morelegsbuttons" title="go to Westminster projection" onclick="window.location.href='#'">
+                            <img class="flagleg" src="-Flags/unionjacksquare.png" frameborder="0" alt="GBR"><br>
+                            Westminster
+                        </button>
+                        <button class="morelegsbuttons" title="go to Holyrood projection" onclick="window.location.href='holyrood/'">
+                            <img class="flagleg" src="-Flags/saltiresquare.png" frameborder="0" alt="SCT"><br>
+                            Holyrood
+                        </button>
+                        <button class="morelegsbuttons" title="go to Senedd projection" onclick="window.location.href='senedd/'">
+                            <img class="flagleg" src="-Flags/reddragonsquare.png" frameborder="0" alt="WAL"><br>
+                            Senedd
+                        </button>
+                    </div>
+                </div>
             </section>
             <section data-title="Blog & About" id="blog-and-about">
                 <div id="blog">
@@ -359,6 +380,10 @@
                     </div>
                     <div class="datacontainer" id="data-blog">
                         <div class="blogtitles-container">
+                            <a href="https://andelections.substack.com/p/010925-holyrood-projection-snp-to" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                                <h2>01/09/25 Holyrood Projection: SNP to Retain Most Seats Despite Vote Collapsing</h2>
+                                <p>01 Sep 2025 • &Elections' inaugural projection of next year's Scottish Parliament election has the SNP storming ahead despite their vote share collapsing.</p>
+                            </a>
                             <a href="https://andelections.substack.com/p/280825-uk-projection-labours-worst" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
                                 <h2>28/08/25 UK Projection: Labour's Worst Week Ever</h2>
                                 <p>28 Aug 2025 • An election held today would yield fewer seats for Labour than the Tories won last year, whilst Reform are within touching distance of a majority again.</p>
