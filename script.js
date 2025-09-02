@@ -414,8 +414,30 @@ function cookieExists(name, value = null) {
   });
 }
 
+
+
+function updateBlogScrolling() {
+    const blogContainer = document.querySelector('.blogtitles-container');
+    if (!blogContainer) return;
+
+    if (blogContainer.scrollHeight > blogContainer.clientHeight) {
+        blogContainer.classList.add('scrollbar-visible');
+        console.log(blogContainer.classList)
+    } else {
+        blogContainer.classList.remove('scrollbar-visible');
+        console.log('scrollbarnotvisible')
+    }
+}
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateBlogScrolling, 100);
+});
+
 //window.addEventListener("load", (event) => {
 window.addEventListener('DOMContentLoaded', () => {
+    updateBlogScrolling();
     mobileDevice = detectMobileDevice();
     ipadDevice = detectiPad();
     console.log("okay then")

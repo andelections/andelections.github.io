@@ -75,7 +75,7 @@ button:active {
     left: 0;
     border-radius: 30px;
     width: calc(100% - 120px);
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.6);
     -webkit-backdrop-filter: blur(45px);
     backdrop-filter: blur(45px);
     margin: 0 auto;
@@ -1303,6 +1303,7 @@ h2 {
         border-radius: 45px;
         transition-duration: 0.4s;
         display: inline-block;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.9);
     }
 
     .mobile-device .showhidesection button {
@@ -1317,6 +1318,21 @@ h2 {
         display: inlinhae-block;
     }
 
+    .mobile-device .morelegsbuttons {
+        font-size: 40px;
+    }
+
+    .mobile-device .showhidesection:hover {
+        font-weight: 350;
+        text-shadow: none;
+        background-color: rgba(51, 117, 224,0.75);
+    }
+
+    .mobile-device .showhidesection:active {
+        box-shadow: none;
+        background-color: rgba(51, 117, 224,0.75);
+    }
+
     .mobile-device .sectiontitle {
         min-height: 90px;
         font-size: 80px;
@@ -1329,11 +1345,23 @@ h2 {
 
     .mobile-device p {
         font-size: 2.5em;
+    }
+
+    .mobile-device .blogtitles-container {
+        max-height: 65vh;
+    }
+
+    .mobile-device .blogtitles-container p {
+        font-size: 2.5em;
     }/*
 
     .mobile-device .blogtitles-container {
         max-height: 100%;
     }*/
+
+    .mobile-device .blogtitles-container.scrollbar-visible p {
+        font-size: 2em;
+    }
 
     .mobile-device .blogtitles-container h2 {
         padding-top: 16px;
