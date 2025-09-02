@@ -28,6 +28,25 @@ document.addEventListener("scroll", function () {
     });
 });
 
+function closesupport(type) {
+    let support = document.getElementById('support');
+    support.classList.add('hidden');
+    const expiry = new Date();
+    expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
+    if (type == 0) {
+        document.cookie = 'supportDismissed=true; path=/; SameSite=Lax';
+    } else {
+        document.cookie = "supportDismissed=true; expires=" + expiry.toUTCString() + "; path=/; SameSite=Lax";
+    }
+    
+}
+
+function showSupportBox() {
+    console.log('okayyyyyy')
+    let support = document.getElementById('support');
+    support.classList.remove('hidden');
+}
+
 function scottishmap(maptoshow) {
     if (maptoshow == 'reg') {
         var maptohide = 'hex';
@@ -388,6 +407,13 @@ iframesRefresh.forEach(iframe => {
 let mobileDevice = false;
 let ipadDevice = false;
 
+function cookieExists(name, value = null) {
+  return document.cookie.split(';').some(cookie => {
+    const [key, val] = cookie.trim().split('=');
+    return key === name && (value === null || val === value);
+  });
+}
+
 //window.addEventListener("load", (event) => {
 window.addEventListener('DOMContentLoaded', () => {
     mobileDevice = detectMobileDevice();
@@ -407,6 +433,10 @@ window.addEventListener('DOMContentLoaded', () => {
     let regionalbuttontl = document.getElementById('tlbuttonRegional');
     pollselectionbuttons(regionalbuttontl);
     console.log("thing here so far")
+
+    if (!cookieExists("supportDismissed","true")) {
+        setTimeout(showSupportBox, 180000); //CHANGE-
+    }
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();

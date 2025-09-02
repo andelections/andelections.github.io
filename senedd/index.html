@@ -118,7 +118,7 @@
             <div class="dropdownsubheading">Help the Site</div>
             ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections',0)">Ko-fi</a><br>
             ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</a><br>
-            ↗ <a title="Subscribe (opens in new window)" onclick="socialslink('https://https://andelections.substack.com/subscribe',0)">Sub on Substack</a><br>
+            ↗ <a title="Subscribe (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0)">Sub on Substack</a><br>
             <div class="dropdownsubheading">Social Media</div>
             ↗ <a href="https://andelections.substack.com" target="_blank" rel="noopener noreferrer">Substack</a><br>
             ↗ <a href="https://x.com/andelectionsuk" target="_blank" rel="noopener noreferrer">Twitter</a><br>
@@ -134,7 +134,7 @@
             <div id="actualtitlestext">
                 <div id="mobileotherpages">
                     <a href="../">Westminster Proj.</a><br>
-                    <a rhef="../holyrood/">Holyrood Projection</a><br>
+                    <a href="../holyrood/">Holyrood Projection</a><br>
                     <a href="#">Senedd Projection</a><br>
                 </div>
                 <a href="#current-projection" onclick="displayMobileMenu()">Current Projection</a><br>
@@ -287,7 +287,7 @@
                 </div-->
                 <div id="more-legislatures">
                     <div class="sectiontitle">
-                        <button class="showhidesection" id="shb-more-legislatures" title="hide section" onclick="showhide(12,true)">hide</button>
+                        <button class="showhidesection opened" id="shb-more-legislatures" title="hide section" onclick="showhide(12,true)">hide</button>
                         <a href="#more-legislatures" id="lnk-more-legislatures" class="sectiontitlelink" title="go to section" onclick="showhide(12,false)">More Legislatures</a>
                     </div>
                     <div class="datacontainer" id="data-more-legislatures">
@@ -383,19 +383,37 @@
                     </div>
                 </div>
             </section>
-                <div id="footer">
-                    Permission required before use of projection data. © 2025 Nicholas Tryand.
-                    <!--a href="privacy-policy">Privacy policy.</a><br>
-                    Sources include: <a href="#poll-library">all polls mentioned</a>,
-                    2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
-                    and 2024 UK general elections in Great Britain.<br>
-                    2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
-                    notional results are used for that election.<br>
-                    Methodological information on the collation of this data is available here.
-                    Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
-                    &Elections does not store user input information in interactive fields.<br-->
+            <div id="footer">
+                Permission required before use of projection data. © 2025 Nicholas Tryand.
+                <!--a href="privacy-policy">Privacy policy.</a><br>
+                Sources include: <a href="#poll-library">all polls mentioned</a>,
+                2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
+                and 2024 UK general elections in Great Britain.<br>
+                2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
+                notional results are used for that election.<br>
+                Methodological information on the collation of this data is available here.
+                Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
+                &Elections does not store user input information in interactive fields.<br-->
+            </div>
+            <div id="support" class="support hidden">
+                <h2>
+                    Thank you for visiting &Elections.
+                    <button title="Close" onclick="closesupport(0)">×</button>
+                </h2>
+                <p>
+                    It's visitors like you that have helped &Elections become the unmatched
+                    resource for British election projections and information that it is.
+                    Thank you for that. Frankly, creating and maintaing &Elections takes
+                    tremendous effort and if you are able to, sharing your generosity
+                    through donating or subscribing to &Elections' Substack page for
+                    exclusive analysis and commentary would be greatly appreciated. Nicholas.
+                </p>
+                <div id="supportbuttons">
+                    <button title="Donate via BuyMeACoffee (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0); closesupport(1)">Donate</button>
+                    <button title="Subscribe to Substack page (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0); closesupport(1)">Subscribe</button>
+                    <button title="Visit Substack page (opens in new tab)" onclick="socialslink('https://andelections.substack.com',1); closesupport(1)">View Substack</button>
                 </div>
-            </section>
+            </div>
         </div>
     </body>
 </html>
