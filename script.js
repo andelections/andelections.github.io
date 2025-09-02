@@ -167,7 +167,7 @@ var sectionsDisplaying = [
     ['2024-projection',false],          //9
     ['blog',true],                      //10
     ['about',true],                     //11
-    ['other-legislatures',true]
+    ['more-legislatures',true]
 ];
 
 function showhide(section, canHide) {
