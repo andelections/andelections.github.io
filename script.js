@@ -435,6 +435,7 @@ window.addEventListener('resize', () => {
     resizeTimeout = setTimeout(updateBlogScrolling, 100);
 });
 
+
 //window.addEventListener("load", (event) => {
 window.addEventListener('DOMContentLoaded', () => {
     updateBlogScrolling();
@@ -866,3 +867,18 @@ if (
   `;
   document.head.appendChild(style);
 }
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (!hash) return;
+
+  // Find the index of the section with that name
+  const index = sectionsDisplaying.findIndex(([name]) => name === hash);
+
+  // If found and it's normally collapsed, open it
+  if (index !== -1 && sectionsDisplaying[index][1] === false) {
+    console.log(index);
+    showhide(index, false);
+  }
+});
