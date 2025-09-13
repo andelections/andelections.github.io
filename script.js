@@ -41,10 +41,57 @@ function closesupport(type) {
     
 }
 
+function analyticsconsent(currentState) {
+    const cookiebanner = document.getElementById('cookies');
+    cookiebanner.classList.add('hidden');
+
+    // Optional: store dismissal in cookie (commented out for now)
+    // const expiry = new Date();
+    // expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
+    // document.cookie = "cookiesDismissed=true; expires=" + expiry.toUTCString() + "; path=/; SameSite=Lax";
+
+    if (currentState === true) {
+        // Store consent
+        localStorage.setItem('analyticsConsent', 'true');
+
+        // Dynamically load GA script
+        const gaScript = document.createElement('script');
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-ZWFF762E3D";
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+
+        // Initialize GA after script loads
+        gaScript.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+        gtag('config', 'G-ZWFF762E3D', {
+            anonymize_ip: true,
+            cookie_flags: 'SameSite=None;Secure'
+        });
+        };
+    } else {
+        // Store rejection
+        localStorage.setItem('analyticsConsent', 'false');
+    }
+
+    // Optional support box logic
+    if (!cookieExists("supportDismissed", "true")) {
+        setTimeout(showSupportBox, 180000);
+    }
+}
+
 function showSupportBox() {
     console.log('okayyyyyy')
     let support = document.getElementById('support');
     support.classList.remove('hidden');
+}
+
+function showCookieSettings() {
+    let cookiebanner = document.getElementById('cookies');
+    cookiebanner.classList.remove('hidden');
+    console.log('hey okay so');
 }
 
 function scottishmap(maptoshow) {
@@ -457,9 +504,10 @@ window.addEventListener('DOMContentLoaded', () => {
     pollselectionbuttons(regionalbuttontl);
     console.log("thing here so far")
 
+    /*
     if (!cookieExists("supportDismissed","true")) {
         setTimeout(showSupportBox, 180000); //CHANGE-
-    }
+    }*/
 
     const iframes = document.querySelectorAll("iframe.excel-embed");
     const activityMap = new WeakMap();
@@ -882,3 +930,15 @@ window.addEventListener('DOMContentLoaded', () => {
     showhide(index, false);
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+    const consent = localStorage.getItem('analyticsConsent');
+    if (consent == 'true') {
+        analyticsconsent(true)
+    } else if (consent == 'false') {
+        analyticsconsent(false)
+    } else {
+        cookiebanner = document.getElementById('cookies');
+        cookiebanner.classList.remove('hidden');
+    }
+})

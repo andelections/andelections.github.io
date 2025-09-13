@@ -65,7 +65,7 @@ button:active {
     box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.9);
 }
 
-#support {
+.notif {
     align-items: center;
     position: fixed;
     display: block;
@@ -74,19 +74,20 @@ button:active {
     bottom: 0;
     left: 0;
     border-radius: 30px;
-    width: calc(100% - 120px);
+    width: calc(100% - 140px);
     background-color: rgba(255,255,255,0.6);
     -webkit-backdrop-filter: blur(45px);
     backdrop-filter: blur(45px);
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 5px;
     margin: 50px;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
     transform: translateY(0);
     opacity: 1;
 }
 
-#supportbuttons button {
+.notifbuttons button {
     width: 30%;
     margin: 5px;
     font-size: 30px;
@@ -94,7 +95,7 @@ button:active {
     border-radius: 20px;
 }
 
-#supportbuttons {
+.notifbuttons {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -110,7 +111,7 @@ button:active {
     margin: 5px;
 }
 
-#support.hidden {
+.notif.hidden {
     transform: translateY(100px);
     opacity: 0;
     transition-duration: 0.4s;
@@ -120,6 +121,40 @@ button:active {
 .mobile-device #support {
     opacity: 0;
     z-index: -100;
+}
+
+.mobile-device .notif p {
+    font-size: 45px; /*25*/
+}
+
+.mobile-device .notif h2 {
+    font-size: 65px; /*45*/
+}
+
+.mobile-device .notif button {
+    font-size: 50px;
+    height: 60px;
+}
+
+.mobile-device #prpobtn {
+    display: none;
+}
+
+.landscape.mobile-device .notif p {
+    font-size: 25px;
+}
+
+.landscape.mobile-device .notif h2 {
+    font-size: 45px;
+}
+
+.landscape.mobile-device .notif button {
+    font-size: 30px;
+    height: 40px;
+}
+
+.landscape.mobile-device #prpobtn{
+    display: inline;
 }
 
 .otherlegs {
@@ -1389,6 +1424,14 @@ h2 {
     .mobile-device #footer {
         font-size: 25px;
     }
+
+    .mobile-device .notif {
+        margin-bottom: 200px;
+    }
+
+    .landscape.mobile-device .notif {
+        margin-bottom: 100px;
+    }
 }
 
 
@@ -1563,4 +1606,12 @@ h2 {
 #message404 p {
     margin: 0 auto;
     text-align: center;
+}
+
+#muchwhitespace {
+    min-height: 50vh;
+}
+
+#cookiesettings {
+    color: blue;
 }

@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js)-->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWFF762E3D"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config','G-ZWFF762E3D');
-        </script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532210416582832" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <title>&Elections • Senedd</title>
@@ -385,17 +376,9 @@
             </section>
             <div id="footer">
                 Permission required before use of projection data. © 2025 Nicholas Tryand.
-                <!--a href="privacy-policy">Privacy policy.</a><br>
-                Sources include: <a href="#poll-library">all polls mentioned</a>,
-                2021 England and Wales Census, 2022 Scotland Census, and results of the 2019
-                and 2024 UK general elections in Great Britain.<br>
-                2019(A) denotes actual 2019 results, otherwise the Rallings-Thrasher
-                notional results are used for that election.<br>
-                Methodological information on the collation of this data is available here.
-                Interactive content was made using (but is not endorsed by) Flourish and Microsoft Excel.
-                &Elections does not store user input information in interactive fields.<br-->
+                <a href="../privacy-policy/">Privacy policy.</a>
             </div>
-            <div id="support" class="support hidden">
+            <div id="support" class="notif support hidden">
                 <h2>
                     Thank you for visiting &Elections.
                     <button title="Close" onclick="closesupport(0)">×</button>
@@ -408,10 +391,29 @@
                     subscribing to &Elections' Substack page for exclusive analysis and
                     commentary would be greatly appreciated. All the best, Nicholas.
                 </p>
-                <div id="supportbuttons">
+                <div id="supportbuttons" class="notifbuttons support">
                     <button title="Donate via BuyMeACoffee (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0); closesupport(1)">Donate</button>
                     <button title="Subscribe to Substack page (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0); closesupport(1)">Subscribe</button>
                     <button title="Visit Substack page (opens in new tab)" onclick="socialslink('https://andelections.substack.com',1); closesupport(1)">View Substack</button>
+                </div>
+            </div>
+            <div id="cookies" class="notif cookies hidden">
+                <h2>
+                    &Elections uses analytical cookies.
+                </h2>
+                <p>
+                    &Elections uses Google Analytics to track how visitors interact with
+                    the site which will only be set if you allow them.
+                    By interacting with embedded content, you consent to data collection
+                    by third-party providers.
+                    For more information about how &Elections and third parties process data,
+                    view &Elections' <a href="../privacy-policy/" target="_blank" rel="noopener noreferrer">privacy policy.</a>
+                    Do you consent to the use of analytical cookies?
+                </p>
+                <div id="cookiesbuttons" class="notifbuttons cookies">
+                    <button title="Allow analytical cookies" onclick="analyticsconsent(true)">Allow</button>
+                    <button title="Disable analytical cookies" onclick="analyticsconsent(false)">Disable</button>
+                    <button id="prpobtn" title="View privacy policy (opens in new tab)" onclick="socialslink('../privacy-policy/',1)">Privacy Policy</button>
                 </div>
             </div>
         </div>
