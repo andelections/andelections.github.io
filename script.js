@@ -1,8 +1,24 @@
 let currentPage = 'Home';
 
+/*
 function setCurrentPage(page) {
     currentPage = page;
-};
+};*/
+
+window.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.replaceAll("/","");
+    if (path == "") {
+        currentPage = "Home";
+    } else if (path == "gb") {
+        currentPage = "Westminster";
+    } else if (path == "holyrood") {
+        currentPage = "Holyrood";
+    } else if (path == "senedd") {
+        currentPage = "Senedd";
+    } else {
+        currentPage = "Home"
+    }
+})
 
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
@@ -919,6 +935,8 @@ if (
 
 window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#', '');
+  const path = window.location.pathname;
+  console.log(path) //okay
   if (!hash) return;
 
   // Find the index of the section with that name
@@ -927,6 +945,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // If found and it's normally collapsed, open it
   if (index !== -1 && sectionsDisplaying[index][1] === false) {
     console.log(index);
+    if (path == "/") {
+        window.location.href="gb/#" + hash
+    }
     showhide(index, false);
   }
 });
