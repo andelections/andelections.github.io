@@ -37,7 +37,7 @@ document.addEventListener("scroll", function () {
             } else {
                 document.title = "&Elections • " + currentPage + " • " + sectionTitle;
             };
-            menuBarTitle.style.fontWeight = "550";
+            //menuBarTitle.style.fontWeight = "550";
         }
     });
 });
