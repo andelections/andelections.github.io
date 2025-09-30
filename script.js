@@ -1,24 +1,22 @@
 let currentPage = 'Home';
 
+const path = window.location.pathname.replaceAll("/","");
+if (path == "") {
+    currentPage = "Home";
+} else if (path == "gb") {
+    currentPage = "Westminster";
+} else if (path == "holyrood") {
+    currentPage = "Holyrood";
+} else if (path == "senedd") {
+    currentPage = "Senedd";
+} else {
+    currentPage = "Home";
+}
+
 /*
 function setCurrentPage(page) {
     currentPage = page;
 };*/
-
-window.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname.replaceAll("/","");
-    if (path == "") {
-        currentPage = "Home";
-    } else if (path == "gb") {
-        currentPage = "Westminster";
-    } else if (path == "holyrood") {
-        currentPage = "Holyrood";
-    } else if (path == "senedd") {
-        currentPage = "Senedd";
-    } else {
-        currentPage = "Home";
-    }
-})
 
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
