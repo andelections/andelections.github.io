@@ -11,79 +11,94 @@
     <body onload="currentPage('Home')">
         <div class="title-bar" id="title-bar">
             <div id="titlebartext">
-                <div class="dropdown" id="pagesdd-trigger">
-                    <span><a class="titlebarlink" id="DifferentPages" href="/"><img class="flag" src="../logozoomedoutwhite.png" alt="ERR"></a></span>
+                <div class="dropdown" id="pagesdd-trigger" title="Site navigation">
+                    <span><a class="titlebarlink" id="DifferentPages" href="#"><img class="flag" src="/logozoomedoutwhite.png" alt="GBR"></a></span>
                 </div>
-                <div class="dropdown" id="current-projectiondd-trigger">
+                <div class="dropdown" id="homedd-trigger">
                     <span><a class="titlebarlink" id="CurrentProjection" href="/"> Home </a></span>
                 </div>
                 •
-                <div class="dropdown" id="current-projectiondd-trigger">
-                    <span><a class="titlebarlink" id="CurrentProjection" href="../gb"> Westminster </a></span>
+                <div class="dropdown" id="westminsterdd-trigger">
+                    <span><a class="titlebarlink" id="CurrentProjection" href="/gb/"> Westminster</a></span>
                 </div>
                 •
-                <div class="dropdown" id="historical-infodd-trigger">
-                    <span><a class="titlebarlink" id="HistoricalInfo" href="../holyrood/"> Holyrood </a></span>
+                <div class="dropdown" id="holyrooddd-trigger">
+                    <span><a class="titlebarlink" id="HistoricalInfo" href="/holyrood/"> Holyrood</a></span>
                 </div>
                 •
-                <div class="dropdown" id="other-projectionsdd-trigger">
-                    <span><a class="titlebarlink" id="OtherProjections" href="../senedd/"> Senedd </a></span>
+                <div class="dropdown" id="senedddd-trigger">
+                    <span><a class="titlebarlink" id="OtherProjections" href="/senedd/"> Senedd</a></span>
                 </div>
             </div>
-            <!--div id="titlebartext">
-                <div class="dropdown">
-                    <span><a class="titlebarlink" id="CurrentProjection" href="#live-model" onclick="showhide(0,false); showhide(1,false); showhide(2,false); showhide(3,false); showhide(4,false)"> Current Projection </a></span>
-                    <div class="dropdown-content current-projection">
-                        → <a href="#live-model">Live Model</a><br>
-                        → <a href="#projection-maps" onclick="showhide(0,false)">Projection Maps</a><br>
-                        → <a href="#constituency-projections" onclick="showhide(1,false)">Constituency Proj.</a><br>
-                        → <a href="#demographic-projections" onclick="showhide(2,false)">Demographic Proj.</a>
-                        → <a href="#regional-projections" onclick="showhide(3,false)">Regional Proj.</a><br>
-                        → <a href="#regional-data" onclick="showhide(4,false)">Regional Data</a>
-                    </div>
-                </div>
-                •
-                <div class="dropdown">
-                    <span><a class="titlebarlink" id="HistoricalInfo" href="#projection-timeline" onclick="showhide(5,false); showhide(6,false); showhide(7,false)"> Historical Info </a></span>
-                    <div class="dropdown-content historical-info">
-                        → <a href="#projection-timeline" onclick="showhide(5,false)">Projection Timeline</a>
-                        → <a href="#polling-timeline" onclick="showhide(6,false)">Polling Timeline</a><br>
-                        → <a href="#poll-library" onclick="showhide(7,false)">Poll Library</a><br>
-                    </div>
-                </div>
-                •
-                <div class="dropdown">
-                    <span><a class="titlebarlink" id="OtherProjections" href="#custom-projection" onclick="showhide(8,false); showhide(9,false)"> Other Projections </a></span>
-                    <div class="dropdown-content other-projections">
-                        → <a href="#custom-projection" onclick="showhide(8,false)">Custom Projection</a><br>
-                        → <a href="#2024-projection" onclick="showhide(9,false)">2024 Projection</a>
-                    </div>
-                </div>
-                •
-                <div class="dropdown">
-                    <span><a class="titlebarlink" id="About&Socials" href="#about" onclick="showhide(10,false)"> Socials </a></span>
-                    <div class="dropdown-content socials">
-                        → <a href="#about" onclick="showhide(10,false)">About & Socials</a><br>
-                        ↗ <a title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</a><br>
-                        <div class="dropdownsubheading">Help the Site</div>
-                        ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections',0)">Ko-fi</a><br>
-                        ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</a><br>
-                        <div class="dropdownsubheading">Social Media</div>
-                        ↗ <a href="https://substack.com/@andelections" target="_blank" rel="noopener noreferrer">Substack</a><br>
-                        ↗ <a href="https://x.com/andelectionsuk" target="_blank" rel="noopener noreferrer">Twitter</a><br>
-                        ↗ <a href="https://bsky.app/profile/andelections.com" target="_blank" rel="noopener noreferrer">BlueSky</a><br>
-                        ↗ <a href="https://www.instagram.com/andelections" target="_blank" rel="noopener noreferrer">Instagram</a><br>
-                        ↗ <a href="https://www.tiktok.com/@andelections" target="_blank" rel="noopener noreferrer">TikTok</a>
-                    </div>
-                </div>
-            </div-->
-            <a href="/" title="Go back home"><img id="logo" src="../logobanner.png" frameborder="0" alt="&elections"></a>
+            <a href="#" title="back to top"><img id="logo" src="/logobanner.png" frameborder="0" alt="&elections"></a>
         </div>
         <div class="dropdown-content pages" id="pagesdd">
-            <a href="../"><img class="flag" src="../-Flags/home.png" frameborder="0" alt="HOME">Home</a><br>
-            <a href="../gb/"><img class="flag" src="../-Flags/unionjacksquare.png" frameborder="0" alt="GBR">Westminster</a><br>
-            <a href="../holyrood/"><img class="flag" src="../-Flags/saltiresquare.png" frameborder="0" alt="SCT">Holyrood</a><br>
-            <a href="../senedd/"><img class="flag" src="../-Flags/reddragonsquare.png" frameborder="0" alt="WAL">Senedd</a>
+            <a href="/"><img class="flag" src="/-Flags/home.png" frameborder="0" alt="HOME">Home</a><br>
+            <a href="/gb/"><img class="flag" src="/-Flags/unionjacksquare.png" frameborder="0" alt="GBR">Westminster</a><br>
+            <a href="/holyrood/"><img class="flag" src="/-Flags/saltiresquare.png" frameborder="0" alt="SCT">Holyrood</a><br>
+            <a href="/senedd/"><img class="flag" src="/-Flags/reddragonsquare.png" frameborder="0" alt="WAL">Senedd</a>
+        </div>
+        <div class="dropdown-content home" id="homedd">
+            <div class="dropdownsubheading"><a href="/#">Projections</a></div>
+            → <a href="/more-legislatures">Navigation</a><br>
+            → <a href="/#live-model">Live Models</a><br>
+            <div class="dropdownsubheading"><a href="/#blog">Connect</a></div>
+            → <a href="/#blog">Substack Blog</a><br>
+            → <a href="/#about">About & Socials</a><br>
+            <div class="dropdownsubheading">Help the Site</div>
+            ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections',0)">Ko-fi</a><br>
+            ↗ <a title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</a><br>
+            ↗ <a title="Subscribe (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0)">Sub on Substack</a><br>
+            <div class="dropdownsubheading">Social Media</div>
+            ↗ <a href="https://andelections.substack.com" target="_blank" rel="noopener noreferrer">Substack</a><br>
+            ↗ <a href="https://x.com/andelectionsuk" target="_blank" rel="noopener noreferrer">Twitter</a><br>
+            ↗ <a href="https://bsky.app/profile/andelections.com" target="_blank" rel="noopener noreferrer">BlueSky</a><br>
+            ↗ <a href="https://www.instagram.com/andelections" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+            ↗ <a href="https://www.tiktok.com/@andelections" target="_blank" rel="noopener noreferrer">TikTok</a><br>
+            <div class="dropdownsubheading">Other</div>
+            → <a href="#">Privacy Policy</a>
+        </div>
+        <div class="dropdown-content westminster" id="westminsterdd">
+            <div class="dropdownsubheading"><a href="/gb/#current-projection">Current Projection</a></div>
+            → <a href="/gb/#live-model">Live model</a><br>
+            → <a href="/gb/#projection-maps">Projection Maps</a><br>
+            → <a href="/gb/#constituency-projections">Constituency Proj.</a><br>
+            → <a href="/gb/#demographic-projections">Demographic Proj.</a><br>
+            → <a href="/gb/#regional-projections">Regional Proj.</a><br>
+            → <a href="/gb/#regional-data">Regional Data</a><br>
+            <div class="dropdownsubheading"><a href="/gb/#historical-info">Historical Info</a></div>
+            → <a href="/gb/#projection-timeline">Projection Timeline </a><br>
+            → <a href="/gb/#polling-timeline">Polling Timeline</a><br>
+            → <a href="/gb/#poll-library">Poll Library</a><br>
+            <div class="dropdownsubheading"><a href="/gb/#other-projections">Other Projections</a></div>
+            → <a href="/gb/#custom-projection">Custom Projection</a><br>
+            → <a href="/gb/#2024-projection">2024 Projection</a><br>
+            → <a href="/gb/#more-legislatures">More Legislatures</a>
+        </div>
+        <div class="dropdown-content holyrood" id="holyrooddd">
+            <div class="dropdownsubheading"><a href="/holyrood/#current-projection">Current Projection</a></div>
+            → <a href="/holyrood/#live-model">Live Model</a><br>
+            → <a href="/holyrood/#projection-maps">Projection Maps</a><br>
+            → <a href="/holyrood/#constituency-projections">Constituency Proj.</a><br>
+            → <a href="/holyrood/#regional-projections">Regional Proj.</a><br>
+            <div class="dropdownsubheading"><a href="/holyrood/#historical-info">Historical Info</a></div>
+            → <a href="/holyrood/#polling-timeline">Polling Timeline</a><br>
+            → <a href="/holyrood/#poll-library">Poll Library</a><br>
+            <div class="dropdownsubheading"><a href="/holyrood/#other-projections">Other Projections</a></div>
+            → <a href="/holyrood/#custom-projection">Custom Projection</a><br>
+            → <a href="/holyrood/#more-legislatures">More Legislatures</a>
+        </div>
+        <div class="dropdown-content senedd" id="senedddd">
+            <div class="dropdownsubheading"><a href="/senedd/#current-projection">Current Projection</a></div>
+            → <a href="/senedd/#live-model">Live Model</a><br>
+            → <a href="/senedd/#projection-maps">Projection Maps</a><br>
+            → <a href="/senedd/#constituency-projections">Constituency Proj.</a><br>
+            <div class="dropdownsubheading"><a href="/senedd/#historical-info">Historical Info</a></div>
+            → <a href="/senedd/#polling-timeline">Polling Timeline</a><br>
+            → <a href="/senedd/#poll-library">Poll Library</a><br>
+            <div class="dropdownsubheading"><a href="/senedd/#other-projections">Other Projections</a></div>
+            → <a href="/senedd/#custom-projection">Custom Projection</a><br>
+            → <a href="/senedd/#more-legislatures">More Legislatures</a>
         </div>
         <div class="mobile-title-bar">
             <button id="mobiletitlesbutton" title="Menu" onclick="displayMobileMenu()">• • •</button>
