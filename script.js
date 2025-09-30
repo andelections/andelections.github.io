@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else if (path == "senedd") {
         currentPage = "Senedd";
     } else {
-        currentPage = "Home"
+        currentPage = "Home";
     }
 })
 
@@ -585,7 +585,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function positionDropdowns() {
         dropdownTriggers.forEach(trigger => {
-            const contentId = dropdownMap[trigger.id];
+            //const contentId = dropdownMap[trigger.id];
+            const contentId = trigger.id.replaceAll("dd-trigger","dd")
             if (!contentId) return; // Skip if no mapping
 
             const content = document.getElementById(contentId);
@@ -610,7 +611,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listeners for showing/hiding dropdowns
     dropdownTriggers.forEach(trigger => {
-        const contentId = dropdownMap[trigger.id];
+        //const contentId = dropdownMap[trigger.id];
+        const contentId = trigger.id.replaceAll("dd-trigger","dd")
         const content = document.getElementById(contentId);
 
         if (!content) return; // Ensure content exists
@@ -647,7 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Mouse leaves the dropdown content area
-        content.addEventListener('mouseleave', () => {
+        content.addEventListener('mouseleave', () => { 
             // Hide the dropdown after a short delay
             hideTimeout = setTimeout(() => {
                 content.classList.remove('is-open');
