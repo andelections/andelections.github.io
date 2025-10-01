@@ -1,13 +1,58 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+/*
 @font-face {
-    font-family: 'Bahnschrift';
-    src: url('Fonts/BAHNSCHRIFT.TTF') format('truetype');
+    font-family: 'DIN1451';
+    src: url('Fonts/DIN1451.ttf') format('truetype');
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN1451Narrow';
+    src: url('Fonts/DIN1451Narrow.ttf') format('truetype');
+    font-stretch: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/Barlow-Regular.ttf') format('truetype');
+    font-stretch: nomral;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow Semibold';
+    src: url('Fonts/BarlowSemiCondensed-SemiBold.ttf') format('truetype');
+    font-stretch: normal;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/Barlow-Medium.ttf') format('truetype');
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+}*/
+
+
+@font-face {
+    font-family: 'Barlow Medium';
+    src: url('Fonts/Barlow-Medium.ttf') format('truetype');
+    font-stretch: normal;
+    font-style: normal;
 }
 
 /*
 @supports (-webkit-touch-callout: none) {
     @font-face {
-        font-family: 'Bahnschrift';
-        src: url('Fonts/BAHNSCHRIFT.woff') format('woff');
+        font-family: 'Din1451';
+        src: url('Fonts/Barlow.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
@@ -40,12 +85,13 @@ body {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: 'Bahnschrift', sans-serif;
+    /*font-family: 'Bahnschrift','DIN1451', sans-serif;*/
+    font-family: 'Barlow','DIN1451', sans-serif;
     padding-top: 50px;
 }
 
 button {
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'Barlow', 'Din1451', sans-serif;
     background-color: rgba(51, 117, 224,0.75);
     color: white;
     border: none;
@@ -106,7 +152,7 @@ button:active {
     right: 0;
     width: 45px;
     height: 45px;
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 45px;
     margin: 5px;
 }
@@ -242,6 +288,7 @@ button:active {
     padding-bottom: 10px;
     font-size: 50px;
     font-weight: 650; /**/
+    font-family: 'Barlow Semibold';
     color: #222222;
     z-index: 200;
     background-color: #ffffff;
@@ -445,7 +492,7 @@ button:active {
     text-align: left;
     padding-left: 5%;
     color: white;
-    font-weight: lighter;
+    font-weight: 200;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition-duration: 0.4s;
@@ -559,6 +606,7 @@ a:hover {
 
 .dropdown-content a:hover {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    font-family: 'Barlow Medium';
 }
 
 .title-bar a:hover {
@@ -647,6 +695,7 @@ h2 {
     padding-right: 15%;
     max-width: calc(1200px - 15%);
     font-weight: 650;
+    font-family: 'Barlow Semibold';
     transition-duration: 0.4s;
 }
 
@@ -695,7 +744,7 @@ h2 {
 
 .socialsbutton {
     background-color:rgba(51, 117, 224,0.75);
-    font-family: 'Bahnschrift', sans-serif;
+    /*font-family: 'Din1451', sans-serif;*/
     border-radius: 40px;
     width: calc(100% - 15px);
     transition-duration: 0.4s;
@@ -735,7 +784,7 @@ h2 {
 
 .pollsoptionbox button {
     background-color: rgba(0,0,0,0);
-    font-family: 'Bahnschrift', sans-serif;
+    /*font-family: 'Din1451', sans-serif;*/
     width: 23%;
     height: 40px;
     border-radius: 30px;
@@ -1221,6 +1270,7 @@ h2 {
     .mobile-device .title-bar {
         font-size: 60px;
         font-stretch: condensed;
+        /*font-family: 'DIN1451Narrow', sans-serif;*/
     }
 
     .mobile-device #infographic {
@@ -1258,7 +1308,7 @@ h2 {
         left: 0;
         padding-left: 50px;
         padding-bottom: 50px;
-        font-family: 'Bahnschrift', sans-serif;
+        /*font-family: 'Din1451', sans-serif;*/
         width: 220px;
         z-index: 10000;
     }
@@ -1277,7 +1327,7 @@ h2 {
         transition-duration: 0.4s;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
         align-items: left;
-        font-family: 'Bahnschrift', sans-serif;
+        /*font-family: 'Din1451', sans-serif;*/
         display: block;
     }
 
@@ -1346,7 +1396,7 @@ h2 {
 
     .mobile-device #mobileotherpages {
         margin-bottom: clamp(20px,8vh,150px);
-        font-weight: 400;
+        font-family: 'Barlow Medium';
     }
 
     .mobile-device #mobiletitletext a {
@@ -1520,17 +1570,20 @@ h2 {
 @media (max-width: 800px) {
     .title-bar {
         font-stretch: condensed;
+        /*font-family: 'DIN1451Narrow', sans-serif;*/
     }
 
     .dropdown-content {
         min-width: 200px;
         font-stretch: condensed;
+        /*font-family: 'DIN1451Narrow', sans-serif;*/
     }
 }
 
 .ipad-device .title-bar {
     font-size: 30px;
     font-stretch: condensed;
+    /*font-family: 'DIN1451Narrow', sans-serif;*/
 }
 
 
@@ -1595,7 +1648,7 @@ h2 {
     /*transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;*/
     transition-duration: 0.4s;
     color: white;
-    font-weight: 50;
+    font-weight: 200;
     text-decoration: none;
     text-align: left;
     font-size: 25px;
@@ -1653,4 +1706,9 @@ h2 {
 
 #cookiesettings {
     color: blue;
+}
+
+.fallback-din {
+    /*font-family: 'DIN1451Narrow', sans-serif;*/
+    font-stretch: normal;
 }
