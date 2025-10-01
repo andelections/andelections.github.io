@@ -67,6 +67,7 @@
             → <a href="/gb/#regional-projections">Regional Proj.</a><br>
             → <a href="/gb/#regional-data">Regional Data</a><br>
             <div class="dropdownsubheading"><a href="/gb/#historical-info">Historical Info</a></div>
+            → <a href="/gb/#past-results">Past Elections</a><br>
             → <a href="/gb/#projection-timeline">Projection Timeline </a><br>
             → <a href="/gb/#polling-timeline">Polling Timeline</a><br>
             → <a href="/gb/#poll-library">Poll Library</a><br>
@@ -82,6 +83,7 @@
             → <a href="/holyrood/#constituency-projections">Constituency Proj.</a><br>
             → <a href="/holyrood/#regional-projections">Regional Proj.</a><br>
             <div class="dropdownsubheading"><a href="/holyrood/#historical-info">Historical Info</a></div>
+            → <a href="/holyrood/#past-results">Past Elections</a><br>
             → <a href="/holyrood/#polling-timeline">Polling Timeline</a><br>
             → <a href="/holyrood/#poll-library">Poll Library</a><br>
             <div class="dropdownsubheading"><a href="/holyrood/#other-projections">Other Projections</a></div>
@@ -94,6 +96,7 @@
             → <a href="/senedd/#projection-maps" onclick="showhide(0,false)">Projection Maps</a><br>
             → <a href="/senedd/#constituency-projections" onclick="showhide(1,false)">Constituency Proj.</a><br>
             <div class="dropdownsubheading"><a href="/senedd/#historical-info">Historical Info</a></div>
+            → <a href="/senedd/#past-results" onclick="showhide(13,false)">Past Elections</a><br>
             → <a href="/senedd/#polling-timeline" onclick="showhide(6,false)">Polling Timeline</a><br>
             → <a href="/senedd/#poll-library" onclick="showhide(7,false)">Poll Library</a><br>
             <div class="dropdownsubheading"><a href="/senedd/#other-projections">Other Projections</a></div>
@@ -222,6 +225,26 @@
                         </div>
                     </div>
                 </div-->
+                <div id="past-results">
+                    <div class="sectiontitle">
+                        <button class="showhidesection" id="shb-past-results" title="show section" onclick="showhide(13,true)">show</button>
+                        <a href="#past-results" id="lnk-past-results" class="sectiontitlelink" title="show and go to section" onclick="showhide(13,false)">Past Elections</a>
+                    </div>
+                    <div class="datacontainer hidden" id="data-past-results">
+                        <div class="pollsoptionbox scot pastresults">
+                            <button title="Show historical election results" id="prbuttonSeats" onclick="pollsselection('Seats',7)">Seat Share</buttoon>
+                            <button title="Show historical vote share" id="prbuttonVote" onclick="pollsselection('Vote',7)">Vote Share</button>
+                        </div><br>
+                        <p class="disclaimer history">Electoral history ends with &Elections' current projection. For past vote share, the regional list vote is used.</p>
+                        <div class="timeline polls" id="prSeats">
+                            <div class="flourish-embed flourish-chart tl" data-src="visualisation/25420606"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/25420606/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                        </div>
+                        <div class="timeline polls" id="prVote">
+                            <div class="flourish-embed flourish-chart tl" data-src="visualisation/25421227"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/25421227/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                        </div>
+                        
+                    </div>
+                </div>
                 <div id="polling-timeline">
                     <div class="sectiontitle">
                         <button class="showhidesection" id="shb-polling-timeline" title="show section" onclick="showhide(6,true)">show</button>

@@ -152,6 +152,7 @@ var modeldisplaying = 'combined';
 var scotregionsmapinitiated = false;
 var scotpollsdisplaying = 'Regional';
 var scottimelinedisplaying = 'Regional';
+var resultdisplaying = 'Seats';
 
 function pollselectionbuttons(button) {
     if (button) {
@@ -218,7 +219,7 @@ function pollsselection(region,type) {
         document.getElementById('polls' + pollstohide).style.display = 'none';
         let oldbutton = document.getElementById('pollsbutton' + pollstohide);
         oldbutton.removeAttribute("style");
-    } else {
+    } else if (type == 6) {
         let tltohide = scottimelinedisplaying;
         scottimelinedisplaying = region;
         let button = document.getElementById('tlbutton' + region);
@@ -235,6 +236,15 @@ function pollsselection(region,type) {
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(graphtitle);
+    } else {
+        let resulttohide = resultdisplaying;
+        resultdisplaying = region;
+        let button = document.getElementById('prbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('pr' + region).style.display = 'block';
+        document.getElementById('pr' + resulttohide).style.display = 'none';
+        let oldbutton = document.getElementById('prbutton' + resulttohide);
+        oldbutton.removeAttribute("style");
     }
 }
 
@@ -251,10 +261,13 @@ var sectionsDisplaying = [
     ['2024-projection',false],          //9
     ['blog',true],                      //10
     ['about',true],                     //11
-    ['more-legislatures',true]
+    ['more-legislatures',true],         //12
+    ['past-results',false]              //13
 ];
 
 function showhide(section, canHide) {
+    console.log(section)
+    console.log(sectionsDisplaying[section]);
     let sectionTitle = sectionsDisplaying[section][0];
     let sectionWasDisplaying = sectionsDisplaying[section][1];
     let button = document.getElementById('shb-' + sectionTitle);
@@ -520,7 +533,9 @@ window.addEventListener('DOMContentLoaded', () => {
     pollselectionbuttons(regionalbuttonpolls);
     let regionalbuttontl = document.getElementById('tlbuttonRegional');
     pollselectionbuttons(regionalbuttontl);
-    console.log("thing here so far")
+    let pastResultsbutton = document.getElementById('prbuttonSeats');
+    pollselectionbuttons(pastResultsbutton);
+    console.log("thing here so far");
 
     /*
     if (!cookieExists("supportDismissed","true")) {

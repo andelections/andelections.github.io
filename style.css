@@ -339,7 +339,9 @@ button:active {
 
 
 .flourish-embed.flourish-chart.tl {
-    height: 635px;
+    /*height: 635px;*/
+    height: calc(40vw);
+    min-height: 560px;
 }
 
 
@@ -726,6 +728,13 @@ h2 {
     margin: 0 auto;
 }
 
+.disclaimer.history {
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    transform: translateY(-5px);
+}
+
 .aboutcontainer table {
     width: 100%;
     table-layout: fixed;
@@ -889,6 +898,10 @@ h2 {
 }
 
 #tlRegional {
+    display: block;
+}
+
+#prSeats {
     display: block;
 }
 
