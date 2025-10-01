@@ -18,6 +18,10 @@ function setCurrentPage(page) {
     currentPage = page;
 };*/
 
+if (!document.fonts.check("1em Bahnschrift")) {
+    document.body.classList.add("fallback-din");
+}
+
 document.addEventListener("scroll", function () {
     let sections = document.querySelectorAll("section");
     let viewportHeight = window.innerHeight;
@@ -266,7 +270,7 @@ function showhide(section, canHide) {
         if (mobileDevice) {
             button.classList.remove('opened');
         } else if (ipadDevice) {
-            button.innerHTML = '>';
+            button.innerHTML = '▸';
         } else {
             button.innerHTML = 'show';
         }
@@ -364,7 +368,7 @@ function detectMobileDevice() {
         document.body.style.paddingTop = '20px';
         //document.documentElement.style.scrollPaddingTop = '125px';
         document.querySelectorAll('.showhidesection').forEach(btn => {
-            btn.innerHTML = '>';
+            btn.innerHTML = '▸';
         })
         document.querySelectorAll('a.titlebarlink').forEach(link => {
             link.addEventListener('click', function  (e) {
