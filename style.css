@@ -288,7 +288,7 @@ button:active {
     padding-bottom: 10px;
     font-size: 50px;
     font-weight: 650; /**/
-    font-family: 'Barlow Semibold';
+    font-family: 'Barlow Semibold','Barlow';
     color: #222222;
     z-index: 200;
     background-color: #ffffff;
@@ -606,7 +606,7 @@ a:hover {
 
 .dropdown-content a:hover {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-    font-family: 'Barlow Medium';
+    font-family: 'Barlow Medium','Barlow';
 }
 
 .title-bar a:hover {
@@ -695,7 +695,7 @@ h2 {
     padding-right: 15%;
     max-width: calc(1200px - 15%);
     font-weight: 650;
-    font-family: 'Barlow Semibold';
+    font-family: 'Barlow Semibold','Barlow';
     transition-duration: 0.4s;
 }
 
@@ -1396,7 +1396,7 @@ h2 {
 
     .mobile-device #mobileotherpages {
         margin-bottom: clamp(20px,8vh,150px);
-        font-family: 'Barlow Medium';
+        font-family: 'Barlow Medium','Barlow';
     }
 
     .mobile-device #mobiletitletext a {
