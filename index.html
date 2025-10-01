@@ -171,7 +171,9 @@
                 </div>
             </div>
             <div id="live-model"><br>
-                <div class="sectiontitle">Westminster Projection</div>
+                <div class="sectiontitle" id="westminster-projection">
+                    <a href="#westminster-projection">Westminster Projection</a>
+                </div>
                 <div class="goto westminsterproj">
                     <button class="gotobtn" onclick="window.location.href='gb/'">
                         View full Westminster projection
@@ -210,8 +212,9 @@
                         <div class="flourish-embed flourish-parliament" data-src="visualisation/24621385"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24621385/thumbnail" width="100%" alt="probabilistic tabulation parliament visualization" /></noscript></div>
                     </div>
                 </div>okay-->
+                <div class="sectiontitle" id="holyrood-projection">
+                    <a href="#holyrood-projection">Holyrood Projection</a>
                 </div>
-                <div class="sectiontitle">Holyrood Projection</div>
                 <div class="goto holyroodproj">
                     <button class="gotobtn" onclick="window.location.href='holyrood/'">
                         View full Holyrood projection
@@ -223,7 +226,9 @@
                         <div class="flourish-embed flourish-parliament" data-src="visualisation/24743035"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24743035/thumbnail" width="100%" alt="senedd cymru visualisation" /></noscript></div>
                     </div>
                 </div> <!--okay-->
-                <div class="sectiontitle">Senedd Projection</div>
+                <div class="sectiontitle" id="senedd-projection">
+                    <a href="#senedd-projection">Senedd Projection</a>
+                </div>
                 <div class="goto seneddproj">
                     <button class="gotobtn" onclick="window.location.href='senedd/'">
                         View full Senedd projection
@@ -235,187 +240,7 @@
                         <div class="flourish-embed flourish-parliament" data-src="visualisation/24742937"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24742937/thumbnail" width="100%" alt="senedd cymru visualisation" /></noscript></div>
                     </div>
                 </div>
-            </div>
-
-
-            <!--
-            <div id="projection-maps">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-projection-maps" title="show section" onclick="showhide(0,true)">show</button>
-                    <a href="#projection-maps" id="lnk-projection-maps" class="sectiontitlelink" title="show and go to section" onclick="showhide(0,false)">Projection Maps</a>
-                </div>
-                <div class="datacontainer hidden" id="data-projection-maps">
-                    <div class="container">
-                        <iframe class="map" src="https://public.flourish.studio/visualisation/20684789/embed" frameborder="0"></iframe>
-                        <iframe class="map" src="https://public.flourish.studio/visualisation/19788967/embed" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div id="constituency-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-constituency-projections" title="show section" onclick="showhide(1,true)">show</button>
-                    <a href="#constituency-projections" id="lnk-constituency-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(1,false)">Constituency Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-constituency-projections">
-                    <div class="loading" id="loading-constituency-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regular">
-                        <iframe class="excel-embed regular lazy-frame" id="consty-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Constituency%20Projections'!C2&Item=ConsProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn consty-proj-sheet"><a onclick="manualrefresh('consty-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="demographic-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-demographic-projections" title="show section" onclick="showhide(2,true)">show</button>
-                    <a href="#demographic-projections" id="lnk-demographic-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(2,false)">Demographic Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-demographic-projections">
-                    <div class="pollsoptionbox demographics">
-                        <button title="Show headline information" id="demobtnallgroups" onclick="pollsselection('allgroups',3)">all groups</button>
-                        <button title="Show detailed information" id="demobtndetails" onclick="pollsselection('details',3)">details</button>
-                        <button title="Show intersectional breakdown" id="demobtnintersectional" onclick="pollsselection('intersectional',3)">intersectional</button>
-                    </div>
-                    <div class="blankspace"></div>
-                    <div class="loading" id="loading-demographic-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet demos" id="demographics-allgroups">
-                        <iframe class="excel-embed regionalproj lazy-frame" id="demo-allgroups-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demo%20Headlines'!C38&Item=DemoHead&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-allgroups-sheet"><a onclick="manualrefresh('demo-allgroups-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet demos" id="demographics-details">
-                        <iframe class="excel-embed regionalproj" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item=DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-proj-sheet"><a onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet demos" id="demographics-intersectional">
-                        <iframe class="excel-embed regionalproj" id="demo-intersect-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Custom%20Demo%20Breakdown'!C43&Item=DemoInte&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn demo-intersect-sheet"><a onclick="manualrefresh('demo-intersect-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="regional-projections">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-regional-projections" title="show section" onclick="showhide(3,true)">show</button>
-                    <a href="#regional-projections" id="lnk-regional-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(3,false)">Regional Projections</a>
-                </div>
-                <div class="datacontainer hidden" id="data-regional-projections">
-                    <div class="loading" id="loading-regional-projections">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regionalproj">
-                        <iframe class="excel-embed regionalproj lazy-frame" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn regional-proj-sheet"><a onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="regional-data">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-regional-data" title="show section" onclick="showhide(4,true)">show</button>
-                    <a href="#regional-data" id="lnk-regional-data" class="sectiontitlelink" title="show and go to section" onclick="showhide(4,false)">Regional Data</a>
-                </div>
-                <div class="datacontainer hidden" id="data-regional-data">
-                    <div class="loading" id="loading-regional-data">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regional">
-                        <iframe class="excel-embed regional lazy-frame" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn regional-data-sheet"><a onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section data-title="Historical Info" id="historical-info">
-            <div id="projection-timeline">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-projection-timeline" title="show section" onclick="showhide(5,true)">show</button>
-                    <a href="#projection-timeline" id="lnk-projection-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(5,false)">Projection Timeline</a>
-                </div>
-                <div class="datacontainer hidden" id="data-projection-timeline">
-                    <div class="timeline projection">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                </div>
-            </div>
-            <div id="polling-timeline">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-polling-timeline" title="show section" onclick="showhide(6,true)">show</button>
-                    <a href="#polling-timeline" id="lnk-polling-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(6,false)">Polling Timeline</a>
-                </div>
-                <div class="datacontainer hidden" id="data-polling-timeline">
-                    <div class="pollsoptionbox timeline">
-                        <button title="Show nationwide averages timeline" id="tlbuttonNationwide" onclick="pollsselection('Nationwide',2)">Nationwide</buttoon>
-                        <button title="Show Scottish polls" id="tlbuttonScotland" onclick="pollsselection('Scotland',2)">Scotland</button>
-                        <button title="Show Welsh polls" id="tlbuttonWales" onclick="pollsselection('Wales',2)">Wales</button>
-                        <button title="Show London polls" id="tlbuttonLondon" onclick="pollsselection('London',2)">London</button>
-                    </div><br>
-                    <div class="graphtitles" id="graphtitles">National Monthly Averages</div>
-                    <div class="timeline polls" id="tlNationwide">
-                        <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/23825431"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23825431/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                    <div class="timeline polls" id="tlScotland">
-                        <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/23830073"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830073/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                    <div class="timeline polls" id="tlWales">
-                        <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/23830171"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830171/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                    <div class="timeline polls" id="tlLondon">
-                        <div class="flourish-embed flourish-chart tl" height="590px" data-src="visualisation/23830184"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23830184/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                    </div>
-                </div>
-            </div>
-            <div id="poll-library">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-poll-library" title="show section" onclick="showhide(7,true)">show</button>
-                    <a href="#poll-library" id="lnk-poll-library" class="sectiontitlelink" title="show and go to section" onclick="showhide(7,false)">Poll Library</a>
-                </div>
-                <div class="datacontainer hidden" id="data-poll-library">
-                    <div class="pollsoptionbox table">
-                        <button title="Show nationwide polls" id="pollsbuttonNationwide" onclick="pollsselection('Nationwide',1)">Nationwide</button>
-                        <button title="Show Scottish polls" id="pollsbuttonScotland" onclick="pollsselection('Scotland',1)">Scotland</button>
-                        <button title="Show Welsh polls" id="pollsbuttonWales" onclick="pollsselection('Wales',1)">Wales</button>
-                        <button title="Show London polls" id="pollsbuttonLondon" onclick="pollsselection('London',1)">London</button>
-                    </div>
-                    <div class="blankspace"></div>
-                    <div class="loading" id="loading-poll-library">Loading...<br>Please wait.</div>
-                    <div class="excelsheet polls" id="pollsNationwide">
-                        <iframe class="excel-embed polls lazy-frame" id="polls-nat-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLib&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn polls-nat-sheet"><a onclick="manualrefresh('polls-nat-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet polls sctwal" id="pollsScotland">
-                        <iframe class="excel-embed polls" id="polls-sct-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolSct&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn polls-sct-sheet"><a onclick="manualrefresh('polls-sct-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet polls sctwal" id="pollsWales">
-                        <iframe class="excel-embed polls" id="polls-wal-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolWal&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn polls-wal-sheet"><a onclick="manualrefresh('polls-wal-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                    <div class="excelsheet polls london" id="pollsLondon">
-                        <iframe class="excel-embed polls" id="polls-ldn-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?Item=PolLdn&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn polls-ldn-sheet"><a onclick="manualrefresh('polls-ldn-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-        -->
-            <!--div id="custom-projection">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-custom-projection" title="show section" onclick="showhide(8,true)">show</button>
-                    <a href="#custom-projection" id="lnk-custom-projection" class="sectiontitlelink" title="show and go to section" onclick="showhide(8,false)">Custom Projection</a>
-                </div>
-                <div class="datacontainer hidden" id="data-custom-projection">
-                <div class="loading" id="loading-custom-projection">Loading...<br>Please wait.</div>
-                    <div class="excelsheet regular">
-                        <iframe class="excel-embed regular lazy-frame" id="custom-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQSS5dNZvWmMS6MYM7RrKJGwARMx9CYcX4eitgKVrKEw7iY?AllowTyping=True&ActiveCell='Custom%20Forecast'!C12&Item=ViCoPr2&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                        <div class="refreshbtn custom-proj-sheet"><a onclick="manualrefresh('custom-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                    </div>
-                </div>
-            </div>
-            <div id="2024-projection">
-                <div class="sectiontitle">
-                    <button class="showhidesection" id="shb-2024-projection" title="show section" onclick="showhide(9,true)">show</button>
-                    <a href="#2024-projection" id="lnk-2024-projection" class="sectiontitlelink" title="show and go to section" onclick="showhide(9,false)">2024 Projection</a>
-                </div>
-                <div class="datacontainer hidden" id="data-2024-projection">
-                    <div class="container">
-                        <iframe class="map" src="https://public.flourish.studio/visualisation/23520885/embed" frameborder="0"></iframe>
-                        <iframe class="map" src="https://public.flourish.studio/visualisation/18688741/embed" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div-->
-            
+            </div> 
             <div id="blog">
                 <div class="sectiontitle">
                     <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
@@ -517,6 +342,7 @@
                         </a>
                     </div>
                 </div>
+            </div>
             <div id="about">
                 <div class="sectiontitle">
                     <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(11,true)">hide</button>
