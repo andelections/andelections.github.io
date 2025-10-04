@@ -56,7 +56,8 @@
             ↗ <a href="https://www.instagram.com/andelections" target="_blank" rel="noopener noreferrer">Instagram</a><br>
             ↗ <a href="https://www.tiktok.com/@andelections" target="_blank" rel="noopener noreferrer">TikTok</a><br>
             <div class="dropdownsubheading">Other</div>
-            → <a href="/privacy-policy/">Privacy Policy</a>
+            → <a href="/privacy-policy/">Privacy Policy</a><br>
+            → <a href="/disclosures/">Disclosures</a>
         </div>
         <div class="dropdown-content westminster" id="westminsterdd">
             <div class="dropdownsubheading"><a href="/gb/#current-projection">Current Projection</a></div>
@@ -175,74 +176,8 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <div id="demographic-projections">
-                    <div class="sectiontitle">
-                        <button class="showhidesection" id="shb-demographic-projections" title="show section" onclick="showhide(2,true)">show</button>
-                        <a href="#demographic-projections" id="lnk-demographic-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(2,false)">Demographic Projections</a>
-                    </div>
-                    <div class="datacontainer hidden" id="data-demographic-projections">
-                        <div class="pollsoptionbox demographics">
-                            <button title="Show headline information" id="demobtnallgroups" onclick="pollsselection('allgroups',3)">all groups</button>
-                            <button title="Show detailed information" id="demobtndetails" onclick="pollsselection('details',3)">details</button>
-                            <button title="Show intersectional breakdown" id="demobtnintersectional" onclick="pollsselection('intersectional',3)">intersectional</button>
-                        </div>
-                        <div class="blankspace"></div>
-                        <div class="loading" id="loading-demographic-projections">Loading...<br>Please wait.</div>
-                        <div class="excelsheet demos" id="demographics-allgroups">
-                            <iframe class="excel-embed regionalproj lazy-frame" id="demo-allgroups-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demo%20Headlines'!C38&Item=DemoHead&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                            <div class="refreshbtn demo-allgroups-sheet"><a onclick="manualrefresh('demo-allgroups-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                        </div>
-                        <div class="excelsheet demos" id="demographics-details">
-                            <iframe class="excel-embed regionalproj" id="demo-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Demographic%20Projections'!C26&Item=DemoProj&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                            <div class="refreshbtn demo-proj-sheet"><a onclick="manualrefresh('demo-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                        </div>
-                        <div class="excelsheet demos" id="demographics-intersectional">
-                            <iframe class="excel-embed regionalproj" id="demo-intersect-sheet" width="100%" height="750px" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Custom%20Demo%20Breakdown'!C43&Item=DemoInte&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                            <div class="refreshbtn demo-intersect-sheet"><a onclick="manualrefresh('demo-intersect-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="regional-projections">
-                    <div class="sectiontitle">
-                        <button class="showhidesection" id="shb-regional-projections" title="show section" onclick="showhide(3,true)">show</button>
-                        <a href="#regional-projections" id="lnk-regional-projections" class="sectiontitlelink" title="show and go to section" onclick="showhide(3,false)">Regional Projections</a>
-                    </div>
-                    <div class="datacontainer hidden" id="data-regional-projections">
-                        <div class="loading" id="loading-regional-projections">Loading...<br>Please wait.</div>
-                        <div class="excelsheet regionalproj">
-                            <iframe class="excel-embed regionalproj lazy-frame" id="regional-proj-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?AllowTyping=True&ActiveCell='Regional%20Projections'!C2&Item='Regional%20Projections'!RegPro&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                            <div class="refreshbtn regional-proj-sheet"><a onclick="manualrefresh('regional-proj-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="regional-data">
-                    <div class="sectiontitle">
-                        <button class="showhidesection" id="shb-regional-data" title="show section" onclick="showhide(4,true)">show</button>
-                        <a href="#regional-data" id="lnk-regional-data" class="sectiontitlelink" title="show and go to section" onclick="showhide(4,false)">Regional Data</a>
-                    </div>
-                    <div class="datacontainer hidden" id="data-regional-data">
-                        <div class="loading" id="loading-regional-data">Loading...<br>Please wait.</div>
-                        <div class="excelsheet regional">
-                            <iframe class="excel-embed regional lazy-frame" id="regional-data-sheet" width="100%" height="750px" frameborder="0" scrolling="no" data-src="https://1drv.ms/x/c/1d438268f7bbb06e/IQRBQNG6S-5rQZkq4lzib2z_AWPVqV1CNRCBP82zhqPCWZc?wdAllowInteractivity=False&ActiveCell='Data'!C2&Item=RegDat&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
-                            <div class="refreshbtn regional-data-sheet"><a onclick="manualrefresh('regional-data-sheet')">If this feature is not working, click here to refresh it.</a></div>
-                        </div>
-                    </div>
-                </div>
-                -->
             </section>
             <section data-title="Historical Info" id="historical-info">
-                <!--div id="projection-timeline">
-                    <div class="sectiontitle">
-                        <button class="showhidesection" id="shb-projection-timeline" title="show section" onclick="showhide(5,true)">show</button>
-                        <a href="#projection-timeline" id="lnk-projection-timeline" class="sectiontitlelink" title="show and go to section" onclick="showhide(5,false)">Projection Timeline</a>
-                    </div>
-                    <div class="datacontainer hidden" id="data-projection-timeline">
-                        <div class="timeline projection">
-                            <div class="flourish-embed flourish-chart" data-src="visualisation/23627455"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/23627455/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-                        </div>
-                    </div>
-                </div-->
                 <div id="past-results">
                     <div class="sectiontitle">
                         <button class="showhidesection" id="shb-past-results" title="show section" onclick="showhide(13,true)">show</button>
@@ -340,75 +275,13 @@
                     </div>
                 </div>
             </section>
-            <!--section data-title="Blog & About" id="blog-and-about">
-                <div id="blog">
-                    <div class="sectiontitle">
-                        <button class="showhidesection opened" id="shb-blog" title="hide section" onclick="showhide(10,true)">hide</button>
-                        <a href="#blog" id="lnk-blog" class="sectiontitlelink" title="go to section" onclick="showhide(10,false)">Substack Blog</a>
-                    </div>
-                    <div class="datacontainer" id="data-blog">
-                        <div class="blogtitles-container">
-                            <a href="https://andelections.substack.com/p/010925-holyrood-projection-snp-to" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                                <h2>01/09/25 Holyrood Projection: SNP to Retain Most Seats Despite Vote Collapsing</h2>
-                                <p>01 Sep 2025 • &Elections' inaugural projection of next year's Scottish Parliament election has the SNP storming ahead despite their vote share collapsing.</p>
-                            </a>
-                            <a href="https://andelections.substack.com/p/the-snps-unremarkable-comeback" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
-                                <h2>The SNP's Unremarkable Comeback</h2>
-                                <p>04 Aug 2025 • The SNP were decimated to 9 seats in 2024, but now most forecasters are projecting that a general election today would yield upwards of 40 seats for them. What happened?</p>
-                            </a>
-                        </div>
-                    </div>
-                <div id="about">
-                    <div class="sectiontitle">
-                        <button class="showhidesection opened" id="shb-about" title="hide section" onclick="showhide(11,true)">hide</button>
-                        <a href="#about" id="lnk-about" class="sectiontitlelink" title="go to section" onclick="showhide(11,false)">About & Socials</a>
-                    </div>
-                    <div class="datacontainer" id="data-about">
-                        <div class="container">
-                            <div class="aboutcontainer about"><p>
-                                I have put tremendous effort into making &Elections, so please
-                                consider donating to support my work, or subscribing
-                                to &Elections' Substack page for exclusive commentary and analysis on polling
-                                and more! You can also follow &Elections on social media to stay up-to-date with
-                                polling and &Elections projections.
-                                Everything you do to help the site is deeply appreciated. All the best, Nicholas.
-                            </p></div>
-                            <div class="aboutcontainer socials">
-                                <table>
-                                    <tr>
-                                        <td colspan="2" class="socialstabletitles">Help the Site</td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://ko-fi.com/andelections', 0)">Ko-fi</button></td>
-                                        <td><button class="socialsbutton" title="Donate (opens in new window)" onclick="socialslink('https://coff.ee/andelections',0)">BuyMeACoffee</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"><button class="socialsbutton" title="Subscribe (opens in new window)" onclick="socialslink('https://andelections.substack.com/subscribe',0)">Subscribe on Substack</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" class="socialstabletitles">Social Media</td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="socialsbutton" title="Linktree (opens in new window)" onclick="socialslink('https://linktr.ee/andelections',0)">Linktree</button></td>
-                                        <td><button class="socialsbutton" title="Substack (opens in new tab)" onclick="socialslink('https://andelections.substack.com',1)">Substack</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="socialsbutton" title="Twitter (opens in new tab)" onclick="socialslink('https://x.com/andelectionsuk',1)">Twitter</button></td>
-                                        <td><button class="socialsbutton" title="BlueSky (opens in new tab)" onclick="socialslink('https://bsky.app/profile/andelections.com',1)">BlueSky</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="socialsbutton" title="Instagram (opens in new tab)" onclick="socialslink('https://www.instagram.com/andelections',1)">Instagram</button></td>
-                                        <td><button class="socialsbutton" title="TikTok (opens in new tab)" onclick="socialslink('https://www.tiktok.com/@andelections',1)">TikTok</button></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section-->
             <div id="footer">
                 Permission required before use of projection data. © 2025 Nicholas Tryand.
-                <a href="../privacy-policy/">Privacy policy.</a>
+                <a href="/privacy-policy/">Privacy policy.</a>
+                &Elections is an independent platform and does not claim to be an official source of election
+                data. &Elections produces projections for elections based on a collation
+                of publicly available voting intention polls for different legislatures.
+                <a href="/disclosures/">Full disclsoures statement.</a><br>
             </div>
             <div id="support" class="notif support hidden">
                 <h2>
