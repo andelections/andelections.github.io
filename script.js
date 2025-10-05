@@ -265,7 +265,19 @@ var sectionsDisplaying = [
     ['past-results',false]              //13
 ];
 
+
+function setupListener() {
+    return new Promise((resolve) => {
+        if (document.readyState == "loading") {
+            document.addEventListener("DOMContentLoaded", resolve);
+        } else {
+            resolve();
+        }
+    });
+}
+
 function showhide(section, canHide) {
+    /*await setupListener();*/
     console.log(section)
     console.log(sectionsDisplaying[section]);
     let sectionTitle = sectionsDisplaying[section][0];
@@ -320,7 +332,7 @@ function showhide(section, canHide) {
         }*/
         if (currentPage == 'Holyrood' && section == 0 && scotregionsmapinitiated == false) {
             regionsmap = document.getElementById('scotmap-reg');
-            regionsmap.classList.add('hide');
+            /*regionsmap.classList.add('hide');*/
             scotregionsmapinitiated = true;
         }
         const iframe = sectionData.querySelector("iframe.lazy-frame");

@@ -222,7 +222,6 @@ button:active {
     max-width: 1600px;
     /*min-width: 1250px;*/
     gap: 2px;
-    overflow-x: auto;
 }
 
 .container #data-other-legislatures div {
@@ -969,14 +968,15 @@ h2 {
 
     .map.all.scot {
         opacity: 1;
-        max-width: 100%;
-        transition: opacity 0.4s ease, max-width 0.4s ease;
+        min-width: calc(50vw - 28px);
+        transition: 0.4s ease;
     }
 
     .map.all.scot.hide {
         opacity: 0;
+        min-width: 0;
         max-width: 0;
-        transition: opacity 0.4s ease, max-width 0.4s ease;
+        transition: 0.4s ease;
     }
 }
 
@@ -1043,21 +1043,11 @@ h2 {
 
 @media (max-width: 1000px) {
 
-    .scotmapbtnsdiv {
+    .mobile-device .scotmapbtnsdiv {
         opacity: 0;
         max-height: 0px;
         min-height: 0px;
         transition: opacity 0.4s ease, max-height 0.4s ease;
-    }
-
-    .map.all.scot {
-        max-height: 650px;
-    }
-
-    .map.all.scot.hide {
-        opacity: 1;
-        max-width: 100%;
-        transition: opacity 0.4s ease, max-width 0.4s ease;
     }
 
     .mobile-device .map.all.scot.hide {
@@ -1066,12 +1056,26 @@ h2 {
         transition: opacity 0.4s ease, max-width 0.4s ease;
     }
 
+    .mobile-device .map.all.scot {
+        max-height: 650px;
+    }
+
     .refreshbtn {
         transform: translateY(-25px);
         height: 29px;
     }
 
     .container {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #data-projection-maps .container {
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+    .mobile-device #data-projection-maps .container {
         flex-direction: column;
         margin: 0 auto;
     }
@@ -1536,8 +1540,30 @@ h2 {
     }
 }
 
-
 @media (max-width: 880px) {
+
+    .scotmapbtnsdiv {
+        opacity: 0;
+        max-height: 0px;
+        min-height: 0px;
+        transition: opacity 0.4s ease, max-height 0.4s ease;
+    }
+
+    .map.all.scot {
+        max-height: 650px;
+    }
+
+    .map.all.scot.hide {
+        opacity: 1;
+        max-width: 100%;
+        transition: opacity 0.4s ease, max-width 0.4s ease;
+    }
+
+    #data-projection-maps .container {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
     .excel-embed {
         zoom: 0.6;
         display: block;
