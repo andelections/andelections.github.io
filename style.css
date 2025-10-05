@@ -972,6 +972,10 @@ h2 {
         transition: 0.4s ease;
     }
 
+    .mobile-device .map.all.scot {
+        min-width: 0;
+    }
+
     .map.all.scot.hide {
         opacity: 0;
         min-width: 0;
