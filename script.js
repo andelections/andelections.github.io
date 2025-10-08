@@ -360,7 +360,7 @@ function showhide(section, canHide) {
 function displayMobileMenu() {
     document.body.classList.toggle("mobile-menu-active");
     let button = document.getElementById('mobiletitlesbutton');
-    button.innerHTML = document.body.classList.contains("mobile-menu-active") ? "Close" : "• • •";
+    button.innerHTML = document.body.classList.contains("mobile-menu-active") ? "Close" : "Menu";
 }
 
 /*
