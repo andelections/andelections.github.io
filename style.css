@@ -1047,6 +1047,14 @@ h2 {
 
 @media (max-width: 1000px) {
 
+    .notif button {
+        font-size: 25px;
+    }
+
+    .mobile-device .notif button {
+        font-size: 50px;
+    }
+
     .mobile-device .scotmapbtnsdiv {
         opacity: 0;
         max-height: 0px;
