@@ -153,6 +153,7 @@ var scotregionsmapinitiated = false;
 var scotpollsdisplaying = 'Regional';
 var scottimelinedisplaying = 'Regional';
 var resultdisplaying = 'Seats';
+var projtldisplaying = 'Stacked';
 
 function pollselectionbuttons(button) {
     if (button) {
@@ -236,7 +237,7 @@ function pollsselection(region,type) {
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(graphtitle);
-    } else {
+    } else if (type == 7) {
         let resulttohide = resultdisplaying;
         resultdisplaying = region;
         let button = document.getElementById('prbutton' + region);
@@ -244,6 +245,15 @@ function pollsselection(region,type) {
         document.getElementById('pr' + region).style.display = 'block';
         document.getElementById('pr' + resulttohide).style.display = 'none';
         let oldbutton = document.getElementById('prbutton' + resulttohide);
+        oldbutton.removeAttribute("style");
+    } else {
+        let projtltohide = projtldisplaying;
+        projtldisplaying = region;
+        let button = document.getElementById('projtlbutton' + region);
+        pollselectionbuttons(button);
+        document.getElementById('projtl' + region).style.display = 'block';
+        document.getElementById('projtl' + projtltohide).style.display = 'none';
+        let oldbutton = document.getElementById('projtlbutton' + projtltohide);
         oldbutton.removeAttribute("style");
     }
 }
@@ -388,6 +398,8 @@ function detectMobileDevice() {
     let userAgent = navigator.userAgent.toLowerCase();
     if (/mobile|android|iphone|ipod/i.test(userAgent)) {
         document.body.classList.add("mobile-device");
+        document.body.style.removeProperty('zoom');
+        document.body.zoom = '1';
         console.log("Mobile device detected!");
         document.body.style.paddingBottom = '150px';
         document.body.style.paddingTop = '20px';
@@ -547,6 +559,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pollselectionbuttons(regionalbuttontl);
     let pastResultsbutton = document.getElementById('prbuttonSeats');
     pollselectionbuttons(pastResultsbutton);
+    let projtllinebutton = document.getElementById('projtlbuttonStacked');
+    pollselectionbuttons(projtllinebutton)
     console.log("thing here so far");
 
     /*
@@ -786,3 +800,11 @@ window.addEventListener('DOMContentLoaded', () => {
         cookiebanner.classList.remove('hidden');
     }
 })
+
+window.addEventListener('DOMContentLoaded', () => {
+    const bodyElement = document.querySelector('body.mobile-device');
+    if (bodyElement) {
+        bodyElement.style.zoom = '1';
+    };
+    }
+)
