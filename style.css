@@ -1245,7 +1245,8 @@ h2 {
     .excelsheet {
         width: 100%;
         margin: 0 auto;
-        height: 525px;
+        /*height: 525px;*/
+        height: calc(750px * (0.7 / 0.8));
     }
 
     .excelsheet.regular {
