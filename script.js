@@ -189,7 +189,7 @@ function pollsselection(region,type) {
         if (region == 'Nationwide') {
             graphtitle = 'National Monthly Averages';
         } else {
-            graphtitle = region + " GE Voting Intention Polls";
+            graphtitle = region + " GE Voting Intention Averages";
         };
         document.getElementById('graphtitles').innerHTML = graphtitle;
         console.log(grpahtitle);
@@ -384,6 +384,7 @@ window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => 
   }
 });*/
 
+
 document.addEventListener("DOMContentLoaded", () => {
   if (screen.orientation) {
     document.body.classList.toggle("landscape", screen.orientation.type.startsWith("landscape"));
@@ -393,6 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
 screen.orientation?.addEventListener("change", () => {
   document.body.classList.toggle("landscape", screen.orientation.type.startsWith("landscape"));
 });
+
 
 function detectMobileDevice() {
     let userAgent = navigator.userAgent.toLowerCase();
@@ -808,3 +810,34 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     }
 )
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+
+    function applyOrientationState() {
+        const isLandscape =
+            (screen.orientation && screen.orientation.type.startsWith("landscape")) ||
+            window.matchMedia("(orientation: landscape)").matches;
+
+        // Keep your original behaviour
+        body.classList.toggle("landscape", isLandscape);
+
+        // Apply zoom only if this is already marked as a mobile device
+        if (body.classList.contains("mobile-device")) {
+            body.style.zoom = isLandscape ? "1" : "1"; //changefirstto0.8
+        }
+    }
+
+    // Initial run
+    applyOrientationState();
+
+    // Modern browsers
+    if (screen.orientation) {
+        screen.orientation.addEventListener("change", applyOrientationState);
+    }
+
+    // iOS fallback
+    window.addEventListener("orientationchange", applyOrientationState);
+});
+*/
