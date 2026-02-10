@@ -1137,7 +1137,11 @@ h2 {
     }
 
     body .mobile-device {
-        zoom: 100% !important;
+        zoom: 100%;
+    }
+
+    body .mobile-device .landscape {
+        zoom: 80%;
     }
 
     .map.all.scot {
@@ -1701,6 +1705,7 @@ h2 {
     }
 }
 
+
 @media (max-width: 880px) {
 
     .container {
@@ -1740,7 +1745,7 @@ h2 {
     }
 
     .excel-embed {
-        zoom: calc(0.6 / 0.7);
+        zoom: calc(0.6 / 0.8);
         display: block;
         margin: 0 auto;
         overflow: auto;
@@ -1749,35 +1754,35 @@ h2 {
     .excelsheet {
         width: 100%;
         margin: 0 auto;
-        height: calc(750px * (0.6 / 0.7));
+        height: calc(750px * (0.6 / 0.8));
     }
 
     .excelsheet.regular {
-        max-width: calc(1200px * (0.6 / 0.7));
+        max-width: calc(1200px * (0.6 / 0.8));
     }
 
     .excelsheet.regionalproj {
-        max-width: calc(1150px * (0.6 / 0.7));
+        max-width: calc(1150px * (0.6 / 0.8));
     }
 
     .excelsheet.demos {
-        max-width: calc(1150px * (0.6 / 0.7));
+        max-width: calc(1150px * (0.6 / 0.8));
     }
 
     .excelsheet.regional {
-        max-width: calc(925px * (0.6 / 0.7));
+        max-width: calc(925px * (0.6 / 0.8));
     }
 
     .excelsheet.polls {
-        max-width: calc(1100px * (0.6 / 0.7));
+        max-width: calc(1100px * (0.6 / 0.8));
     }
 
     .excelsheet.polls.sctwal {
-        max-width: calc(1000px * (0.6 / 0.7));
+        max-width: calc(1000px * (0.6 / 0.8));
     }
 
     .excelsheet.polls.london {
-        max-width: calc(950px * (0.6 / 0.7));
+        max-width: calc(950px * (0.6 / 0.8));
     }
 
     .mobile-device .excel-embed {
