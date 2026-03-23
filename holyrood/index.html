@@ -12,7 +12,7 @@
 
                 ua = navigator.userAgent.toLowerCase();
                 const hash = window.location.hash.replace('#', '');
-                if (/mobile|android|iphone|ipod/i.test(ua)) {
+                if (/iphone|ipod/i.test(ua)) {
                     if (hash == '') {
                         window.location.href = "/holyrood-m/";
                     } else {
