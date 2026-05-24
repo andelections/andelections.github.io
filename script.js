@@ -9,6 +9,8 @@ if (path == "") {
     currentPage = "Holyrood";
 } else if (path == "senedd") {
     currentPage = "Senedd";
+} else if (path == "legeee") {
+    currentPage = "LEGEEE";
 } else {
     currentPage = "Home";
 }
@@ -272,7 +274,8 @@ var sectionsDisplaying = [
     ['blog',true],                      //10
     ['about',true],                     //11
     ['more-legislatures',true],         //12
-    ['past-results',false]              //13
+    ['past-results',false],              //13
+    ['LE2026',false]                    //14
 ];
 
 
@@ -288,7 +291,8 @@ function setupListener() {
 
 function showhide(section, canHide) {
     /*await setupListener();*/
-    console.log(section)
+    console.log(section);
+    console.log(sectionsDisplaying);
     console.log(sectionsDisplaying[section]);
     let sectionTitle = sectionsDisplaying[section][0];
     let sectionWasDisplaying = sectionsDisplaying[section][1];
@@ -620,7 +624,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'current-projectiondd-trigger': 'current-projectiondd',
         'historical-infodd-trigger': 'historical-infodd',
         'other-projectionsdd-trigger': 'other-projectionsdd',
-        'socialsdd-trigger': 'socialsdd'
+        'socialsdd-trigger': 'socialsdd',
+        'legeeedd-trigger': 'legeeedd'
         // Add all your other dropdown trigger-to-content mappings here
         // Example: 'about-us-trigger': 'about-us-content'
     };

@@ -28,6 +28,10 @@
                     <span><a class="titlebarlink" id="CurrentProjection" href="#"> Home </a></span>
                 </div>
                 •
+                <div class="dropdown" id="legeeedd-trigger">
+                    <span><a class="titlebarlink" id="CurrentProjection" href="/legeee/"> LEGEEE</a></span>
+                </div>
+                •
                 <div class="dropdown" id="westminsterdd-trigger">
                     <span><a class="titlebarlink" id="CurrentProjection" href="gb/"> Westminster</a></span>
                 </div>
@@ -44,6 +48,7 @@
         </div>
         <div class="dropdown-content pages" id="pagesdd">
             <a href="#"><img class="flag" src="-Flags/home.png" frameborder="0" alt="HOME">Home</a><br>
+            <a href="/legeee/"><img class="flag" src="/-Flags/unionjacksquare.png" frameborder="0" alt="LE26">2026 LEGEEE</a><br>
             <a href="gb/"><img class="flag" src="-Flags/unionjacksquare.png" frameborder="0" alt="GBR">Westminster</a><br>
             <a href="holyrood/"><img class="flag" src="-Flags/saltiresquare.png" frameborder="0" alt="SCT">Holyrood</a><br>
             <a href="senedd/"><img class="flag" src="-Flags/reddragonsquare.png" frameborder="0" alt="WAL">Senedd</a>
@@ -68,6 +73,15 @@
             <div class="dropdownsubheading">Other</div>
             → <a href="privacy-policy/">Privacy Policy</a><br>
             → <a href="/disclosures/">Disclosures</a>
+        </div>
+        <div class="dropdown-content legeee westminster" id="legeeedd">
+            <div class="dropdownsubheading"><a href="/legeee/#2026-locals">2026 Locals</a></div>
+            → <a href="/legeee/#live-model">Headline Estimate</a><br>
+            → <a href="/legeee/#projection-maps">Projection Maps</a><br>
+            → <a href="/legeee/#constituency-projections">Constituency Est.</a><br>
+            → <a href="/legeee/#regional-projections">Regional Estimates</a>
+            <div class="dropdownsubheading"><a href="/legeee/#more-legislatures">Other Projections</a></div>
+            → <a href="/legeee/#more-legislatures"></a>More Legislatures</a>
         </div>
         <div class="dropdown-content westminster" id="westminsterdd">
             <div class="dropdownsubheading"><a href="gb/#current-projection">Current Projection</a></div>
@@ -155,10 +169,11 @@
         <div id="mobiletitletext">
             <div id="actualtitlestext">
                 <div id="mobileotherpages">
-                    <a href="#">Home</a><br>
-                    <a href="gb/">Westminster Proj.</a><br>
-                    <a href="holyrood/">Holyrood Projection</a><br>
-                    <a href="senedd/">Senedd Projection</a><br>
+                    <a href="/#">Home</a><br>
+                    <a href="/legeee/">LEGEEE</a><br>
+                    <a href="/gb/">Westminster Proj.</a><br>
+                    <a href="/holyrood/">Holyrood Projection</a><br>
+                    <a href="/senedd/">Senedd Projection</a><br>
                 </div>
             </div>
         </div>
@@ -185,6 +200,23 @@
                 </div>
             </div>
             <div id="live-model"><br>
+                <div class="sectiontitle" id="LE2026">
+                    <a href="#LE2026">2026 LEGEEE Estimate</a>
+                </div>
+                <div class="goto">
+                    <button class="gotobtn" onclick="window.location.href='/legeee/'">
+                        View full LEGEEE estimate
+                    </button>
+                </div>
+                <div id="livemodeldisclaimer"><a href="https://andelections.substack.com/p/and-elections-legeee-model" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                    <p>Learn more about &Elections' Local Elections General Election Equivalent Estiamte (LEGEEE) here.</p>
+                </a></div>
+                <div class="container" id="model-binary">
+                    <img id="infographic" src="/legeee/image.png" frameborder="0" alt="Binary Tabulation - Live Election Projection"></frame></iframe>
+                    <div class="scroll-container">
+                        <div class="flourish-embed flourish-parliament" data-src="visualisation/29097776"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29097776/thumbnail" width="100%" alt="senedd cymru visualisation" /></noscript></div>
+                    </div>
+                </div>
                 <div class="sectiontitle" id="westminster-projection">
                     <a href="#westminster-projection">Westminster Projection</a>
                 </div>
@@ -267,6 +299,10 @@
                         </button>
                     </div>
                     <div class="blogtitles-container">
+                        <a href="https://andelections.substack.com/p/and-elections-legeee-model" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
+                            <h2>&Elections: LEGEEE Model</h2>
+                            <p>24 May 2026 • Local Elections General Election Equivalent Estimate.</p>
+                        </a>
                         <a href="https://andelections.substack.com/p/280326-uk-projection-the-local-election" title="Open article in new tab" target="_blank" rel="noopener noreferrer">
                             <h2>28/03/26 UK Projection: The Local Election Campaigns Commence</h2>
                             <p>28 Mar 2026 • Reform's downward trajectory continues as the Greens surge and new polling illustrates the state of politics in Wales and Scotland.</p>

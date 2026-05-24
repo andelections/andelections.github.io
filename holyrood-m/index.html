@@ -19,13 +19,16 @@
         <script src="../script.js"></script>
     </head>
     <body onload="setCurrentPage('Holyrood')">
-        <div class="title-bar" id="title-bar">
             <div id="titlebartext">
                 <div class="dropdown" id="pagesdd-trigger" title="Site navigation">
                     <span><a class="titlebarlink" id="DifferentPages" href="#"><img class="flag" src="/-Flags/saltiresquare.png" alt="SCT"></a></span>
                 </div>
                 <div class="dropdown" id="homedd-trigger">
                     <span><a class="titlebarlink" id="CurrentProjection" href="/"> Home </a></span>
+                </div>
+                •
+                <div class="dropdown" id="legeeedd-trigger">
+                    <span><a class="titlebarlink" id="CurrentProjection" href="/legeee/"> LEGEEE</a></span>
                 </div>
                 •
                 <div class="dropdown" id="westminsterdd-trigger">
@@ -44,6 +47,7 @@
         </div>
         <div class="dropdown-content pages" id="pagesdd">
             <a href="/"><img class="flag" src="/-Flags/home.png" frameborder="0" alt="HOME">Home</a><br>
+            <a href="/legeee/"><img class="flag" src="/-Flags/unionjacksquare.png" frameborder="0" alt="LE26">2026 LEGEEE</a><br>
             <a href="/gb/"><img class="flag" src="/-Flags/unionjacksquare.png" frameborder="0" alt="GBR">Westminster</a><br>
             <a href="#"><img class="flag" src="/-Flags/saltiresquare.png" frameborder="0" alt="SCT">Holyrood</a><br>
             <a href="/senedd/"><img class="flag" src="/-Flags/reddragonsquare.png" frameborder="0" alt="WAL">Senedd</a>
@@ -68,6 +72,15 @@
             <div class="dropdownsubheading">Other</div>
             → <a href="/privacy-policy/">Privacy Policy</a><br>
             → <a href="/disclosures/">Disclosures</a>
+        </div>
+        <div class="dropdown-content legeee westminster" id="legeeedd">
+            <div class="dropdownsubheading"><a href="/legeee/#2026-locals">2026 Locals</a></div>
+            → <a href="/legeee/#live-model">Headline Estimate</a><br>
+            → <a href="/legeee/#projection-maps">Projection Maps</a><br>
+            → <a href="/legeee/#constituency-projections">Constituency Est.</a><br>
+            → <a href="/legeee/#regional-projections">Regional Estimates</a>
+            <div class="dropdownsubheading"><a href="/legeee/#more-legislatures">Other Projections</a></div>
+            → <a href="/legeee/#more-legislatures"></a>More Legislatures</a>
         </div>
         <div class="dropdown-content westminster" id="westminsterdd">
             <div class="dropdownsubheading"><a href="/gb/#current-projection">Current Projection</a></div>
@@ -122,14 +135,14 @@
             <div id="actualtitlestext">
                 <div id="mobileotherpages">
                     <a href="/">Home</a><br>
-                    <a href="../gb/">Westminster Proj.</a><br>
+                    <a href="/legeee/">LEGEEE</a><br>
+                    <a href="/gb/">Westminster Proj.</a><br>
                     <a href="#">Holyrood Projection</a><br>
-                    <a href="../senedd/">Senedd Projection</a><br>
+                    <a href="/senedd/">Senedd Projection</a><br>
                 </div>
                 <a href="#current-projection" onclick="displayMobileMenu()">Current Projection</a><br>
                 <a href="#historical-info" onclick="displayMobileMenu()">Historical Info</a><br>
                 <a href="#other-projections" onclick="displayMobileMenu()">Other Projections</a><br>
-                <a href="#blog-and-about" onclick="displayMobileMenu()">Connect</a>
             </div>
         </div>
         
