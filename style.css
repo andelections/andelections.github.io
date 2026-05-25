@@ -668,6 +668,7 @@ ul {
     text-align: center;
     margin: 0 auto;
     font-size: 20px;
+    z-index: 200000;
 }
 
 #livemodeldisclaimer a {
@@ -1703,6 +1704,10 @@ h2 {
         margin-left: 150px;
         width: calc(100% - 220px);
     }
+
+    .mobile-device #livemodeldisclaimer p {
+        font-size: 40px;
+    }
 }
 
 
@@ -1919,6 +1924,10 @@ h2 {
     top: 0;
     left: 0;
     max-width: 250px;
+}
+
+.dropdown-content.inner {
+    position: absolute;
 }
 
 /* New class to make dropdown content visible (toggled by JS) */
