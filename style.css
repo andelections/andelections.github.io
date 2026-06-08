@@ -19,8 +19,26 @@
 @font-face {
     font-family: 'Barlow';
     src: url('Fonts/Barlow-Regular.ttf') format('truetype');
-    font-stretch: nomral;
+    font-stretch: normal;
     font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/BarlowSemiCondensed-Regular.ttf') format('truetype');
+    font-stretch: semi-condensed;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/BarlowCondensed-Regular.ttf') format('truetype');
+    font-stretch: condensed;
+    font-style: normal;
+
 }
 
 @font-face {
@@ -30,6 +48,7 @@
     font-weight: 600;
     font-style: normal;
 }
+
 
 /*
 @font-face {
